@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/styles/output.css" rel="stylesheet">
+    <title>EHS Home</title>
+</head>
+<body>
+    <head>
+        <!-- parent div with full width and proper spacing -->
+        <div class="flex justify-between items-center px-3 py-2 bg-white shadow-sm border-b-2 border-[#27408B]">
+            <!-- logo -->
+            <div class="flex items-center">
+                <img src="./src/assets/logo.webp" alt="" class="w-24">
+            </div>
+            
+            <!-- menus -->
+            <div class="flex">
+                <ul class="flex items-center space-x-8">
+                    <li class="relative group">
+                        <a href="#" class="text-gray-600 hover:text-blue-600 py-2">Products</a>
+                    </li>
+                    <li class="relative group">
+                        <a href="#" class="text-gray-600 hover:text-blue-600 py-2">Solutions</a>
+                        <!-- Dropdown menu -->
+                        <div class="absolute left-0 mt-2 w- bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div class="py-2 px-4">
+                                <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Enterprise</a>
+                                <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Small Business</a>
+                                <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Startups</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <a href="#" class="text-gray-600 hover:text-blue-600 py-2">Resources</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- CTA Buttons -->
+            <div class="flex items-center ">
+                <a href="#" class="px-4 py-2 rounded-full bg-[#27408B] text-white hover:bg-[#26386e] transition-colors">
+                    Contact US
+                </a>
+            </div>
+        </div>
+    </head>
+</body>
+</html>
