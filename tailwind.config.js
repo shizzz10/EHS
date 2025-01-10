@@ -5,7 +5,11 @@ module.exports = {
     "./src/**/*.{html,js}" // Match HTML and JS files in the src folder and its subfolders
   ],
   theme: {
-   extend: {},
+   extend: {
+  colors: {
+        default: '#27408B', // Define your custom color
+      },
+   },
   },
   plugins: [],
 }

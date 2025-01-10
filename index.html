@@ -1,49 +1,437 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./src/styles/output.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/styles/output.css" rel="stylesheet" />
     <title>EHS Home</title>
-</head>
-<body>
+    <style>
+      /* Tailwind classes used in the HTML */
+
+/* For mobile menu sliding animation */
+/* Mobile Navigation */
+#mobile-menu {
+  transition: right 0.4s ease-in-out; 
+}
+
+/* When the menu is active, move it into view */
+#mobile-menu.active {
+  right: 0;
+}
+
+
+
+
+
+/* Active State for Cross Animation */
+#hamburger-menu.active .menu-line:nth-child(1) {
+  transform: translateY(0.625rem) rotate(45deg); /* Top bar */
+}
+
+#hamburger-menu.active .menu-line:nth-child(2) {
+  opacity: 0; /* Middle bar disappears */
+}
+
+#hamburger-menu.active .menu-line:nth-child(3) {
+  transform: translateY(-0.625rem) rotate(-45deg); /* Bottom bar */
+}
+
+
+/* Optional: Change hover color if needed */
+.hamburger-btn:hover .menu-line {
+  background-color: #1e3271; /* Darker blue on hover */
+}
+
+
+
+    </style>
+  </head>
+  <body>
     <head>
-        <!-- parent div with full width and proper spacing -->
-        <div class="flex justify-between items-center px-3 py-2 bg-white shadow-sm border-b-2 border-[#27408B]">
-            <!-- logo -->
-            <div class="flex items-center">
-                <img src="./src/assets/logo.webp" alt="" class="w-24">
-            </div>
-            
-            <!-- menus -->
-            <div class="flex">
-                <ul class="flex items-center space-x-8">
-                    <li class="relative group">
-                        <a href="#" class="text-gray-600 hover:text-blue-600 py-2">Products</a>
-                    </li>
-                    <li class="relative group">
-                        <a href="#" class="text-gray-600 hover:text-blue-600 py-2">Solutions</a>
-                        <!-- Dropdown menu -->
-                        <div class="absolute left-0 mt-2 w- bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                            <div class="py-2 px-4">
-                                <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Enterprise</a>
-                                <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Small Business</a>
-                                <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Startups</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="relative group">
-                        <a href="#" class="text-gray-600 hover:text-blue-600 py-2">Resources</a>
-                    </li>
-                </ul>
-            </div>
-    
-            <!-- CTA Buttons -->
-            <div class="flex items-center ">
-                <a href="#" class="px-4 py-2 rounded-full bg-[#27408B] text-white hover:bg-[#26386e] transition-colors">
-                    Contact US
-                </a>
-            </div>
+      <!-- <div class="relative bg-white shadow-sm"> -->
+      <div
+        class="flex justify-between items-center px-3 py-1.5 bg-default shadow-sm border-b-2 border-white"
+      >
+        <!-- logo -->
+        <div class="flex">
+          <img src="./src/assets/logo.webp" alt="" class="w-24" />
         </div>
+
+        <!-- menus -->
+        <div class="hidden md:flex">
+          <ul class="flex items-center gap-8">
+            <li class="group">
+              <a
+                href=""
+                class="text-gray-100 text-base font-semibold hover:text-white py-2"
+                >Consultancy</a
+              >
+            </li>
+            <li class="group">
+              <button
+                class="dropdown-parent hover:text-white py-2 flex items-center justify-center text-gray-100 text-base font-semibold"
+              >
+                Solutions
+
+                <img src="./src/assets/white-half-arrow.svg" alt="" class="w-4 h-4 ml-1 transform transition-transform duration-300 group-hover:rotate-180">
+                
+              </button>
+              <!-- Fixed-width dropdown menu -->
+              <div
+                class="hidden dropdown absolute left-1/2 transform -translate-x-1/2 mt-6 w-screen bg-white shadow-sm"
+              >
+                <div class="px-4">
+                  <div class="grid grid-cols-3 gap-8 p-8">
+                    <!-- By Industry -->
+                    <div>
+                      <h3
+                        class="text-base font-semibold text-black tracking-wide uppercase mb-4"
+                      >
+                        By Industry
+                      </h3>
+                      <ul class="space-y-4">
+                        <li>
+                          <a
+                            href=""
+                            class="text-gray-700 text-base font-medium hover:text-default"
+                            >Construction</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href=""
+                            class="text-gray-700 text-base font-medium hover:text-default"
+                            >Manufacturing</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href=""
+                            class="text-gray-700 text-base font-medium hover:text-default"
+                            >Healthcare</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href=""
+                            class="text-gray-700 text-base font-medium hover:text-default"
+                            >Retail</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- By Solution -->
+                    <div>
+                      <h3
+                        class="text-base font-semibold text-black tracking-wide uppercase mb-4"
+                      >
+                        By Solution
+                      </h3>
+                      <ul class="space-y-4">
+                        <li>
+                          <a
+                            href=""
+                            class="text-gray-700 text-base font-medium hover:text-default"
+                            >Safety Management</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href=""
+                            class="text-gray-700 text-base font-medium hover:text-default"
+                            >Quality Control</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href=""
+                            class="text-gray-700 text-base font-medium hover:text-default"
+                            >Risk Management</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href=""
+                            class="text-gray-700 text-base font-medium hover:text-default"
+                            >Compliance</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Enterprise -->
+                    <div class="bg-gray-50 rounded-lg p-6">
+                      <h3
+                        class="text-base font-semibold text-black tracking-wide uppercase mb-4"
+                      >
+                        Enterprise
+                      </h3>
+                      <p class="text-gray-700 text-base font-medium mb-4">
+                        Scale with confidence and dedicated support
+                      </p>
+                      <a
+                        href=""
+                        class="text-default hover:underline flex items-center"
+                      >
+                        Learn more
+                        <svg
+                          class="w-4 h-4 ml-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="relative group">
+              <a
+                href=""
+                class="text-gray-100 text-base font-semibold hover:text-white py-2"
+                >Trainings</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center">
+          <a
+            href=""
+            class="px-4 py-1.5 rounded-full bg-white text-default hover:bg-default hover:text-white border border-white transition-colors shadow-sm text-base font-semibold"
+          >
+            Contact US
+          </a>
+        </div>
+
+        <!-- mobile header  -->
+
+ <!-- Mobile Header -->
+<div class="md:hidden">
+    
+    <div class="flex">
+        
+        <button id="hamburger-menu" class="flex flex-col justify-between items-center bg-transparent border-none p-0 cursor-pointer w-6 h-6 outline-none">
+            <span class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"></span>
+            <span class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"></span>
+            <span class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"></span>
+          </button>
+          
+      
+    </div>
+  
+    
+    <div id="mobile-menu" class="mobile-menu hidden absolute mt-7 right-[-100vw] h-full bg-default w-full z-10">
+
+      <div class="flex flex-col gap-2">
+        <div class="accordion-item border-y border-gray-300 px-4">
+          <h4
+            class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
+          >
+            <span class="text-base md:text-lg text-white">Solution</span>
+            <img
+              src="./src/assets/white-half-arrow.svg"
+              alt="arrow"
+              class="w-4 arrow transition-transform duration-300"
+            />
+          </h4>
+          <div
+            class="accordion-content hidden flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+          >
+            <a
+              href=""
+              class="text-sm md:text-base c-underline text-gray-200"
+              >Safety Managment</a
+            >
+           
+          </div>
+        </div>
+
+        <div class="accordion-item border-b border-gray-300 px-4">
+          <h4
+            class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
+          >
+            <span class="text-base md:text-lg text-white">Consultancy</span>
+            <img
+              src="./src/assets/white-half-arrow.svg"
+              alt="arrow"
+              class="w-4 arrow transition-transform duration-300"
+            />
+          </h4>
+          <div
+            class="accordion-content hidden flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+          >
+            <a
+              href=""
+              class="text-sm md:text-base c-underline text-gray-200"
+              >Consultancy</a
+            >
+           
+          </div>
+        </div>
+
+        <div class="accordion-item border-b border-gray-300 px-4">
+          <h4
+            class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
+          >
+            <span class="text-base md:text-lg text-white">Trainings</span>
+            <img
+              src="./src/assets/white-half-arrow.svg"
+              alt="arrow"
+              class="w-4 arrow transition-transform duration-300"
+            />
+          </h4>
+          <div
+            class="accordion-content hidden flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+          >
+            <a href="" class="text-sm md:text-base c-underline text-gray-200">
+                Trainings
+            </a>
+            
+          </div>
+        </div>
+
+        <div class="accordion-item border-b border-gray-300 px-4">
+          <h4
+            class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
+          >
+            <span class="text-base md:text-lg text-white">Connect</span>
+            <img
+              src="./src/assets/white-half-arrow.svg"
+              alt="arrow"
+              class="w-4 arrow transition-transform duration-300"
+            />
+          </h4>
+          <div
+            class="accordion-content hidden flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+          >
+            <a
+              href=""
+              class="text-sm md:text-base c-underline text-gray-200"
+              >Contact Us</a
+            >
+            <a href="" class="text-sm md:text-base c-underline text-gray-200"
+              >Book Calendar</a
+            >
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  
+
+
+
+      </div>
     </head>
-</body>
+
+    <main>....</main>
+
+    <script>
+      const parent = document.querySelector(".dropdown-parent");
+      const dropdown = document.querySelector(".dropdown");
+
+      let timeoutID;
+
+      parent.addEventListener("mouseenter", () => {
+        clearTimeout(timeoutID);
+        setTimeout(() => dropdown.classList.remove("hidden"), 100);
+      });
+
+      parent.addEventListener("mouseleave", () => {
+        timeoutID = setTimeout(() => dropdown.classList.add("hidden"), 300);
+      });
+
+      dropdown.addEventListener("mouseenter", () => clearTimeout(timeoutID));
+      dropdown.addEventListener("mouseleave", () => {
+        timeoutID = setTimeout(() => dropdown.classList.add("hidden"), 300);
+      });
+
+
+
+
+
+
+
+      const hamburgerMenu = document.getElementById('hamburger-menu');
+const mobileMenu = document.getElementById('mobile-menu');
+
+// Toggle the mobile menu and hamburger animation when clicked
+hamburgerMenu.addEventListener('click', () => {
+  // Toggle the 'active' class for the hamburger button
+  hamburgerMenu.classList.toggle('active');
+
+  // Toggle the mobile menu visibility
+  if (mobileMenu.classList.contains('active')) {
+    mobileMenu.classList.remove('active');
+    // Wait for the animation to complete, then hide the menu
+    setTimeout(() => {
+      mobileMenu.classList.add('hidden');
+    }, 300); // Matches the animation duration
+  } else {
+    mobileMenu.classList.remove('hidden');
+    setTimeout(() => {
+      mobileMenu.classList.add('active');
+    }, 300);
+  }
+});
+
+
+
+
+
+
+
+
+
+ // accordian & its animation
+ const accordionHeaders = document.querySelectorAll(".accordion-header");
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const arrow = header.querySelector(".arrow");
+
+          if (content.classList.contains("hidden")) {
+            content.classList.remove("hidden");
+            requestAnimationFrame(() => {
+              content.classList.add("opacity-100", "scale-y-100");
+              content.classList.remove("opacity-0", "scale-y-0");
+            });
+          } else {
+            // Start collapsing animation
+            content.classList.add("opacity-0", "scale-y-0");
+            content.classList.remove("opacity-100", "scale-y-100");
+
+            // Wait for the animation to complete before adding 'hidden'
+            content.addEventListener(
+              "transitionend",
+              () => {
+                content.classList.add("hidden");
+              },
+              { once: true }
+            );
+          }
+
+          // Rotate the arrow
+          arrow.classList.toggle("rotate-180");
+        });
+      });
+
+
+
+
+    </script>
+  </body>
 </html>
