@@ -1,0 +1,243 @@
+final one for desktop
+
+
+<head>
+    <!-- parent div with position relative for dropdown positioning -->
+    <!-- <div class="relative bg-white shadow-sm"> -->
+        <div class="flex  justify-between items-center px-3 py-1.5 bg-white shadow-sm border-b-2 border-default">
+            <!-- logo -->
+            <div class="flex">
+               
+        <img src="./src/assets/logo.webp" alt="" class="w-24">
+            </div>
+            
+            <div class="flex justify-between items-center gap-4 w-[70%]">
+
+            <!-- menus -->
+            <div class="flex">
+                <ul class="flex items-center gap-8">
+                    <li class="group">
+                        <a href="" class="text-black text-base font-semibold hover:text-default py-2 ">Products</a>
+                    </li>
+                    <li class="group">
+                        <button class="dropdown-parent hover:text-default py-2 flex items-center text-black text-base font-semibold">
+                            Solutions
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg> 
+                        </button>
+                        <!-- Fixed-width dropdown menu --> 
+                        <div class="hidden dropdown absolute left-1/2 transform -translate-x-1/2 mt-6 w-screen bg-white shadow-sm">
+                            <div class="px-4">
+                                <div class="grid grid-cols-3 gap-8 p-8">
+                                    <!-- By Industry -->
+                                    <div>
+                                        <h3 class="text-base font-semibold text-black tracking-wide uppercase mb-4">By Industry</h3>
+                                        <ul class="space-y-4">
+                                            <li><a href="" class="text-gray-700 text-base font-medium hover:text-default">Construction</a></li>
+                                            <li><a href="" class="text-gray-700 text-base font-medium hover:text-default">Manufacturing</a></li>
+                                            <li><a href="" class="text-gray-700 text-base font-medium hover:text-default">Healthcare</a></li>
+                                            <li><a href="" class="text-gray-700 text-base font-medium hover:text-default">Retail</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- By Solution -->
+                                    <div>
+                                        <h3 class="text-base font-semibold text-black tracking-wide uppercase mb-4">By Solution</h3>
+                                        <ul class="space-y-4">
+                                            <li><a href="" class="text-gray-700 text-base font-medium hover:text-default">Safety Management</a></li>
+                                            <li><a href="" class="text-gray-700 text-base font-medium hover:text-default">Quality Control</a></li>
+                                            <li><a href="" class="text-gray-700 text-base font-medium hover:text-default">Risk Management</a></li>
+                                            <li><a href="" class="text-gray-700 text-base font-medium hover:text-default">Compliance</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- Enterprise -->
+                                    <div class="bg-gray-50 rounded-lg p-6">
+                                        <h3 class="text-base font-semibold text-black tracking-wide uppercase mb-4">Enterprise</h3>
+                                        <p class="text-gray-700 text-base font-medium mb-4">Scale with confidence and dedicated support</p>
+                                        <a href="" class="text-default hover:underline flex items-center">
+                                            Learn more
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <a href="" class="text-black text-base font-semibold hover:text-default py-2">Resources</a>
+                    </li>
+                </ul>
+            </div>
+
+              <!-- CTA Buttons -->
+    <div class="flex items-center ">
+        <a href="" class="px-4 py-1.5 rounded-full bg-default text-white hover:bg-white hover:text-default border border-default
+         transition-colors shadow-sm text-base font-semibold">
+            Contact US
+        </a>
+    </div>
+
+</div>
+        </div>
+    <!-- </div> -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+    <!-- parent div with full width and proper spacing -->
+    <div class="flex justify-between items-center px-3 py-2 bg-white shadow-sm border-b-2 border-[#27408B]">
+        <!-- logo -->
+        <div class="flex items-center">
+            <img src="./src/assets/logo.webp" alt="" class="w-24">
+        </div>
+        
+        <!-- menus -->
+        <div class="flex">
+            <ul class="flex items-center space-x-8">
+                <li class="relative group">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 py-2">Products</a>
+                </li>
+
+                <li class="relative group">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 py-2">Solutions</a>
+                    <!-- Dropdown menu -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-screen bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      <div class="py-2 px-4">
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Enterprise</a>
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Small Business</a>
+                        <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Startups</a>
+                      </div>
+                    </div>
+                  </li>
+                  
+                  
+                  
+                <li class="relative group">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 py-2">Resources</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex items-center ">
+            <a href="#" class="px-4 py-2 rounded-full bg-[#27408B] text-white hover:bg-[#26386e] transition-colors">
+                Contact US
+            </a>
+        </div>
+    </div>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex justify-between items-center px-3 py-2 bg-white shadow-sm border-b-2 border-[#27408B]">
+    <!-- logo -->
+    <div class="flex ">
+       
+<img src="./src/assets/logo.webp" alt="" class="w-24">
+    </div>
+    
+    <!-- menus -->
+    <div class="flex">
+        <ul class="flex items-center space-x-8">
+            <li class="relative group">
+                <a href="#" class="text-gray-600 hover:text-blue-600 py-2">Products</a>
+            </li>
+            <li class="relative static group">
+                <a href="#" class="text-gray-600 hover:text-blue-600 py-2 flex items-center">
+                    Solutions
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </a>
+                <!-- Fixed-width dropdown menu -->
+                <div class="bsolute left-1/2 transform -translate-x-1/2 mt-2 w-screen absolute right-0 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div class="max-w-7xl mx-auto">
+                        <div class="grid grid-cols-3 gap-8 p-8">
+                            <!-- By Industry -->
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-900 tracking-wide uppercase mb-4">By Industry</h3>
+                                <ul class="space-y-4">
+                                    <li><a href="#" class="text-base text-gray-600 hover:text-blue-600">Construction</a></li>
+                                    <li><a href="#" class="text-base text-gray-600 hover:text-blue-600">Manufacturing</a></li>
+                                    <li><a href="#" class="text-base text-gray-600 hover:text-blue-600">Healthcare</a></li>
+                                    <li><a href="#" class="text-base text-gray-600 hover:text-blue-600">Retail</a></li>
+                                </ul>
+                            </div>
+                            <!-- By Solution -->
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-900 tracking-wide uppercase mb-4">By Solution</h3>
+                                <ul class="space-y-4">
+                                    <li><a href="#" class="text-base text-gray-600 hover:text-blue-600">Safety Management</a></li>
+                                    <li><a href="#" class="text-base text-gray-600 hover:text-blue-600">Quality Control</a></li>
+                                    <li><a href="#" class="text-base text-gray-600 hover:text-blue-600">Risk Management</a></li>
+                                    <li><a href="#" class="text-base text-gray-600 hover:text-blue-600">Compliance</a></li>
+                                </ul>
+                            </div>
+                            <!-- Enterprise -->
+                            <div class="bg-gray-50 rounded-lg p-6">
+                                <h3 class="text-sm font-semibold text-gray-900 tracking-wide uppercase mb-4">Enterprise</h3>
+                                <p class="text-base text-gray-600 mb-4">Scale with confidence and dedicated support</p>
+                                <a href="#" class="text-blue-600 hover:text-blue-700 flex items-center">
+                                    Learn more
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="relative group">
+                <a href="#" class="text-gray-600 hover:text-blue-600 py-2">Resources</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="flex ">
+        <a href="#" class="text-gray-600 hover:text-blue-600">Sign In</a>
+        <a href="#" class="px-4 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+            Get Started
+        </a>
+    </div>
+</div>
