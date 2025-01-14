@@ -63,9 +63,10 @@
       }
 
       .marquee-block {
-        padding-left: 8rem;
+        padding-left: 4rem;
         display: flex;
         cursor: pointer;
+        height: 30px;
       }
       .marquee-block:hover .marquee-logo {
         filter: unset;
@@ -177,6 +178,13 @@
         width: 10px;
         height: 10px;
         }
+        
+      .marquee-block {
+        padding-left: 8rem;
+        display: flex;
+        cursor: pointer;
+        height: 6px;
+      }
     }
     </style>
   </head>
@@ -184,7 +192,7 @@
     <head>
       <!-- <div class="relative bg-white shadow-sm"> -->
       <div
-        class="header fixed lg:static top-0 w-full z-50 flex justify-between items-center px-2 py-1 sm:px-3 sm:py-1.5 bg-default bg-opacity-60 hover:bg-white lg:hover:bg-default lg:bg-opacity-100 shadow-sm border-b-2 border-accent group"
+        class="header fixed lg:static top-0 w-full z-50 flex justify-between items-center px-4 sm:px-5 py-1.5 bg-default bg-opacity-60  lg:bg-opacity-100 shadow-sm border-b-2 border-accent group"
       >
         <!-- logo -->
         <div class="flex">
@@ -601,13 +609,13 @@
               class="flex flex-col justify-between items-center bg-transparent border-none p-0 cursor-pointer w-6 h-6 outline-none"
             >
               <span
-                class="menu-line block bg-white group-hover:bg-gray-700 w-6 h-1 rounded-sm transition-all duration-300 origin-center"
+                class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"
               ></span>
               <span
-                class="menu-line block bg-white group-hover:bg-gray-700 w-6 h-1 rounded-sm transition-all duration-300 origin-center"
+                class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"
               ></span>
               <span
-                class="menu-line block bg-white group-hover:bg-gray-700 w-6 h-1 rounded-sm transition-all duration-300 origin-center"
+                class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"
               ></span>
             </button>
           </div>
@@ -711,53 +719,86 @@
     <main class="flex flex-col">
       <!-- Hero  -->
 
-      <div class="swiper mySwiper w-full h-full">
+      <div class="swiper mySwiper w-full h-[85vh] lg:h-[80vh]">
         <div class="swiper-wrapper">
+          
           <div
             class="swiper-slide flex justify-center items-center relative z-0"
           >
             <img
               src="./src/assets/hero.webp"
               alt=""
-              class="w-full h-auto max-h-[80vh] object-cover object-center opacity-80"
+              class="w-full h-full  object-cover object-center opacity-80"
             />
 
             <div class="absolute inset-0 bg-gradient-to-l from-default/100 via-default/70 to-transparent"></div>
 
 
             <span
-              class="absolute bottom-14 sm:bottom-28 right-1 sm:right-6 mx-2 text-accent font-bold text-base sm:text-lg md:text-2xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 w-60 text-center"
+              class="absolute bottom-60 sm:bottom-40 right-1 sm:right-6 mx-2 text-accent font-bold text-2xl md:text-3xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 w-80 lg:w-[600px] text-center"
             >
               Transform your safety culture with our solutions
             </span>
 
             <a
               href=""
-              class="animate-it--x absolute bottom-2 sm:bottom-8 right-1 sm:right-10 mx-2 text-white font-bold text-base sm:text-lg md:text-2xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 bg-accent bg-opacity-80 hover:bg-opacity-90 rounded-full"
+              class="animate-it--x absolute bottom-40 sm:bottom-20 right-12 sm:right-40 mx-2 text-white font-bold text-base sm:text-lg md:text-2xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 bg-accent bg-opacity-80 hover:bg-opacity-90 rounded-full"
             >
-              Explore Services
+            Explore Training
             </a>
           </div>
 
           <div
             class="swiper-slide flex justify-center items-center relative z-0"
           >
-            <img
-              src="./src/assets/hero.webp"
-              alt=""
-              class="w-full h-auto max-h-[80vh] object-cover object-center opacity-80"
-            />
-
+          
+          <video class="w-full h-full object-cover object-center opacity-80" autoplay muted loop>
+            <source src="./src/assets/consultancy.mp4" type="video/mp4">
+          </video>
 
             <div class="absolute inset-0 bg-gradient-to-l from-default/100 via-default/70 to-transparent"></div>
 
+
             <span
-              class="absolute bottom-14 sm:bottom-28 right-1 sm:right-6 mx-2 text-white font-bold text-base sm:text-lg md:text-2xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 w-60 text-center"
+              class="absolute bottom-60 sm:bottom-40 right-1 sm:right-6 mx-2 text-accent font-bold text-2xl md:text-3xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 w-80 lg:w-[600px] text-center"
             >
               Transform your safety culture with our solutions
             </span>
-            
+
+            <a
+              href=""
+              class="animate-it--x absolute bottom-40 sm:bottom-20 right-12 sm:right-40 mx-2 text-white font-bold text-base sm:text-lg md:text-2xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 bg-accent bg-opacity-80 hover:bg-opacity-90 rounded-full"
+            >
+            Explore Consultancy
+            </a>
           </div>
+
+          <div
+            class="swiper-slide flex justify-center items-center relative z-0"
+          >
+          <video class="w-full h-full object-cover object-center opacity-80" autoplay muted loop>
+            <source src="./src/assets/digital solutions.mp4" type="video/mp4">
+          </video>
+
+            <div class="absolute inset-0 bg-gradient-to-l from-default/100 via-default/70 to-transparent"></div>
+
+
+            <span
+              class="absolute bottom-60 sm:bottom-40 right-1 sm:right-6 mx-2 text-white font-bold text-2xl md:text-3xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 w-80 lg:w-[600px] text-center"
+            >
+              Transform your safety culture with our solutions
+            </span>
+
+            <a
+              href=""
+              class="animate-it--x absolute bottom-40 sm:bottom-20 right-12 sm:right-40 mx-2 text-white font-bold text-base sm:text-lg md:text-2xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 bg-accent bg-opacity-80 hover:bg-opacity-90 rounded-full"
+            >
+              Explore Digital Solutions
+            </a>
+          </div>
+
+
+
         </div>
         <div class="swiper-button-next text-gray-400"></div>
         <div class="swiper-button-prev text-gray-400"></div>
@@ -779,12 +820,12 @@
           <div
             class="flex flex-col sm:flex-row justify-between items-center gap-4 lg:gap-2 text-black pl-2 sm:pl-2 lg:pl-6"
           >
-            <div class="flex flex-col gap-2 sm:w-[47%] px-1 py-3">
-              <h2 class="text-lg sm:text-xl lg:text-3xl font-bold">
+            <div class="flex flex-col gap-2 sm:w-[47%] px-1 py-10 lg:py-3">
+              <h2 class="text-2xl lg:text-3xl text-default font-semibold">
                 Transform your safety culture with our solutions
               </h2>
 
-              <div class="flex text-sm md:text-base text-gray-800">
+              <div class="flex text-xl md:text-2xl text-gray-500 py-4">
                 With over 11 years of cross industry experience, we are
                 providing the top-notch EHS Management solutions to the industry
                 for transforming their EHS culture in a sustainable manner.
@@ -795,13 +836,13 @@
 
             <div class="sm:w-[47%] w-full justify-end relative  hidden lg:flex">
               <img
-                src="./src/assets/hero.webp"
+                src="./src/assets/what we do.webp"
                 alt=""
-                class="animate-it--x w-[240px] sm:w-8/12 lg:w-7/12"
+                class="animate-it--x w-[240px] sm:w-8/12 lg:w-7/12 object-cover object-top"
               />
 
               <span
-                class="absolute top-0 right-0 text-white font-bold text-sm sm:text-base px-3 py-1.5 sm:px-4 sm:py-2 bg-default bg-opacity-80 hover:bg-opacity-100"
+                class="absolute top-0 right-0 text-white font-bold text-lg sm:text-xl lg:text-3xl px-3 py-1.5 sm:px-4 sm:py-2 bg-default bg-opacity-80 hover:bg-opacity-100"
               >
                 What we do
               </span>
@@ -818,7 +859,7 @@
           </h2>
 
           <div
-            class="flex flex-col gap-3 sm:flex-row flex-wrap md:flex-nowrap md:gap-0 justify-around items-center px-5 py-10 sm:p-7 lg:p-8"
+            class="flex flex-col gap-5 sm:gap-3 sm:flex-row flex-wrap md:flex-nowrap md:gap-0 justify-around items-center px-5 py-14 sm:p-7 lg:px-8 lg:py-40"
           >
             <div
               class="animate-it-product relative flex flex-col justify-center items-center sm:justify-start sm:items-start gap-3 w-56 h-60 lg:w-80 lg:h-80 group"
@@ -833,7 +874,7 @@
                 class="flex flex-col absolute top-1/2 w-full transform -translate-y-1/2"
               >
                 <span
-                  class="absolute left-2 text-white font-bold text-base lg:text-xl rounded-br-2xl rounded-bl-2xl"
+                  class="absolute left-2 text-white font-bold text-lg lg:text-xl rounded-br-2xl rounded-bl-2xl"
                 >
                   Digital Solutions
                 </span>
@@ -868,7 +909,7 @@
                 class="flex flex-col absolute top-1/2 w-full transform -translate-y-1/2"
               >
                 <span
-                  class="absolute left-2 text-white font-bold text-sm sm:text-base lg:text-xl rounded-br-2xl rounded-bl-2xl"
+                  class="absolute left-2 text-white font-bold text-lg lg:text-xl rounded-br-2xl rounded-bl-2xl"
                 >
                   Consultancy
                 </span>
@@ -903,7 +944,7 @@
                 class="flex flex-col absolute top-1/2 w-full transform -translate-y-1/2"
               >
                 <span
-                  class="absolute left-2 text-white font-bold text-sm sm:text-base lg:text-xl rounded-br-2xl rounded-bl-2xl"
+                  class="absolute left-2 text-white font-bold text-lg lg:text-xl rounded-br-2xl rounded-bl-2xl"
                 >
                   HSE Training
                 </span>
@@ -938,7 +979,7 @@
           </div>
 
           <div class="flex gap-4 flex-col text-black">
-            <h5 class="text-xl font-semibold text-center">
+            <h5 class="text-2xl lg:text-3xl text-default font-semibold text-center">
               Take your safety culture to the next level with
             </h5>
 
@@ -946,42 +987,19 @@
               <img src="./src/assets/Empower Logo.svg" alt="" class="w-60" />
             </div>
 
-            <div class="animate-it--x flex justify-center items-center mt-4">
+            <div class="animate-it--x flex flex-col gap-1  justify-center items-center mt-4">
               <img src="./src/assets/services.webp" alt="" class="w-7/12" />
+              <a
+                href=""
+                class="animate-it-y text-white hover:text-accent w-fit font-bold text-base sm:text-lg md:text-2xl px-4 py-1 sm:px-8 sm:py-3 bg-accent border border-accent hover:bg-white rounded-full shadow-sm"
+              >
+                Try Demo
+              </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- CTA  -->
-      <div class="flex flex-col gap-4 px-4 mt-20 sm:mt-36 lg:mt-40">
-        <div class="flex relative justify-center items-center">
-          <div
-            class="absolute flex items-center justify-center flex-col gap-2 p-1 sm:p-6 w-fit bg-white rounded-full"
-          >
-            <h4
-              class="text-lg sm:text-xl lg:text-3xl font-bold text-center w-5/6 sm:w-auto"
-            >
-              Take your safety culture to the next level
-            </h4>
-
-            <a
-              href=""
-              class="animate-it-y text-white hover:text-accent w-fit font-bold text-base sm:text-lg md:text-2xl px-3 py-1.5 sm:px-4 sm:py-3 bg-accent border border-accent hover:bg-white rounded-full"
-            >
-              Explore Services
-            </a>
-          </div>
-        </div>
-
-        <div class="flex">
-          <img
-            src="./src/assets/banner.webp"
-            alt=""
-            class="w-full h-auto max-h-[60vh] object-cover object-center rounded-lg"
-          />
-        </div>
-      </div>
 
       <!-- trusted by  -->
 
@@ -1082,7 +1100,6 @@
       </div>
     </main>
 
-    <!-- hero carousel  -->
     <script>
       var swiper = new Swiper(".mySwiper", {
         cssMode: true,
@@ -1095,16 +1112,14 @@
           el: ".swiper-pagination",
           clickable: true,
           renderBullet: function (index, className) {
-            // Restrict pagination to two dots: one for the first half and one for the second half
-            return index === 0 || index === Math.floor(this.slides.length / 2)
-              ? `<span class="${className}"></span>`
-              : "";
+            // **Render a bullet for each slide**
+            return `<span class="${className}"></span>`;
           },
         },
         mousewheel: true,
         keyboard: true,
         autoplay: {
-          delay: 5000, // 5-second delay between slides
+          delay: 9000, // 5-second delay between slides
           disableOnInteraction: false, // Continue autoplay after user interaction
         },
         breakpoints: {
@@ -1115,7 +1130,7 @@
       });
     
       // Ensure that autoplay settings are re-evaluated on window resize
-      window.addEventListener('resize', function () {
+      window.addEventListener("resize", function () {
         if (window.innerWidth > 768) {
           if (swiper.autoplay.running) {
             swiper.autoplay.stop();
@@ -1129,6 +1144,7 @@
         }
       });
     </script>
+    
     
 
     <footer
