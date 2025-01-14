@@ -2,14 +2,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link href="./src/styles/output.css" rel="stylesheet" />
     <title>EHS Home</title>
     <style>
-
-body{
-  overflow-x: hidden;
-}
+      body {
+        overflow-x: hidden;
+      }
 
       /* Tailwind classes used in the HTML */
 
@@ -41,73 +44,147 @@ body{
         background-color: #1e3271; /* Darker blue on hover */
       }
 
-
-
-
-
       .marquee {
-  display: flex;
-  overflow-x: hidden;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  min-width: 100%;
-}
-.marquee:hover .marquee-content {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-.marquee:hover .marquee-logo {
-  filter: grayscale(1) contrast(0) blur(1px);
-}
-.marquee-logo {
-  filter: grayscale(1) contrast(0);
-}
+        display: flex;
+        overflow-x: hidden;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        min-width: 100%;
+      }
+      .marquee:hover .marquee-content {
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+      }
+      .marquee:hover .marquee-logo {
+        filter: grayscale(1) contrast(0) blur(1px);
+      }
+      .marquee-logo {
+        filter: grayscale(1) contrast(0);
+      }
 
+      .marquee-block {
+        padding-left: 8rem;
+        display: flex;
+        cursor: pointer;
+      }
+      .marquee-block:hover .marquee-logo {
+        filter: unset;
+      }
 
-.marquee-block {
-  padding-left: 8rem;
-  display: flex;
-  cursor: pointer;
-}
-.marquee-block:hover .marquee-logo {
-  filter: unset;
-}
+      .marquee-content {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        -webkit-animation: slide-left 20s linear infinite;
+        animation: slide-left 20s linear infinite;
+      }
+      @-webkit-keyframes slide-left {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+      @keyframes slide-left {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
 
-.marquee-content {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  -webkit-animation: slide-left 20s linear infinite;
-          animation: slide-left 20s linear infinite;
-}
-@-webkit-keyframes slide-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-@keyframes slide-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
+      .animate-it-y {
+        opacity: 0;
+        transform: translateY(60px);
+        transition: all 0.6s ease;
+      }
 
+      .animate-it-y.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
+      .animate-it--x {
+        opacity: 0;
+        transform: translateX(-90px);
+        transition: all 0.6s ease;
+      }
+      .animate-it--x.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
 
+      .animate-it-x {
+        opacity: 0;
+        transform: translateX(90px);
+        transition: all 0.6s ease;
+      }
+      .animate-it-x.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
 
+      /* Initial state for all child elements */
+      .animate-it-product {
+        opacity: 0;
+        transform: translateX(-90px);
+        transition: all 0.5s ease; /* Base transition */
+      }
+
+      /* When the 'visible' class is added, the element animates */
+      .animate-it-product.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      /* Add staggered animation using nth-child */
+      .animate-it-product:nth-child(1) {
+        transition-delay: 0.2s; /* First child animates after 0.3s */
+      }
+
+      .animate-it-product:nth-child(2) {
+        transition-delay: 0.4s; /* Second child animates after 0.6s */
+      }
+
+      .animate-it-product:nth-child(3) {
+        transition-delay: 0.6s; /* Third child animates after 0.9s */
+      }
+
+      .swiper-pagination-bullet {
+        width: 14px;
+        height: 14px;
+        border: 1px solid #f15f5c;
+        background-color: transparent;
+        opacity: 1;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: #f15f5c;
+      }
+
+      .swiper-button-next:after,
+      .swiper-rtl .swiper-button-prev:after {
+        font-size: 26px;
+      }
+
+      .swiper-button-prev:after,
+      .swiper-rtl .swiper-button-next:after {
+        font-size: 26px;
+      }
+      @media (max-width: 768px) {
+        .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        }
+    }
     </style>
   </head>
   <body>
-
     <head>
       <!-- <div class="relative bg-white shadow-sm"> -->
       <div
-        class="fixed lg:static top-0 w-full z-50 flex justify-between items-center px-2 py-1 sm:px-3 sm:py-1.5 bg-default shadow-sm border-b-2 border-white"
+        class="header fixed lg:static top-0 w-full z-50 flex justify-between items-center px-2 py-1 sm:px-3 sm:py-1.5 bg-default bg-opacity-60 hover:bg-white lg:hover:bg-default lg:bg-opacity-100 shadow-sm border-b-2 border-accent group"
       >
         <!-- logo -->
         <div class="flex">
@@ -117,16 +194,16 @@ body{
         <!-- menus -->
         <div class="hidden lg:flex">
           <ul class="flex items-center gap-8">
-            <li class="group">
+            <li class="group/dropdown">
               <button
                 class="dropdown-parent hover:text-white py-2 flex items-center justify-center text-gray-100 text-base font-semibold"
               >
-              Consultancy
+                Consultancy
 
                 <img
                   src="./src/assets/white-half-arrow.svg"
                   alt=""
-                  class="w-4 h-4 ml-1 transform transition-transform duration-300 group-hover:rotate-180"
+                  class="w-4 h-4 ml-1 transform transition-transform duration-300 group-hover/dropdown:rotate-180"
                 />
               </button>
               <!-- Fixed-width dropdown menu -->
@@ -245,7 +322,7 @@ body{
                 </div>
               </div>
             </li>
-            <li class="group">
+            <li class="group/dropdown">
               <button
                 class="dropdown-parent hover:text-white py-2 flex items-center justify-center text-gray-100 text-base font-semibold"
               >
@@ -254,7 +331,7 @@ body{
                 <img
                   src="./src/assets/white-half-arrow.svg"
                   alt=""
-                  class="w-4 h-4 ml-1 transform transition-transform duration-300 group-hover:rotate-180"
+                  class="w-4 h-4 ml-1 transform transition-transform duration-300 group-hover/dropdown:rotate-180"
                 />
               </button>
               <!-- Fixed-width dropdown menu -->
@@ -373,16 +450,16 @@ body{
                 </div>
               </div>
             </li>
-            <li class="group">
+            <li class="group/dropdown">
               <button
                 class="dropdown-parent hover:text-white py-2 flex items-center justify-center text-gray-100 text-base font-semibold"
               >
-              Trainings
+                Trainings
 
                 <img
                   src="./src/assets/white-half-arrow.svg"
                   alt=""
-                  class="w-4 h-4 ml-1 transform transition-transform duration-300 group-hover:rotate-180"
+                  class="w-4 h-4 ml-1 transform transition-transform duration-300 group-hover/dropdown:rotate-180"
                 />
               </button>
               <!-- Fixed-width dropdown menu -->
@@ -524,29 +601,33 @@ body{
               class="flex flex-col justify-between items-center bg-transparent border-none p-0 cursor-pointer w-6 h-6 outline-none"
             >
               <span
-                class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"
+                class="menu-line block bg-white group-hover:bg-gray-700 w-6 h-1 rounded-sm transition-all duration-300 origin-center"
               ></span>
               <span
-                class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"
+                class="menu-line block bg-white group-hover:bg-gray-700 w-6 h-1 rounded-sm transition-all duration-300 origin-center"
               ></span>
               <span
-                class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"
+                class="menu-line block bg-white group-hover:bg-gray-700 w-6 h-1 rounded-sm transition-all duration-300 origin-center"
               ></span>
             </button>
           </div>
 
           <div
             id="mobile-menu"
-            class="mobile-menu hidden absolute mt-20  inset-0 w-screen h-screen bg-default bg-opacity-80 z-50"
+            class="mobile-menu hidden absolute mt-20 inset-0 w-screen h-screen bg-default bg-opacity-80 z-50"
           >
             <div class="flex flex-col">
-              <div class="accordion-item border-b border-default px-4 bg-gray-200 font-medium">
+              <div
+                class="accordion-item border-b border-default px-4 bg-gray-50 font-medium"
+              >
                 <h4
                   class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
                 >
-                  <span class="text-base md:text-lg text-default">Solution</span>
+                  <span class="text-lg text-default"
+                    >Solution</span
+                  >
                   <img
-                    src="./src/assets/white-half-arrow.svg"
+                    src="./src/assets/gray-half-arrow.svg"
                     alt="arrow"
                     class="w-4 arrow transition-transform duration-300"
                   />
@@ -556,21 +637,23 @@ body{
                 >
                   <a
                     href=""
-                    class="text-sm md:text-base c-underline text-gray-800"
+                    class="text-base c-underline text-gray-800"
                     >Safety Managment</a
                   >
                 </div>
               </div>
 
-              <div class="accordion-item border-b border-default px-4 bg-gray-200 font-medium">
+              <div
+                class="accordion-item border-b border-default px-4 bg-gray-50 font-medium"
+              >
                 <h4
                   class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
                 >
-                  <span class="text-base md:text-lg text-default"
+                  <span class="text-lg text-default"
                     >Consultancy</span
                   >
                   <img
-                    src="./src/assets/white-half-arrow.svg"
+                    src="./src/assets/gray-half-arrow.svg"
                     alt="arrow"
                     class="w-4 arrow transition-transform duration-300"
                   />
@@ -586,13 +669,17 @@ body{
                 </div>
               </div>
 
-              <div class="accordion-item border-b border-default px-4 bg-gray-200 font-medium">
+              <div
+                class="accordion-item border-b border-default px-4 bg-gray-50 font-medium"
+              >
                 <h4
                   class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
                 >
-                  <span class="text-base md:text-lg text-default">Trainings</span>
+                  <span class="text-lg text-default"
+                    >Trainings</span
+                  >
                   <img
-                    src="./src/assets/white-half-arrow.svg"
+                    src="./src/assets/gray-half-arrow.svg"
                     alt="arrow"
                     class="w-4 arrow transition-transform duration-300"
                   />
@@ -609,10 +696,12 @@ body{
                 </div>
               </div>
 
-              <a href="" class="accordion-item border-b border-accent text-white hover:text-accent hover:bg-white px-6 py-2 bg-accent font-medium">
+              <a
+                href=""
+                class="accordion-item border-b border-accent text-white hover:text-accent hover:bg-white px-6 py-2 bg-accent font-medium text-lg"
+              >
                 Connect
               </a>
-
             </div>
           </div>
         </div>
@@ -621,40 +710,81 @@ body{
 
     <main class="flex flex-col">
       <!-- Hero  -->
-      <div class="flex relative z-0 mt-10 lg:mt-0">
-        <img
-          src="./src/assets/hero.webp"
-          alt=""
-          class="w-full h-auto max-h-[80vh] object-cover object-center opacity-80"
-        />
 
-        <span
-          class="absolute bottom-14 sm:bottom-28 left-1 sm:left-6 mx-2 text-accent font-bold text-base sm:text-lg md:text-2xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 bg-black bg-opacity-30 rounded-tr-sm rounded-br-sm rounded-tl-full rounded-bl-full"
-        >
-          Transform your safety culture with our solutions
-        </span>
+      <div class="swiper mySwiper w-full h-full">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide flex justify-center items-center relative z-0"
+          >
+            <img
+              src="./src/assets/hero.webp"
+              alt=""
+              class="w-full h-auto max-h-[80vh] object-cover object-center opacity-80"
+            />
 
-        <a
-          href=""
-          class="absolute bottom-2 sm:bottom-8 left-1 sm:left-10 mx-2 text-white font-bold text-base sm:text-lg md:text-2xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 bg-accent bg-opacity-80 hover:bg-opacity-90 rounded-full"
-        >
-          Explore Services
-        </a>
+            <div class="absolute inset-0 bg-gradient-to-l from-default/100 via-default/70 to-transparent"></div>
+
+
+            <span
+              class="absolute bottom-14 sm:bottom-28 right-1 sm:right-6 mx-2 text-accent font-bold text-base sm:text-lg md:text-2xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 w-60 text-center"
+            >
+              Transform your safety culture with our solutions
+            </span>
+
+            <a
+              href=""
+              class="animate-it--x absolute bottom-2 sm:bottom-8 right-1 sm:right-10 mx-2 text-white font-bold text-base sm:text-lg md:text-2xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 bg-accent bg-opacity-80 hover:bg-opacity-90 rounded-full"
+            >
+              Explore Services
+            </a>
+          </div>
+
+          <div
+            class="swiper-slide flex justify-center items-center relative z-0"
+          >
+            <img
+              src="./src/assets/hero.webp"
+              alt=""
+              class="w-full h-auto max-h-[80vh] object-cover object-center opacity-80"
+            />
+
+
+            <div class="absolute inset-0 bg-gradient-to-l from-default/100 via-default/70 to-transparent"></div>
+
+            <span
+              class="absolute bottom-14 sm:bottom-28 right-1 sm:right-6 mx-2 text-white font-bold text-base sm:text-lg md:text-2xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 w-60 text-center"
+            >
+              Transform your safety culture with our solutions
+            </span>
+            
+          </div>
+        </div>
+        <div class="swiper-button-next text-gray-400"></div>
+        <div class="swiper-button-prev text-gray-400"></div>
+        <div class="swiper-pagination"></div>
       </div>
 
       <!-- services/products  -->
-      <div class="flex flex-col ">
+      <div class="flex flex-col">
+
         <!-- what we do  -->
-        <div class="flex flex-col gap-4  lg:gap-2 text-black pl-2 sm:pl-2 lg:pl-6">
+        <div
+          class="flex flex-col"
+        >
+        <h2
+        class="animate-it-x text-lg sm:text-xl lg:text-3xl font-bold bg-default bg-opacity-80 hover:bg-opacity-100 px-3 py-1.5 w-fit lg:hidden text-white"
+      >
+      What we do
+      </h2>
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center gap-4 lg:gap-2 text-black pl-2 sm:pl-2 lg:pl-6"
+          >
+            <div class="flex flex-col gap-2 sm:w-[47%] px-1 py-3">
+              <h2 class="text-lg sm:text-xl lg:text-3xl font-bold">
+                Transform your safety culture with our solutions
+              </h2>
 
-          <div class="flex flex-col sm:flex-row justify-between items-center gap-5">
-            <div class="flex flex-col gap-2 sm:w-[47%] px-1">
-              
-          <h2 class="text-lg sm:text-xl lg:text-3xl font-bold">
-            Transform your safety culture with our solutions
-          </h2>
-
-              <div class="flex text-sm md:text-base  text-gray-800">
+              <div class="flex text-sm md:text-base text-gray-800">
                 With over 11 years of cross industry experience, we are
                 providing the top-notch EHS Management solutions to the industry
                 for transforming their EHS culture in a sustainable manner.
@@ -663,11 +793,11 @@ body{
               </div>
             </div>
 
-            <div class="flex sm:w-[47%] w-full justify-end relative">
+            <div class="sm:w-[47%] w-full justify-end relative  hidden lg:flex">
               <img
                 src="./src/assets/hero.webp"
                 alt=""
-                class="w-[240px] sm:w-8/12 lg:w-7/12"
+                class="animate-it--x w-[240px] sm:w-8/12 lg:w-7/12"
               />
 
               <span
@@ -681,352 +811,486 @@ body{
 
         <!-- what we Offer  -->
         <div class="flex flex-col gap-4 bg-default text-white">
-          <h2 class="text-lg sm:text-xl lg:text-3xl font-bold  bg-accent bg-opacity-80 hover:bg-opacity-100 px-3 py-1.5 w-fit">What we offer</h2>
+          <h2
+            class="animate-it-x text-lg sm:text-xl lg:text-3xl font-bold bg-accent bg-opacity-80 hover:bg-opacity-100 px-3 py-1.5 w-fit"
+          >
+            What we offer
+          </h2>
 
-          <div class="flex flex-col gap-3 sm:flex-row flex-wrap md:flex-nowrap md:gap-0 justify-between items-center  p-5 sm:p-7 lg:p-8">
-           
-
-            
+          <div
+            class="flex flex-col gap-3 sm:flex-row flex-wrap md:flex-nowrap md:gap-0 justify-around items-center px-5 py-10 sm:p-7 lg:p-8"
+          >
             <div
-              class="relative flex flex-col justify-center items-center sm:justify-start sm:items-start gap-3 w-56 h-60 lg:w-80 lg:h-80 group"
+              class="animate-it-product relative flex flex-col justify-center items-center sm:justify-start sm:items-start gap-3 w-56 h-60 lg:w-80 lg:h-80 group"
             >
               <img
                 src="./src/assets/digital solution.webp"
                 alt=""
-                class="absolute w-full h-full rounded-lg text-center object-cover group-hover:border hover:border-white shadow-sm shadow-white/30   opacity-70 group-hover:opacity-100"
+                class="absolute w-full h-full rounded-lg text-center object-cover group-hover:border hover:border-white shadow-sm shadow-white/30 opacity-40 group-hover:opacity-100"
               />
 
-
-
-              <div class="flex flex-col absolute top-1/2 w-full transform  -translate-y-1/2">
-
-              <span
-                class="absolute left-2  text-white font-bold text-sm sm:text-base lg:text-xl rounded-br-2xl rounded-bl-2xl"
+              <div
+                class="flex flex-col absolute top-1/2 w-full transform -translate-y-1/2"
               >
-              Digital Solutions
-              </span>
+                <span
+                  class="absolute left-2 text-white font-bold text-base lg:text-xl rounded-br-2xl rounded-bl-2xl"
+                >
+                  Digital Solutions
+                </span>
 
-              
-               <!-- Triangle -->
-               <div 
-               class="absolute -top-3 -right-2 w-0 h-0 border-r-[30px] border-r-transparent border-b-[30px] border-accent">
-             </div>
+                <!-- Triangle -->
+                <div
+                  class="absolute -top-3 -right-2 w-0 h-0 border-r-[30px] border-r-transparent border-b-[30px] border-accent"
+                ></div>
 
-              
-              <div class="absolute top-5 w-[104%] h-[2px] bg-accent my-2"></div>
+                <div
+                  class="absolute top-5 w-[104%] h-[2px] bg-accent my-2"
+                ></div>
 
-              <span
-                class="absolute top-8 mx-2 text-gray-100 font-medium text-sm sm:text-base rounded-br-2xl rounded-bl-2xl"
-              >
-              Uplift your safety culture with digital solutions
-              </span>
-
+                <span
+                  class="absolute top-8 mx-2 text-gray-100 font-medium text-sm sm:text-base rounded-br-2xl rounded-bl-2xl"
+                >
+                  Uplift your safety culture with digital solutions
+                </span>
+              </div>
             </div>
-
-              
-            </div>
-       
-            
 
             <div
-              class="relative flex flex-col justify-center items-center sm:justify-start sm:items-start gap-3 w-56 h-60 lg:w-80 lg:h-80 group"
+              class="animate-it-product relative flex flex-col justify-center items-center sm:justify-start sm:items-start gap-3 w-56 h-60 lg:w-80 lg:h-80 group"
             >
               <img
                 src="./src/assets/consultancy.webp"
                 alt=""
-                class="absolute w-full h-full rounded-lg text-center object-cover group-hover:border hover:border-white shadow-sm shadow-white/30   opacity-70 group-hover:opacity-100"
+                class="absolute w-full h-full rounded-lg text-center object-cover group-hover:border hover:border-white shadow-sm shadow-white/30 opacity-40 group-hover:opacity-100"
               />
 
-
-
-              <div class="flex flex-col absolute top-1/2 w-full transform  -translate-y-1/2">
-
-              <span
-                class="absolute left-2  text-white font-bold text-sm sm:text-base lg:text-xl rounded-br-2xl rounded-bl-2xl"
+              <div
+                class="flex flex-col absolute top-1/2 w-full transform -translate-y-1/2"
               >
-                Consultancy
-              </span>
+                <span
+                  class="absolute left-2 text-white font-bold text-sm sm:text-base lg:text-xl rounded-br-2xl rounded-bl-2xl"
+                >
+                  Consultancy
+                </span>
 
-              
-               <!-- Triangle -->
-               <div 
-               class="absolute -top-3 -right-2 w-0 h-0 border-r-[30px] border-r-transparent border-b-[30px] border-accent">
-             </div>
+                <!-- Triangle -->
+                <div
+                  class="absolute -top-3 -right-2 w-0 h-0 border-r-[30px] border-r-transparent border-b-[30px] border-accent"
+                ></div>
 
-              
-              <div class="absolute top-5 w-[104%] h-[2px] bg-accent my-2"></div>
+                <div
+                  class="absolute top-5 w-[104%] h-[2px] bg-accent my-2"
+                ></div>
 
-              <span
-                class="absolute top-8 mx-2 text-gray-100 font-medium text-sm sm:text-base rounded-br-2xl rounded-bl-2xl"
-              >
-                Build a sustainable EHS & ESG culture
-              </span>
-
+                <span
+                  class="absolute top-8 mx-2 text-gray-100 font-medium text-sm sm:text-base rounded-br-2xl rounded-bl-2xl"
+                >
+                  Build a sustainable EHS & ESG culture
+                </span>
+              </div>
             </div>
 
-              
-            </div>
-
-            
-
-
-            
             <div
-              class="relative flex flex-col justify-center items-center sm:justify-start sm:items-start gap-3 w-56 h-60 lg:w-80 lg:h-80 group"
+              class="animate-it-product relative flex flex-col justify-center items-center sm:justify-start sm:items-start gap-3 w-56 h-60 lg:w-80 lg:h-80 group"
             >
               <img
                 src="./src/assets/hse training.webp"
                 alt=""
-                class="absolute w-full h-full rounded-lg text-center object-cover group-hover:border hover:border-white shadow-sm shadow-white/30   opacity-70 group-hover:opacity-100"
+                class="absolute w-full h-full rounded-lg text-center object-cover group-hover:border hover:border-white shadow-sm shadow-white/30 opacity-40 group-hover:opacity-100"
               />
 
-
-
-              <div class="flex flex-col absolute top-1/2 w-full transform  -translate-y-1/2">
-
-              <span
-                class="absolute left-2  text-white font-bold text-sm sm:text-base lg:text-xl rounded-br-2xl rounded-bl-2xl"
+              <div
+                class="flex flex-col absolute top-1/2 w-full transform -translate-y-1/2"
               >
-              HSE Training
-              </span>
+                <span
+                  class="absolute left-2 text-white font-bold text-sm sm:text-base lg:text-xl rounded-br-2xl rounded-bl-2xl"
+                >
+                  HSE Training
+                </span>
 
-              
-               <!-- Triangle -->
-               <div 
-               class="absolute -top-3 -right-2 w-0 h-0 border-r-[30px] border-r-transparent border-b-[30px] border-accent">
-             </div>
+                <!-- Triangle -->
+                <div
+                  class="absolute -top-3 -right-2 w-0 h-0 border-r-[30px] border-r-transparent border-b-[30px] border-accent"
+                ></div>
 
-              
-              <div class="absolute top-5 w-[104%] h-[2px] bg-accent my-2"></div>
+                <div
+                  class="absolute top-5 w-[104%] h-[2px] bg-accent my-2"
+                ></div>
 
-              <span
-                class="absolute top-8 mx-2 text-gray-100 font-medium text-sm sm:text-base rounded-br-2xl rounded-bl-2xl"
-              >
-              Enhance the HSE capabilities of your team
-              </span>
-
+                <span
+                  class="absolute top-8 mx-2 text-gray-100 font-medium text-sm sm:text-base rounded-br-2xl rounded-bl-2xl"
+                >
+                  Enhance the HSE capabilities of your team
+                </span>
+              </div>
             </div>
-
-              
-            </div>
-       
-
-
-
-
           </div>
         </div>
 
         <!-- How We do  -->
         <div class="flex flex-col gap-4">
           <div class="flex justify-end items-end w-full">
-          <h2 class="text-lg sm:text-xl lg:text-3xl font-bold  bg-accent text-white bg-opacity-80 hover:bg-opacity-100 px-3 py-1.5 w-fit text-end">How We do</h2>
-        </div>
-
+            <h2
+              class="animate-it--x text-lg sm:text-xl lg:text-3xl font-bold bg-accent text-white bg-opacity-80 hover:bg-opacity-100 px-3 py-1.5 w-fit text-end"
+            >
+              How We do
+            </h2>
+          </div>
 
           <div class="flex gap-4 flex-col text-black">
+            <h5 class="text-xl font-semibold text-center">
+              Take your safety culture to the next level with
+            </h5>
 
-          <h5 class="text-xl font-semibold text-center">
-            Take your safety culture to the next level with
-          </h5>
+            <div class="flex justify-center items-center">
+              <img src="./src/assets/Empower Logo.svg" alt="" class="w-60" />
+            </div>
 
-          <div class="flex justify-center items-center">
-            <img src="./src/assets/Empower Logo.svg" alt="" class="w-60" />
+            <div class="animate-it--x flex justify-center items-center mt-4">
+              <img src="./src/assets/services.webp" alt="" class="w-7/12" />
+            </div>
           </div>
-
-          <div class="flex justify-center items-center mt-4">
-            <img src="./src/assets/services.webp" alt="" class="w-7/12" />
-          </div>
-        </div>
         </div>
       </div>
 
       <!-- CTA  -->
-       <div class="flex flex-col gap-4 px-4 mt-20 sm:mt-36 lg:mt-40">
-        
-
+      <div class="flex flex-col gap-4 px-4 mt-20 sm:mt-36 lg:mt-40">
         <div class="flex relative justify-center items-center">
+          <div
+            class="absolute flex items-center justify-center flex-col gap-2 p-1 sm:p-6 w-fit bg-white rounded-full"
+          >
+            <h4
+              class="text-lg sm:text-xl lg:text-3xl font-bold text-center w-5/6 sm:w-auto"
+            >
+              Take your safety culture to the next level
+            </h4>
 
-        <div class="absolute flex items-center justify-center flex-col  gap-2 p-1 sm:p-6 w-fit bg-white rounded-full">
-        <h4 class="text-lg sm:text-xl lg:text-3xl font-bold text-center w-5/6 sm:w-auto">Take your safety culture to the next level</h4>
+            <a
+              href=""
+              class="animate-it-y text-white hover:text-accent w-fit font-bold text-base sm:text-lg md:text-2xl px-3 py-1.5 sm:px-4 sm:py-3 bg-accent border border-accent hover:bg-white rounded-full"
+            >
+              Explore Services
+            </a>
+          </div>
+        </div>
 
-        
-        <a
-          href=""
-          class="text-white hover:text-accent w-fit font-bold text-base sm:text-lg md:text-2xl px-3 py-1.5 sm:px-4 sm:py-3 bg-accent border border-accent hover:bg-white rounded-full"
-        >
-          Explore Services
-        </a>
-
-      </div>
-    </div>
-
-      <div class="flex">
-        <img
-        src="./src/assets/banner.webp"
-        alt=""
-        class="w-full h-auto max-h-[60vh] object-cover object-center rounded-lg"
-      />
-      </div>
-       </div>
-
-       <!-- trusted by  -->
-
-       
-
-
-
-       <div class="flex flex-col gap-3 py-10">
-        <h4 class="text-lg sm:text-xl lg:text-3xl font-bold text-center">Our solutions are implemented at</h4>
-       <div class="marquee flex">
-        <section class="flex marquee-content">
-          <a class="marquee-block"><img class="marquee-logo" src="./src/assets/Picture11.webp"  class="w-16 sm:w-32 lg:w-40 h-auto object-contain" /></a>
-          <a class="marquee-block"><img class="marquee-logo" src="./src/assets/Picture12.webp" class="w-16 sm:w-32 lg:w-40 h-auto object-contain" /></a>
-          <a class="marquee-block"><img class="marquee-logo" src="./src/assets/Picture13.webp" class="w-16 sm:w-32 lg:w-40 h-auto object-contain" /></a>
-          <a class="marquee-block"><img class="marquee-logo" src="./src/assets/Picture14.webp" class="w-16 sm:w-32 lg:w-40 h-auto object-contain" /></a>
-          <a class="marquee-block"><img class="marquee-logo" src="./src/assets/Picture15.webp" class="w-16 sm:w-32 lg:w-40 h-auto object-contain" /></a>
-          <a class="marquee-block"><img class="marquee-logo" src="./src/assets/Picture16.webp" class="w-16 sm:w-32 lg:w-40 h-auto object-contain" /></a>
-          <a class="marquee-block"><img class="marquee-logo" src="./src/assets/Picture17.webp" class="w-16 sm:w-32 lg:w-40 h-auto object-contain" /></a>
-        </section>
-        <section class="flex marquee-content">
-          
-          <a class="marquee-block"><img class="marquee-logo" src="./src/assets/Picture11.webp" class="w-16 sm:w-32 lg:w-40 h-auto object-contain" /></a>
-          <a class="marquee-block"><img class="marquee-logo" src="./src/assets/Picture12.webp" class="w-16 sm:w-32 lg:w-40 h-auto object-contain" /></a>
-          <a class="marquee-block"><img class="marquee-logo" src="./src/assets/Picture13.webp" class="w-16 sm:w-32 lg:w-40 h-auto object-contain" /></a>
-          <a class="marquee-block"><img class="marquee-logo" src="./src/assets/Picture14.webp" class="w-16 sm:w-32 lg:w-40 h-auto object-contain" /></a>
-          <a class="marquee-block"><img class="marquee-logo" src="./src/assets/Picture15.webp" class="w-16 sm:w-32 lg:w-40 h-auto object-contain" /></a>
-          <a class="marquee-block"><img class="marquee-logo" src="./src/assets/Picture16.webp" class="w-16 sm:w-32 lg:w-40 h-auto object-contain" /></a>
-          <a class="marquee-block"><img class="marquee-logo" src="./src/assets/Picture17.webp" class="w-16 sm:w-32 lg:w-40 h-auto object-contain" /></a>
-        </section>
+        <div class="flex">
+          <img
+            src="./src/assets/banner.webp"
+            alt=""
+            class="w-full h-auto max-h-[60vh] object-cover object-center rounded-lg"
+          />
+        </div>
       </div>
 
-    </div>
+      <!-- trusted by  -->
 
-
+      <div class="animate-it-y flex flex-col gap-3 py-10">
+        <h4 class="text-lg sm:text-xl lg:text-3xl font-bold text-center">
+          Our solutions are implemented at
+        </h4>
+        <div class="marquee flex">
+          <section class="flex marquee-content">
+            <a class="marquee-block"
+              ><img
+                class="marquee-logo"
+                src="./src/assets/Picture11.webp"
+                class="w-16 sm:w-32 lg:w-40 h-auto object-contain"
+            /></a>
+            <a class="marquee-block"
+              ><img
+                class="marquee-logo"
+                src="./src/assets/Picture12.webp"
+                class="w-16 sm:w-32 lg:w-40 h-auto object-contain"
+            /></a>
+            <a class="marquee-block"
+              ><img
+                class="marquee-logo"
+                src="./src/assets/Picture13.webp"
+                class="w-16 sm:w-32 lg:w-40 h-auto object-contain"
+            /></a>
+            <a class="marquee-block"
+              ><img
+                class="marquee-logo"
+                src="./src/assets/Picture14.webp"
+                class="w-16 sm:w-32 lg:w-40 h-auto object-contain"
+            /></a>
+            <a class="marquee-block"
+              ><img
+                class="marquee-logo"
+                src="./src/assets/Picture15.webp"
+                class="w-16 sm:w-32 lg:w-40 h-auto object-contain"
+            /></a>
+            <a class="marquee-block"
+              ><img
+                class="marquee-logo"
+                src="./src/assets/Picture16.webp"
+                class="w-16 sm:w-32 lg:w-40 h-auto object-contain"
+            /></a>
+            <a class="marquee-block"
+              ><img
+                class="marquee-logo"
+                src="./src/assets/Picture17.webp"
+                class="w-16 sm:w-32 lg:w-40 h-auto object-contain"
+            /></a>
+          </section>
+          <section class="flex marquee-content">
+            <a class="marquee-block"
+              ><img
+                class="marquee-logo"
+                src="./src/assets/Picture11.webp"
+                class="w-16 sm:w-32 lg:w-40 h-auto object-contain"
+            /></a>
+            <a class="marquee-block"
+              ><img
+                class="marquee-logo"
+                src="./src/assets/Picture12.webp"
+                class="w-16 sm:w-32 lg:w-40 h-auto object-contain"
+            /></a>
+            <a class="marquee-block"
+              ><img
+                class="marquee-logo"
+                src="./src/assets/Picture13.webp"
+                class="w-16 sm:w-32 lg:w-40 h-auto object-contain"
+            /></a>
+            <a class="marquee-block"
+              ><img
+                class="marquee-logo"
+                src="./src/assets/Picture14.webp"
+                class="w-16 sm:w-32 lg:w-40 h-auto object-contain"
+            /></a>
+            <a class="marquee-block"
+              ><img
+                class="marquee-logo"
+                src="./src/assets/Picture15.webp"
+                class="w-16 sm:w-32 lg:w-40 h-auto object-contain"
+            /></a>
+            <a class="marquee-block"
+              ><img
+                class="marquee-logo"
+                src="./src/assets/Picture16.webp"
+                class="w-16 sm:w-32 lg:w-40 h-auto object-contain"
+            /></a>
+            <a class="marquee-block"
+              ><img
+                class="marquee-logo"
+                src="./src/assets/Picture17.webp"
+                class="w-16 sm:w-32 lg:w-40 h-auto object-contain"
+            /></a>
+          </section>
+        </div>
+      </div>
     </main>
 
-  
+    <!-- hero carousel  -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        cssMode: true,
+        loop: true, // Enable infinite loop
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            // Restrict pagination to two dots: one for the first half and one for the second half
+            return index === 0 || index === Math.floor(this.slides.length / 2)
+              ? `<span class="${className}"></span>`
+              : "";
+          },
+        },
+        mousewheel: true,
+        keyboard: true,
+        autoplay: {
+          delay: 5000, // 5-second delay between slides
+          disableOnInteraction: false, // Continue autoplay after user interaction
+        },
+        breakpoints: {
+          768: {
+            autoplay: false, // Disable autoplay on screens wider than 768px
+          },
+        },
+      });
+    
+      // Ensure that autoplay settings are re-evaluated on window resize
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 768) {
+          if (swiper.autoplay.running) {
+            swiper.autoplay.stop();
+          }
+          swiper.autoplay.disable();
+        } else {
+          if (!swiper.autoplay.running) {
+            swiper.autoplay.start();
+          }
+          swiper.autoplay.enable();
+        }
+      });
+    </script>
+    
 
-    <footer class="flex flex-col mt-auto gap-1.5 sm:gap-3 bg-default text-white px-2 sm:px-3 lg:px-4 py-1.5 sm:py-3">
-
+    <footer
+      class="flex flex-col mt-auto gap-1.5 sm:gap-3 bg-default text-white px-2 sm:px-3 lg:px-4 py-1.5 sm:py-3"
+    >
       <!-- Logo social  -->
-      <div class="flex border-b border-gray-300 w-full justify-between py-1.5 px-1 md:py-2 md:px-4">
+      <div
+        class="flex border-b border-gray-300 w-full justify-between py-1.5 px-1 md:py-2 md:px-4"
+      >
         <!-- logo  -->
         <div class="flex">
-          <img src="./src/assets/logo.webp" alt="" class="w-20 sm:w-24">
+          <img src="./src/assets/logo.webp" alt="" class="w-20 sm:w-24" />
         </div>
 
         <!-- socials  -->
         <div class="flex gap-4">
-          <img src="./src/assets/whatsapp.svg" alt="" class="w-5 sm:w-7 ease-in-out transform scale-100 hover:scale-[1.03] duration-300">
-          <img src="./src/assets/linkedin.svg" alt="" class="w-5 sm:w-7 ease-in-out transform scale-100 hover:scale-[1.03] duration-300">
-          <img src="./src/assets/email.svg" alt="" class="w-5 sm:w-7 ease-in-out transform scale-100 hover:scale-[1.03] duration-300">
+          <img
+            src="./src/assets/whatsapp.svg"
+            alt=""
+            class="w-5 sm:w-7 ease-in-out transform scale-100 hover:scale-[1.03] duration-300"
+          />
+          <img
+            src="./src/assets/linkedin.svg"
+            alt=""
+            class="w-5 sm:w-7 ease-in-out transform scale-100 hover:scale-[1.03] duration-300"
+          />
+          <img
+            src="./src/assets/email.svg"
+            alt=""
+            class="w-5 sm:w-7 ease-in-out transform scale-100 hover:scale-[1.03] duration-300"
+          />
         </div>
-
       </div>
 
       <!-- about  -->
-        <div class="flex gap-5 flex-wrap justify-between border-b border-gray-300 w-full py-1.5 px-1 md:py-2 md:px-4">
-          
-          <!-- Digital soultions  -->
-          <div class="flex flex-col text-white gap-3">
-            <h6 class="text-base lg:text-xl font-medium">Digital Solutions</h6>
-            <div class="flex gap-2 flex-col">
-              <h2 class="font-semibold text-sm">Web Applications</h2>
-              <ul class="list-disc ml-6 text-sm text-gray-200">
-                <li>HSE Reporting and Communication</li>
-                <li>HSE JSA</li>
-                <li>HSE Motion Tracking Web App</li>
-              </ul>
-            </div>
+      <div
+        class="flex gap-5 flex-wrap justify-between border-b border-gray-300 w-full py-1.5 px-1 md:py-2 md:px-4"
+      >
+        <!-- Digital soultions  -->
+        <div class="flex flex-col text-white gap-3">
+          <h6 class="text-base lg:text-xl font-medium">Digital Solutions</h6>
+          <div class="flex gap-2 flex-col">
+            <h2 class="font-semibold text-sm">Web Applications</h2>
+            <ul class="list-disc ml-6 text-sm text-gray-200">
+              <li>HSE Reporting and Communication</li>
+              <li>HSE JSA</li>
+              <li>HSE Motion Tracking Web App</li>
+            </ul>
           </div>
-
-          <!-- Consultancy  -->
-          <div class="flex flex-col text-white gap-3">
-            <h6 class="text-base lg:text-xl font-medium">Consultancy</h6>
-            <div class="flex gap-2 flex-col">
-              <h2 class="font-semibold text-sm">abc</h2>
-              <ul class="list-disc ml-6 text-sm text-gray-200">
-                <li>abc</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Trainings  -->
-          <div class="flex flex-col text-white gap-3">
-            <h6 class="text-base lg:text-xl font-medium">Trainings</h6>
-            <div class="flex gap-2 flex-col">
-              <h2 class="font-semibold text-sm">abc</h2>
-              <ul class="list-disc ml-6 text-sm text-gray-200">
-                <li>abcv</li>
-              </ul>
-            </div>
-          </div>
-
-
         </div>
 
-        <!-- copyright  -->
-         <div class="flex flex-col md:flex-row gap-4 md:justify-between py-1.5 px-1 md:py-2 md:px-4">
-
-          <!-- 1st columns -->
-          <div class="flex flex-col gap-1 w-full md:w-[48%]">
-            <h6 class="text-base">EHS & ESG Consultants</h6>
-            <p class="text-xs text-gray-200">Republication or redistribution of EHS & ESG Consultants content or logo, including by framing or similar means, is prohibited without the prior written consent of EHS & ESG Consultants.</p>
+        <!-- Consultancy  -->
+        <div class="flex flex-col text-white gap-3">
+          <h6 class="text-base lg:text-xl font-medium">Consultancy</h6>
+          <div class="flex gap-2 flex-col">
+            <h2 class="font-semibold text-sm">abc</h2>
+            <ul class="list-disc ml-6 text-sm text-gray-200">
+              <li>abc</li>
+            </ul>
           </div>
+        </div>
 
-          <!-- 2nd column -->
-          <div class="block w-full md:w-[48%]">
-            <div class="flex justify-end gap-1">
-              
-            <a href="" class="relative pr-2 lg:pr-4 lg:mr-4 text-sm lg:text-base">
+        <!-- Trainings  -->
+        <div class="flex flex-col text-white gap-3">
+          <h6 class="text-base lg:text-xl font-medium">Trainings</h6>
+          <div class="flex gap-2 flex-col">
+            <h2 class="font-semibold text-sm">abc</h2>
+            <ul class="list-disc ml-6 text-sm text-gray-200">
+              <li>abcv</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- copyright  -->
+      <div
+        class="flex flex-col md:flex-row gap-4 md:justify-between py-1.5 px-1 md:py-2 md:px-4"
+      >
+        <!-- 1st columns -->
+        <div class="flex flex-col gap-1 w-full md:w-[48%]">
+          <h6 class="text-base">EHS & ESG Consultants</h6>
+          <p class="text-xs text-gray-200">
+            Republication or redistribution of EHS & ESG Consultants content or
+            logo, including by framing or similar means, is prohibited without
+            the prior written consent of EHS & ESG Consultants.
+          </p>
+        </div>
+
+        <!-- 2nd column -->
+        <div class="block w-full md:w-[48%]">
+          <div class="flex justify-end gap-1">
+            <a
+              href=""
+              class="relative pr-2 lg:pr-4 lg:mr-4 text-sm lg:text-base"
+            >
               Privacy
-              <span class="absolute right-0 top-1/2 h-4 w-px bg-white -translate-y-1/2"></span>
+              <span
+                class="absolute right-0 top-1/2 h-4 w-px bg-white -translate-y-1/2"
+              ></span>
             </a>
-            <a href="" class="relative pr-2 lg:pr-4 lg:mr-4 text-sm lg:text-base">
+            <a
+              href=""
+              class="relative pr-2 lg:pr-4 lg:mr-4 text-sm lg:text-base"
+            >
               Cookie Policy
-              <span class="absolute right-0 top-1/2 h-4 w-px bg-white -translate-y-1/2"></span>
+              <span
+                class="absolute right-0 top-1/2 h-4 w-px bg-white -translate-y-1/2"
+              ></span>
             </a>
-            <a href="" class="relative pr-2 lg:pr-4 lg:mr-4 text-sm lg:text-base">
+            <a
+              href=""
+              class="relative pr-2 lg:pr-4 lg:mr-4 text-sm lg:text-base"
+            >
               EHS & ESG Consultants
             </a>
           </div>
-          </div>
-
-         </div>
-
+        </div>
+      </div>
     </footer>
 
     <script>
 
+      // header 
 
 
+      document.addEventListener("DOMContentLoaded", function () {
+      const header = document.querySelector(".header"); // Target the header
+      const threshold = 80; // Change the background when scrolled down 80px or more
 
-const parents = document.querySelectorAll(".dropdown-parent");
-const dropdowns = document.querySelectorAll(".dropdown");
-
-parents.forEach((parent, index) => {
-  const dropdown = dropdowns[index]; // Match the parent with its corresponding dropdown
-  let timeoutID;
-
-  parent.addEventListener("mouseenter", () => {
-    clearTimeout(timeoutID);
-    setTimeout(() => dropdown.classList.remove("hidden"), 100);
-  });
-
-  parent.addEventListener("mouseleave", () => {
-    timeoutID = setTimeout(() => dropdown.classList.add("hidden"), 100);
-  });
-
-  dropdown.addEventListener("mouseenter", () => clearTimeout(timeoutID));
-  dropdown.addEventListener("mouseleave", () => {
-    timeoutID = setTimeout(() => dropdown.classList.add("hidden"), 100);
-  });
-});
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > threshold) {
+          header.classList.remove( "bg-opacity-60"); 
+        } else {
+          header.classList.add("bg-opacity-60"); 
+        }
+      });
+    });
 
 
 
 
+      const parents = document.querySelectorAll(".dropdown-parent");
+      const dropdowns = document.querySelectorAll(".dropdown");
+
+      parents.forEach((parent, index) => {
+        const dropdown = dropdowns[index]; // Match the parent with its corresponding dropdown
+        let timeoutID;
+
+        parent.addEventListener("mouseenter", () => {
+          clearTimeout(timeoutID);
+          setTimeout(() => dropdown.classList.remove("hidden"), 100);
+        });
+
+        parent.addEventListener("mouseleave", () => {
+          timeoutID = setTimeout(() => dropdown.classList.add("hidden"), 100);
+        });
+
+        dropdown.addEventListener("mouseenter", () => clearTimeout(timeoutID));
+        dropdown.addEventListener("mouseleave", () => {
+          timeoutID = setTimeout(() => dropdown.classList.add("hidden"), 100);
+        });
+      });
 
       const hamburgerMenu = document.getElementById("hamburger-menu");
       const mobileMenu = document.getElementById("mobile-menu");
@@ -1083,6 +1347,25 @@ parents.forEach((parent, index) => {
           arrow.classList.toggle("rotate-180");
         });
       });
+
+      // Select all elements with animation classes
+      const sections = document.querySelectorAll(
+        ".animate-it-y, .animate-it--x, .animate-it-x, .animate-it-product, .animate-text"
+      );
+
+      const handleScroll = () => {
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          // Check if the element is in the viewport
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            section.classList.add("visible"); // Add "visible" class
+          }
+        });
+      };
+
+      // Add scroll event listener
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // Run on page load to check initial visibility
     </script>
   </body>
 </html>
