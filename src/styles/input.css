@@ -2,3 +2,173 @@
 @tailwind components;
 @tailwind utilities;
 /* npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch */
+
+
+body {
+    overflow-x: hidden;
+  }
+
+  /* Tailwind classes used in the HTML */
+
+  /* For mobile menu sliding animation */
+  /* Mobile Navigation */
+  /* #mobile-menu {
+    transition: top 1s ease-in-out;
+  }
+
+  #mobile-menu.active {
+    top: 0;
+  } */
+
+  /* Active State for Cross Animation */
+  #hamburger-menu.active .menu-line:nth-child(1) {
+    transform: translateY(0.625rem) rotate(45deg); /* Top bar */
+  }
+
+  #hamburger-menu.active .menu-line:nth-child(2) {
+    opacity: 0; /* Middle bar disappears */
+  }
+
+  #hamburger-menu.active .menu-line:nth-child(3) {
+    transform: translateY(-0.625rem) rotate(-45deg); /* Bottom bar */
+  }
+
+  /* Optional: Change hover color if needed */
+  .hamburger-btn:hover .menu-line {
+    background-color: #1e3271; /* Darker blue on hover */
+  }
+
+  .marquee {
+    display: flex;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    min-width: 100%;
+  }
+  .marquee:hover .marquee-content {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+  .marquee:hover .marquee-logo {
+    filter: grayscale(1) contrast(0) blur(1px);
+  }
+  .marquee-logo {
+    filter: grayscale(1) contrast(0);
+  }
+
+  /* .marquee-block {
+    padding-left: 8rem;
+    display: flex;
+    cursor: pointer;
+  } */
+  .marquee-block:hover .marquee-logo {
+    filter: unset;
+  }
+
+  .marquee-content {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    -webkit-animation: slide-left 22s linear infinite;
+    animation: slide-left 22s linear infinite;
+  }
+  @-webkit-keyframes slide-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes slide-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-it-y {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.6s ease;
+  }
+
+  .animate-it-y.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animate-it--x {
+    opacity: 0;
+    transform: translateX(-90px);
+    transition: all 0.6s ease;
+  }
+  .animate-it--x.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .animate-it-x {
+    opacity: 0;
+    transform: translateX(90px);
+    transition: all 0.6s ease;
+  }
+  .animate-it-x.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Initial state for all child elements */
+  .animate-it-product {
+    opacity: 0;
+    transform: translateX(-90px);
+    transition: all 0.5s ease; /* Base transition */
+  }
+
+  /* When the 'visible' class is added, the element animates */
+  .animate-it-product.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Add staggered animation using nth-child */
+  .animate-it-product:nth-child(1) {
+    transition-delay: 0.1s; /* First child animates after 0.3s */
+  }
+
+  .animate-it-product:nth-child(2) {
+    transition-delay: 0.2s; /* Second child animates after 0.6s */
+  }
+
+  .animate-it-product:nth-child(3) {
+    transition-delay: 0.2s; /* Third child animates after 0.9s */
+  }
+
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #f15f5c;
+    background-color: transparent;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #f15f5c;
+  }
+
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    font-size: 26px;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after {
+    font-size: 26px;
+  }
+  @media (max-width: 768px) {
+    .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    }
+}
