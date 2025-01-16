@@ -1,0 +1,263 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/output.css" rel="stylesheet" />
+    <title>Book Demo</title>
+    <style>
+        .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+.carousel {
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100vw;
+    height: 100vh;
+}
+    </style>
+</head>
+<body>
+    <main class="min-h-screen bg-default ">
+      <div class="flex justify-center items-center">
+        <div
+          class="min-h-screen flex flex-col gap-3 justify-center items-center flex-shrink-0 w-full lg:w-1/2"
+        >
+          <div class="flex mt-2">
+            <img
+              src="../assets/Empower Logo.svg"
+              class="w-48 sm:w-64"
+              alt=""
+            />
+          </div>
+          <div class="flex gap-4 justify-center w-11/12 lg:w-96 text-white">
+            <div class="flex text-base  lg:text-lg">
+              <h2 class="text-sm sm:text-base font-semibold">Fill this Form to access the DEMO</h2>
+            </div>
+          </div>
+
+          <!-- FORM  -->
+          <div class="flex flex-col text-white w-full lg:w-auto">
+            
+            <form
+            action=""
+            method="post"
+            class="flex justify-center items-center flex-col gap-3 sm:gap-4 w-full lg:w-auto"
+          >
+          
+            <div
+              class="flex flex-col items-center gap-3 sm:gap-4 my-4 text-sm sm:text-base w-full"
+            >
+                <div class="name w-11/12 lg:w-auto">
+                  <input
+                    type="name"
+                    class="text-black px-2 py-2 sm:py-2 text-sm sm:text-base rounded-lg w-full lg:w-96"
+                    placeholder="Name"
+                  />
+                </div>
+                
+
+                <div class="designation w-11/12 lg:w-auto">
+                  <input
+                    type="name"
+                    class="text-black px-2 py-2 sm:py-2 text-sm sm:text-base rounded-lg w-full lg:w-96"
+                    placeholder="Designation"
+                  />
+                </div>
+
+                <div class="companyName w-11/12 lg:w-auto">
+                  <input
+                    type="name"
+                    class="text-black px-2 py-2 sm:py-2 text-sm sm:text-base rounded-lg w-full lg:w-96"
+                    placeholder="Company Name"
+                  />
+                </div>
+
+                <div class="country w-11/12 lg:w-auto">
+                  <input
+                    type="name"
+                    class="text-black px-2 py-2 sm:py-2 text-sm sm:text-base rounded-lg w-full lg:w-96"
+                    placeholder="Country/Region"
+                  />
+                </div>
+
+                
+                <div class="email w-11/12 lg:w-auto">
+                  <input
+                    type="email"
+                    class="text-black px-2 py-2 sm:py-2 text-sm sm:text-base rounded-lg w-full lg:w-96"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="contact w-11/12 lg:w-auto">
+                  <input
+                    type="number"
+                    class="text-black px-2 py-2 sm:py-2 text-sm sm:text-base rounded-lg w-full lg:w-96"
+                    placeholder="Enter contact number"
+                  />
+                </div>
+
+                
+                <div class="country w-11/12 lg:w-auto">
+                    <textarea name="" id="" rows="3"  class="text-black px-2 py-2 sm:py-2 text-sm sm:text-base rounded-lg w-full lg:w-96" placeholder="Let us know, if you have any query"></textarea>
+                  </div>
+
+                <!-- Submit button -->
+                <div class="flex mt-2 flex-col items-center gap-2 w-11/12">
+
+                  <!-- Submit button  -->
+
+                  <button
+                    type="submit"
+                    class="px-2 py-2 border border-white bg-white text-default hover:bg-default hover:text-white p-1 w-full lg:w-96 rounded-full shadow-sm shadow-white/20 text-base sm:text-lg font-medium"
+                  >
+                    Submit
+                  </button>
+                  <!-- Error message  -->
+                  <div
+                    class="hidden flex flex-col gap-1 bg-gray-300 text-red-600 p-2 rounded-lg w-full lg:w-96 mt-2 items-center"
+                  >
+                    <span class="text-xs sm:text-sm font-semibold"
+                      >An error has occurred.</span
+                    >
+                    <span class="text-xs sm:text-sm font-semibold"
+                      >Please fill the form Again</span
+                    >
+                  </div>
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+             <!-- Developed and designed by  -->
+             <div class="flex flex-col mt-auto items-center">
+              <div class="flex">
+                <span class="text-white text-sm sm:text-base font-medium"
+                  >Designed and Developed by</span
+                >
+              </div>
+              <div class="flex  gap-2">
+              <a href=""  class="flex">
+                <img
+                  src="../assets/logo.webp"
+                  class="w-32 sm:w-40"
+                  alt="logo"
+                />
+              </a>
+            </div>
+            </div>
+        </div>
+
+        <!-- carousel div  -->
+        <div class="hidden lg:flex sticky top-0 w-full pr-1 pt-1 pb-1 mb-auto">
+          <!-- Carousal  -->
+          <div class="flex w-full overflow-hidden relative rounded">
+            <div class="carousel flex">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <img
+                  src="../assets/banner 2.webp"
+                  class="object-cover object-center"
+                  alt="Slide 1"
+                />
+                <div
+                  class="text-overlay absolute bottom-0 left-0 right-0 px-4 text-start text-white py-1"
+                >
+                  <h2 class="text-lg font-semibold">Welcome!</h2>
+                  <p class="text-base">
+                    Follow emergency procedures and know your exits.<br />Always
+                    check your surroundings before starting any task.
+                  </p>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <img
+                  src="../assets/banner 3.webp"
+                  class="object-cover object-center"
+                  alt="Slide 2"
+                />
+                <div
+                  class="text-overlay absolute bottom-0 left-0 right-0 px-4 text-start text-white py-1"
+                >
+                  <h2 class="text-lg font-semibold">Welcome!</h2>
+                  <p class="text-base">
+                    Never bypass safety features or disable alarms.<br />Use
+                    tools and machinery only if properly trained.
+                  </p>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <img
+                  src="../assets/what we do.webp"
+                  class="object-cover object-center"
+                  alt="Slide 3"
+                />
+                <div
+                  class="text-overlay absolute bottom-0 left-0 right-0 px-4 text-start text-white py-1"
+                >
+                  <h2 class="text-lg font-semibold">Welcome!</h2>
+                  <p class="text-base">
+                    Keep walkways clear of obstacles to avoid trips and
+                    falls.<br />Stay within designated safety zones and avoid
+                    distractions.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Carousel controls -->
+            <div
+              class="left absolute bottom-4 right-12 text-white px-1 z-50 cursor-pointer"
+            >
+              <img src="../assets/Arrow left.svg" alt="" class="w-8" />
+            </div>
+            <div
+              class="right absolute bottom-4 right-2 text-white px-1 z-50 cursor-pointer"
+            >
+              <img src="../assets/Arrow right (1).svg" alt="" class="w-8" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <script>
+      const carousel = document.querySelector(".carousel");
+      const slides = document.querySelectorAll(".slide");
+      const leftButton = document.querySelector(".left");
+      const rightButton = document.querySelector(".right");
+
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        carousel.style.transform = `translateX(-${
+          currentIndex * slides[0].clientWidth
+        }px)`;
+      }
+
+      // Move left
+      leftButton.addEventListener("click", () => {
+        if (currentIndex > 0) currentIndex--;
+        updateCarousel();
+      });
+
+      // Move right
+      rightButton.addEventListener("click", () => {
+        if (currentIndex < slides.length - 1) currentIndex++;
+        updateCarousel();
+      });
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+      }, 3000);
+
+    </script>
+  </body>
+</html>
