@@ -172,3 +172,21 @@ body {
     height: 10px;
     }
 }
+
+.button-slider {
+  /* width: 100%; */
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.button-slider::-webkit-scrollbar {
+  display: none; 
+} 
+
+
+
+
+
+
