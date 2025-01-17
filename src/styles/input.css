@@ -7,7 +7,13 @@
 body {
     overflow-x: hidden;
   }
-
+  h1, h2, h3, h4, h5, h6, a, button, label {
+    font-family:  Arial, Helvetica, sans-serif;
+  }
+  p, span, li, input, textarea{
+    font-family: 'Verdana', sans-serif; /* Clean and modern sans-serif font */
+  }
+  
   /* Tailwind classes used in the HTML */
 
   /* For mobile menu sliding animation */
@@ -185,8 +191,10 @@ body {
   display: none; 
 } 
 
+.bg-accent-active{
+  background-color: #F15F5C;
+}
 
-
-
-
-
+.border-accent-active{
+  border: 1px solid #F15F5C;
+}

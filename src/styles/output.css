@@ -776,10 +776,6 @@ video {
   margin-top: auto;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .block {
   display: block;
 }
@@ -804,8 +800,8 @@ video {
   height: 0.25rem;
 }
 
-.h-28 {
-  height: 7rem;
+.h-14 {
+  height: 3.5rem;
 }
 
 .h-4 {
@@ -824,8 +820,12 @@ video {
   height: 2px;
 }
 
-.h-\[70vh\] {
-  height: 70vh;
+.h-\[75vh\] {
+  height: 75vh;
+}
+
+.h-\[80vh\] {
+  height: 80vh;
 }
 
 .h-\[85vh\] {
@@ -888,16 +888,16 @@ video {
   width: 8rem;
 }
 
-.w-36 {
-  width: 9rem;
-}
-
 .w-4 {
   width: 1rem;
 }
 
 .w-40 {
   width: 10rem;
+}
+
+.w-44 {
+  width: 11rem;
 }
 
 .w-48 {
@@ -910,6 +910,10 @@ video {
 
 .w-5\/6 {
   width: 83.333333%;
+}
+
+.w-52 {
+  width: 13rem;
 }
 
 .w-56 {
@@ -938,14 +942,6 @@ video {
 
 .w-\[240px\] {
   width: 240px;
-}
-
-.w-\[47\%\] {
-  width: 47%;
-}
-
-.w-\[48\%\] {
-  width: 48%;
 }
 
 .w-fit {
@@ -1343,6 +1339,11 @@ video {
   padding-right: 1.5rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -1381,11 +1382,6 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .pb-1 {
@@ -1472,6 +1468,10 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.leading-8 {
+  line-height: 2rem;
 }
 
 .tracking-wide {
@@ -1654,6 +1654,15 @@ video {
 
 body {
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, a, button, label {
+  font-family:  Arial, Helvetica, sans-serif;
+}
+
+p, span, li, input, textarea{
+  font-family: 'Verdana', sans-serif;
+  /* Clean and modern sans-serif font */
 }
 
 /* Tailwind classes used in the HTML */
@@ -1849,6 +1858,14 @@ body {
   display: none;
 }
 
+.bg-accent-active{
+  background-color: #F15F5C;
+}
+
+.border-accent-active{
+  border: 1px solid #F15F5C;
+}
+
 .before\:mr-2::before {
   content: var(--tw-content);
   margin-right: 0.5rem;
@@ -1974,12 +1991,12 @@ body {
 }
 
 @media (min-width: 640px) {
-  .sm\:mt-24 {
-    margin-top: 6rem;
-  }
-
   .sm\:mt-1 {
     margin-top: 0.25rem;
+  }
+
+  .sm\:mt-24 {
+    margin-top: 6rem;
   }
 
   .sm\:w-10\/12 {
@@ -1998,6 +2015,14 @@ body {
     width: 10rem;
   }
 
+  .sm\:w-52 {
+    width: 13rem;
+  }
+
+  .sm\:w-60 {
+    width: 15rem;
+  }
+
   .sm\:w-64 {
     width: 16rem;
   }
@@ -2014,24 +2039,28 @@ body {
     width: 66.666667%;
   }
 
-  .sm\:w-\[30\%\] {
-    width: 30%;
-  }
-
-  .sm\:w-\[80\%\] {
-    width: 80%;
-  }
-
-  .sm\:w-auto {
-    width: auto;
+  .sm\:w-96 {
+    width: 24rem;
   }
 
   .sm\:w-\[47\%\] {
     width: 47%;
   }
 
-  .sm\:w-36 {
-    width: 9rem;
+  .sm\:w-\[48\%\] {
+    width: 48%;
+  }
+
+  .sm\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .sm\:w-auto {
+    width: auto;
+  }
+
+  .sm\:w-56 {
+    width: 14rem;
   }
 
   .sm\:flex-row {
@@ -2090,6 +2119,11 @@ body {
   .sm\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .sm\:pl-2 {
@@ -2193,16 +2227,16 @@ body {
     margin-top: 0px;
   }
 
+  .lg\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
   .lg\:mt-24 {
     margin-top: 6rem;
   }
 
   .lg\:mt-4 {
     margin-top: 1rem;
-  }
-
-  .lg\:mt-2 {
-    margin-top: 0.5rem;
   }
 
   .lg\:flex {
@@ -2233,6 +2267,10 @@ body {
     width: 10rem;
   }
 
+  .lg\:w-48 {
+    width: 12rem;
+  }
+
   .lg\:w-60 {
     width: 15rem;
   }
@@ -2257,12 +2295,20 @@ body {
     width: 500px;
   }
 
+  .lg\:w-\[650px\] {
+    width: 650px;
+  }
+
   .lg\:w-auto {
     width: auto;
   }
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-52 {
+    width: 13rem;
   }
 
   .lg\:flex-row {
@@ -2317,6 +2363,11 @@ body {
     padding: 2rem;
   }
 
+  .lg\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
   .lg\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -2340,16 +2391,6 @@ body {
   .lg\:py-40 {
     padding-top: 10rem;
     padding-bottom: 10rem;
-  }
-
-  .lg\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .lg\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
   }
 
   .lg\:pl-6 {
@@ -2388,6 +2429,10 @@ body {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:font-medium {
+    font-weight: 500;
   }
 }
 
@@ -2442,10 +2487,4 @@ body {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
-} 
-
-
-
-
-
-
+}
