@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../styles/output.css" rel="stylesheet" />
-    <title>EMPOWER FEATURES</title>
+    <title>Consultancy</title>
   </head>
   <body>
     <head>
@@ -587,709 +587,920 @@
       </div>
     </head>
 
-    <main
-      class="flex flex-col gap-8 mb-10 px-2 py-3 2xl:justify-center 2xl:items-center"
-    >
-      <!-- CTA  -->
-      <div class="flex flex-col gap-4 px-4 mt-24 sm:mt-24 lg:mt-24">
-        <div class="flex items-center justify-center flex-col gap-8">
-          <h4
-            class="text-3xl lg:text-5xl font-bold text-center w-5/6 sm:w-auto"
+    <main class="flex flex-col mb-20">
+      <!-- hero  -->
+      <div
+        class="flex justify-center items-center relative z-0 w-full h-[85vh] lg:h-[80vh]"
+      >
+        <video
+          class="w-full h-full object-cover object-center opacity-80"
+          autoplay
+          muted
+          loop
+        >
+          <source src="../assets/consultancy.mp4" type="video/mp4" />
+        </video>
+
+        <div
+          class="absolute inset-0 bg-gradient-to-l from-default/100 via-default/70 to-transparent"
+        ></div>
+
+        <!-- Content container -->
+        <div
+          class="absolute inset-x-0 bottom-10 flex flex-col px-4 justify-center items-center"
+        >
+          <span
+            class="text-white font-bold text-2xl md:text-3xl px-4 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4 w-[96%] sm:w-[100%] leading-8 lg:w-[100%] text-center lg:text-center"
           >
-            21 Powerful Features embedded in
-            <strong class="text-default">EMPOWER</strong>
-          </h4>
+            Solve the “unsolvable” safety, sustainability and performance
+            challenges
+          </span>
         </div>
       </div>
 
-      <!-- features  -->
-      <div class="flex flex-col gap-12 lg:gap-20 px-4 mt-10 max-w-[1600px]">
-        <!-- feature odd 1 -->
-        <div
-          id="incident_Reporting"
-          class="flex items-center gap-6 lg:gap-2 justify-between flex-col-reverse lg:flex-row"
-        >
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end items-center justify-center"
-          >
+      <!-- Training body  -->
+
+      <div
+        class="flex flex-col gap-8 mt-8 px-4 2xl:justify-center 2xl:items-center"
+      >
+        <!-- filters  -->
+        <div class="flex flex-col gap-4">
+          <!-- Heading text  -->
+          <div class="flex items-center justify-center">
             <h2
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start lg:w-[80%]"
+              class="text-xl lg:text-2xl text-default font-semibold text-center"
             >
-              Instant Incident Reporting
+              Choose Training For
             </h2>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:!leading-[50px] lg:w-[80%]"
-            >
-              Report six types of reports in the
-              <strong class="text-default">EMPOWER</strong> HSE Reporting Web
-              Application including suggestions, nearmisses, unsafe acts, unsafe
-              conditions, first aid events and injuries.
-            </span>
           </div>
 
-          <!-- images  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-start lg:items-start justify-center items-center"
-          >
-            <img src="../assets/1.png" class="w-[80%] lg:w-[80%]" alt="" />
+          <!-- filters  -->
+          <div class="flex flex-wrap gap-4 items-center justify-center">
+            <button
+              data-filter="all"
+              class="filter-btn text-base sm:text-lg border border-transparent border-r-accent pr-2"
+            >
+              ALL <span class="count text-default font-medium">(10)</span>
+            </button>
+
+            <button
+              data-filter="strategy"
+              class="filter-btn text-base sm:text-lg border border-transparent border-r-accent pr-2"
+            >
+              HSE STRATEGY
+              <span class="count text-default font-medium">(3)</span>
+            </button>
+
+            <button
+              data-filter="safety"
+              class="filter-btn text-base sm:text-lg border border-transparent border-r-accent pr-2"
+            >
+              SAFETY <span class="count text-default font-medium">(3)</span>
+            </button>
+
+            <button
+              data-filter="sustainability"
+              class="filter-btn text-base sm:text-lg"
+            >
+              SUSTAINABILITY
+              <span class="count text-default font-medium">(4)</span>
+            </button>
           </div>
         </div>
 
-        <!-- feature even 2 -->
+        <!-- cards  -->
         <div
-          id="reports_Tracking"
-          class="flex items-center gap-2 justify-between flex-col lg:flex-row"
+          class="flex justify-center gap-4 xl:gap-5 flex-wrap 2xl:max-w-[1600px]"
         >
-          <!-- images  -->
+          <!-- card  -->
           <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end justify-center items-center"
+            data-category="strategy"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
           >
-            <img src="../assets/2.png" class="w-[80%] lg:w-[80%]" alt="" />
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/aa.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
+
+              <span
+                class="bg-default bg-opacity-70 hover:bg-opacity-80 px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Strategy</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                ISO Systems Implementation
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
+
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
           </div>
 
-          <!-- text  -->
+          <!-- card  -->
           <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-start items-center justify-center"
+            data-category="strategy"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
           >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start w-full lg:w-[80%]"
-            >
-              Smart Tracking of Reports
-            </h4>
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/aa.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
 
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:w-[80%]"
-            >
-              Open reports are automatically assigned to the action owners and
-              their departmental team members for effective tracking of open
-              reports.
-            </span>
-          </div>
-        </div>
+              <span
+                class="bg-default bg-opacity-70 hover:bg-opacity-80 px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Strategy</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                Behaviour Based Safety Program
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
 
-        <!-- feature odd 3  -->
-        <div
-          id="site_charts"
-          class="flex items-center gap-6 lg:gap-2 justify-between flex-col-reverse lg:flex-row"
-        >
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start lg:w-[80%]"
-            >
-              Actionable Site Charts
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:!leading-[50px] lg:w-[80%]"
-            >
-              The charts are designed to provide an actionable insights on
-              various categories i.e. Types of Reports, Reports by Department,
-              Reports by Status and much more.
-            </span>
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
           </div>
 
-          <!-- images  -->
+          <!-- card  -->
           <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-start lg:items-start justify-center items-center"
+            data-category="strategy"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
           >
-            <img src="../assets/3.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
-        </div>
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/aa.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
 
-        <!-- feature even 4 -->
-        <div
-          id="hse_leaderboard"
-          class="flex items-center gap-2 justify-between flex-col lg:flex-row"
-        >
-          <!-- images  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end justify-center items-center"
-          >
-            <img src="../assets/4.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
+              <span
+                class="bg-default bg-opacity-70 hover:bg-opacity-80 px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Strategy</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                HSE Policies and Procedures
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
 
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-start items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start w-full lg:w-[80%]"
-            >
-              HSE Performance Leaderboard
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:w-[80%]"
-            >
-              The HSE Leaderboard section designed to identify the high
-              performing individual engaged in reporting of unsafe reports,
-              suggestions and closing of hazards at the workplace.
-            </span>
-          </div>
-        </div>
-
-        <!-- feature odd 5 -->
-        <div
-          id="hse_alerts"
-          class="flex items-center gap-6 lg:gap-2 justify-between flex-col-reverse lg:flex-row"
-        >
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start w-full lg:w-[80%]"
-            >
-              Unlimited HSE Alerts
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:!leading-[50px] lg:w-[80%]"
-            >
-              Send unlimited HSE Alerts to all the users related to any
-              emergency and immediate action required by the users. A pop up
-              message will be appear in the HSE Alerts section for each user.
-            </span>
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
           </div>
 
-          <!-- images  -->
+          <!-- card  -->
           <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-start lg:items-start justify-center items-center"
+            data-category="strategy"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
           >
-            <img src="../assets/5.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
-        </div>
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/aa.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
 
-        <!-- feature even 6 -->
-        <div
-          id="hse_communication"
-          class="flex items-center gap-2 justify-between flex-col lg:flex-row"
-        >
-          <!-- images  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end justify-center items-center"
-          >
-            <img src="../assets/6.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
+              <span
+                class="bg-default bg-opacity-70 hover:bg-opacity-80 px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Strategy</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                Business Continuity Planning (BCP)
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
 
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-start items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start w-full lg:w-[80%]"
-            >
-              HSE Communication Banners
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:w-[80%]"
-            >
-              Utilize the communication banners appearing on homepage for
-              communicating HSE achievements or upcoming events with all the
-              users.
-            </span>
-          </div>
-        </div>
-
-        <!-- feature odd 7 -->
-        <div
-          id="emergency_contact"
-          class="flex items-center gap-6 lg:gap-2 justify-between flex-col-reverse lg:flex-row"
-        >
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start lg:w-[80%]"
-            >
-              Emergency Contact Info
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:!leading-[50px] lg:w-[80%]"
-            >
-              The emergency contact section is designed to share site emergency
-              contact detail with all the users for swift communication in case
-              of any emergency situation to the relevant team.
-            </span>
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
           </div>
 
-          <!-- images  -->
+          <!-- card  -->
           <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-start lg:items-start justify-center items-center"
+            data-category="strategy"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
           >
-            <img src="../assets/7.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
-        </div>
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/aa.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
 
-        <!-- feature even 8 -->
-        <div
-          id="hse_learning"
-          class="flex items-center gap-2 justify-between flex-col lg:flex-row"
-        >
-          <!-- images  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end justify-center items-center"
-          >
-            <img src="../assets/8.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
+              <span
+                class="bg-default bg-opacity-70 hover:bg-opacity-80 px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Strategy</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                Emergency Response and Planning (ERP)
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
 
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-start items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start w-full lg:w-[80%]"
-            >
-              HSE Learnings Section
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:w-[80%]"
-            >
-              Share the micro learning with the users through HSE Learning
-              section. New questions and answers can be added by the web
-              application admin.
-            </span>
-          </div>
-        </div>
-
-        <!-- feature odd 9 -->
-        <div
-          id="hse_library"
-          class="flex items-center gap-6 lg:gap-2 justify-between flex-col-reverse lg:flex-row"
-        >
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start lg:w-[80%]"
-            >
-              HSE Files Library for sharing and downloading
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:!leading-[50px] lg:w-[80%]"
-            >
-              The admin can share multiple downloadable files with the users
-              which can be accessed by all the users and save in their systems.
-            </span>
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
           </div>
 
-          <!-- images  -->
+          <!-- card  -->
           <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-start lg:items-start justify-center items-center"
+            data-category="strategy"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
           >
-            <img src="../assets/9.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
-        </div>
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/aa.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
 
-        <!-- feature even 10 -->
-        <div
-          id="automated_workflow"
-          class="flex items-center gap-2 justify-between flex-col lg:flex-row"
-        >
-          <!-- images  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end justify-center items-center"
-          >
-            <img src="../assets/10.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
+              <span
+                class="bg-default bg-opacity-70 hover:bg-opacity-80 px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Strategy</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                HSE Risk Management
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
 
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-start items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start w-full lg:w-[80%]"
-            >
-              Automated Action Owner Assignment
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:w-[80%]"
-            >
-              The reported events are assigned to the action owner departments
-              and all the users of same department can view the assigned reports
-              and also close as needed.
-            </span>
-          </div>
-        </div>
-
-        <!-- feature odd 11 -->
-        <div
-          id="responsive_design"
-          class="flex items-center gap-6 lg:gap-2 justify-between flex-col-reverse lg:flex-row"
-        >
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start lg:w-[80%]"
-            >
-              Android & iOS Compatibility
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:!leading-[50px] lg:w-[80%]"
-            >
-              <strong class="text-default">EMPOWER</strong> web application is
-              100% compatible with Desktops, MacOS, Android and iOS. User can
-              save the link on their mobile home screens for quick access to the
-              application.
-            </span>
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
           </div>
 
-          <!-- images  -->
+          <!-- card  -->
           <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-start lg:items-start justify-center items-center"
+            data-category="strategy"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
           >
-            <img src="../assets/11.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
-        </div>
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/aa.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
 
-        <!-- feature even 12 -->
-        <div
-          id="emergency_response"
-          class="flex items-center gap-2 justify-between flex-col lg:flex-row"
-        >
-          <!-- images  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end justify-center items-center"
-          >
-            <img src="../assets/12.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
+              <span
+                class="bg-default bg-opacity-70 hover:bg-opacity-80 px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Strategy</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                Occupational Health Management
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
 
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-start items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start w-full lg:w-[80%]"
-            >
-              Emergency Response Plans
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:w-[80%]"
-            >
-              Site Emergency Plan section is available for sharing the various
-              emergency response plans with the users and the required sequence
-              of response actions can be set according to your organization
-              requirements.
-            </span>
-          </div>
-        </div>
-
-        <!-- feature odd 13 -->
-        <div
-          id="hse_team"
-          class="flex items-center gap-6 lg:gap-2 justify-between flex-col-reverse lg:flex-row"
-        >
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start lg:w-[80%]"
-            >
-              HSE Team Information
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:!leading-[50px] lg:w-[80%]"
-            >
-              The Site HSE Team information can be shared with the wide audience
-              of the users. The information include name of team members,
-              contact details and the site HSE team achievements.
-            </span>
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
           </div>
 
-          <!-- images  -->
+          <!-- card  -->
           <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-start lg:items-start justify-center items-center"
+            data-category="strategy"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
           >
-            <img src="../assets/13.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
-        </div>
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/aa.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
 
-        <!-- feature even 14 -->
-        <div
-          id="instant_dev_support"
-          class="flex items-center gap-2 justify-between flex-col lg:flex-row"
-        >
-          <!-- images  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end justify-center items-center"
-          >
-            <img src="../assets/14.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
+              <span
+                class="bg-default bg-opacity-70 hover:bg-opacity-80 px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Strategy</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                SEDEX Assessment
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
 
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-start items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start w-full lg:w-[80%]"
-            >
-              Instant Support from Developers
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:w-[80%]"
-            >
-              The admin of <strong class="text-default">EMPOWER</strong> can
-              seek for immediate support from the developers by booking a
-              calendar meeting from the application.
-            </span>
-          </div>
-        </div>
-
-        <!-- feature odd 15 -->
-        <div
-          id="quick_user_management"
-          class="flex items-center gap-6 lg:gap-2 justify-between flex-col-reverse lg:flex-row"
-        >
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start lg:w-[80%]"
-            >
-              Quick User Management
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:!leading-[50px] lg:w-[80%]"
-            >
-              The admin of EMPOWER can approve new user, trash approved users
-              and untrash users as required. The process is made easy with the
-              user of filters for each department.
-            </span>
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
           </div>
 
-          <!-- images  -->
+          <!-- card  -->
           <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-start lg:items-start justify-center items-center"
+            data-category="strategy"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
           >
-            <img src="../assets/15.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
-        </div>
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/aa.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
 
-        <!-- feature even 16 -->
-        <div
-          id="sharing_hse_policy"
-          class="flex items-center gap-2 justify-between flex-col lg:flex-row"
-        >
-          <!-- images  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end justify-center items-center"
-          >
-            <img src="../assets/16.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
+              <span
+                class="bg-default bg-opacity-70 hover:bg-opacity-80 px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Strategy</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                Hazardous/Non-Hazardous Waste Management
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
 
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-start items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start w-full lg:w-[80%]"
-            >
-              Sharing HSE Policy
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:w-[80%]"
-            >
-              Upload and share your site HSE policy with the users. The user can
-              read and download the policy as per need basis.
-            </span>
-          </div>
-        </div>
-
-        <!-- feature odd 17 -->
-        <div
-          id="user_specific_charts"
-          class="flex items-center gap-6 lg:gap-2 justify-between flex-col-reverse lg:flex-row"
-        >
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start lg:w-[80%]"
-            >
-              User Specific Charts
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:!leading-[50px] lg:w-[80%]"
-            >
-              Individual user charts can be viewed from My Charts section
-              including the total reports and its status along with monthly
-              reporting statistics.
-            </span>
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
           </div>
 
-          <!-- images  -->
+          <!-- card  -->
           <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-start lg:items-start justify-center items-center"
+            data-category="strategy"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
           >
-            <img src="../assets/17.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
-        </div>
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/aa.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
 
-        <!-- feature even 18 -->
-        <div
-          id="focused_departmental_charts"
-          class="flex items-center gap-2 justify-between flex-col lg:flex-row"
-        >
-          <!-- images  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end justify-center items-center"
-          >
-            <img src="../assets/18.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
+              <span
+                class="bg-default bg-opacity-70 hover:bg-opacity-80 px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Strategy</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                Contractor Safety Program
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
 
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-start items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start w-full lg:w-[80%]"
-            >
-              Focused Departmental Charts
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:w-[80%]"
-            >
-              Each user can view the performance of its department and the
-              different types of reports along with its current status. The
-              admin user can view performance of each department by selecting it
-              from the drop down section.
-            </span>
-          </div>
-        </div>
-
-        <!-- feature odd 19 -->
-        <div
-          id="advanced_reports_filters"
-          class="flex items-center gap-6 lg:gap-2 justify-between flex-col-reverse lg:flex-row"
-        >
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start lg:w-[80%]"
-            >
-              Advanced Reports Filters
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:!leading-[50px] lg:w-[80%]"
-            >
-              Users and admin of the application can use advanced filters to
-              find the type of reports, severity of reports, aging reports and
-              also on monthly basis.
-            </span>
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
           </div>
 
-          <!-- images  -->
+          <!-- card  -->
           <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-start lg:items-start justify-center items-center"
+            data-category="safety"
+            class="safety card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
           >
-            <img src="../assets/19.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
-        </div>
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/cc.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
 
-        <!-- feature even 20 -->
-        <div
-          id="event_records_for_audit"
-          class="flex items-center gap-2 justify-between flex-col lg:flex-row"
-        >
-          <!-- images  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end justify-center items-center"
-          >
-            <img src="../assets/20.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
+              <span
+                class="bg-utilities-safety px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Safety</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                Fire Safety Management
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
 
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-start items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start w-full lg:w-[80%]"
-            >
-              Event Records for Audits
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:w-[80%]"
-            >
-              Any change made in the system by users is logged in the system
-              which can be traced by the Admin during routine checks or during
-              the audits.
-            </span>
-          </div>
-        </div>
-
-        <!-- feature odd 21 -->
-        <div
-          id="download_reports"
-          class="flex items-center gap-6 lg:gap-2 justify-between flex-col-reverse lg:flex-row"
-        >
-          <!-- text  -->
-          <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-end lg:items-end items-center justify-center"
-          >
-            <h4
-              class="text-xl lg:text-4xl text-default font-semibold text-center lg:text-start lg:w-[80%]"
-            >
-              Download Reports
-            </h4>
-
-            <span
-              class="text-xl lg:text-4xl text-gray-500 text-center lg:text-start lg:!leading-[50px] lg:w-[80%]"
-            >
-              The admin user has the rights to download all the data related to
-              the reports into a CSV file which can be utilized for further
-              analysis and developing charts that are not available in the web
-              application.
-            </span>
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
           </div>
 
-          <!-- images  -->
+          <!-- card  -->
           <div
-            class="flex flex-col gap-2 w-full lg:w-[48%] lg:justify-start lg:items-start justify-center items-center"
+            data-category="safety"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
           >
-            <img src="../assets/21.png" class="w-[80%] lg:w-[80%]" alt="" />
-          </div>
-        </div>
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/cc.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
 
-        <div id="backButton" class="flex mt-4 justify-center items-center">
-          <a
-            href="#"
-            id="backButtonLink"
-            class="animate-it-y text-white hover:text-accent w-fit font-bold text-base sm:text-lg md:text-2xl px-3 py-1.5 sm:px-4 sm:py-3 bg-accent border border-accent hover:bg-white rounded-full"
+              <span
+                class="bg-utilities-safety px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Safety</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                PPE Fitness Program
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
+
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
+          </div>
+
+          <!-- card  -->
+          <div
+            data-category="safety"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
           >
-            BACK TO LAST PAGE
-          </a>
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/cc.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
+
+              <span
+                class="bg-utilities-safety px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Safety</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                Permit to Work System
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
+
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
+          </div>
+
+          <!-- card  -->
+          <div
+            data-category="safety"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
+          >
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/cc.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
+
+              <span
+                class="bg-utilities-safety px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Safety</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                Chemical Safety
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
+
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
+          </div>
+
+          <!-- card  -->
+          <div
+            data-category="safety"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
+          >
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/cc.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
+
+              <span
+                class="bg-utilities-safety px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Safety</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                Warehouse Safety
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
+
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
+          </div>
+
+          <!-- card  -->
+          <div
+            data-category="sustainability"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
+          >
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/dd.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
+
+              <span
+                class="bg-utilities-sustainability px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Sustainability</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                Waste Management & Certifications
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
+
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
+          </div>
+
+          <!-- card  -->
+          <div
+            data-category="sustainability"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
+          >
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/dd.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
+
+              <span
+                class="bg-utilities-sustainability px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Sustainability</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                WWF Green Office Certification
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
+
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
+          </div>
+
+          <!-- card  -->
+          <div
+            data-category="sustainability"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
+          >
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/dd.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
+
+              <span
+                class="bg-utilities-sustainability px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Sustainability</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                Environmental Aspects Identification Study
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
+
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
+          </div>
+
+          <!-- card  -->
+          <div
+            data-category="sustainability"
+            class="card flex flex-col justify-center items-center gap-3 bg-gray-50 p-4 shadow-sm shadow-black/20 w-full sm:w-72 lg:w-80 xl:w-[400px] group border border-gray-100 hover:border-accent rounded-lg"
+          >
+            <!-- head   -->
+            <div class="flex gap-2 items-center w-full relative">
+              <img
+                src="../assets/dd.jpg"
+                alt=""
+                class="w-full object-cover rounded-xl border border-gray-50 group-hover:border-accent"
+              />
+
+              <span
+                class="bg-utilities-sustainability px-2 p-1 lg:px-4 rounded-lg absolute left-2 top-1 text-white cursor-default"
+                >Sustainability</span
+              >
+            </div>
+            <!-- desc  -->
+            <div class="flex flex-col gap-2 items-center mt-2 justify-center">
+              <h4
+                class="text-lg lg:text-xl font-semibold text-default text-center"
+              >
+                Organic Waste Management (Composting)
+              </h4>
+              <span class="text-gray-600 text-sm text-center"
+                >Description of the training will come here in maximum three to
+                four lines.
+              </span>
+
+              <a
+                href=""
+                class="w-full p-2 rounded-full bg-accent border border-accent hover:bg-transparent text-white hover:text-accent text-center font-medium text-base lg:text-lg"
+              >
+                Explore More
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </main>
+
+    <script>
+      // Function to get URL parameters
+      function getURLParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Function to update the URL
+      function updateURLParam(param, value) {
+        const url = new URL(window.location);
+        if (value === "all") {
+          url.searchParams.delete(param); // Remove the filter if "all" is selected
+        } else {
+          url.searchParams.set(param, value); // Set the filter for other options
+        }
+        window.history.replaceState({}, "", url); // Update URL without reloading the page
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll(".filter-btn");
+        const cards = document.querySelectorAll(".card");
+
+        // Function to calculate and update card counts
+        function updateCounts() {
+          const counts = { all: cards.length }; // Initialize "all" with total card count
+
+          // Calculate counts based on the "data-category" attribute
+          cards.forEach((card) => {
+            const category = card.getAttribute("data-category");
+            if (category) {
+              counts[category] = (counts[category] || 0) + 1;
+            }
+          });
+
+          // Update button text with counts inside the <span> tag
+          buttons.forEach((button) => {
+            const filter = button.getAttribute("data-filter");
+            const countElement = button.querySelector(".count"); // Select the <span class="count">
+            countElement.textContent = `(${counts[filter] || 0})`; // Update the count in the span
+          });
+        }
+
+        // Load filter from URL if present
+        const currentFilter = getURLParam("filter") || "all";
+
+        // Function to apply filter
+        function applyFilter(filter) {
+          // Remove 'active' class from all buttons
+          buttons.forEach((btn) =>
+            btn.classList.remove("text-default", "font-semibold")
+          );
+
+          // Add 'active' class to the clicked button
+          const activeButton = Array.from(buttons).find(
+            (btn) => btn.getAttribute("data-filter") === filter
+          );
+          if (activeButton) {
+            activeButton.classList.add("text-default", "font-semibold");
+          }
+
+          // Show/hide cards based on filter
+          cards.forEach((card) => {
+            const category = card.getAttribute("data-category");
+            if (filter === "all" || category === filter) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        }
+
+        // Initial setup
+        updateCounts(); // Update counts on page load
+        applyFilter(currentFilter); // Apply the filter based on URL
+
+        // Add click event listeners to buttons
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const filter = button.getAttribute("data-filter");
+            updateURLParam("filter", filter); // Update URL parameter or remove if "all"
+            applyFilter(filter); // Apply the filter
+          });
+        });
+      });
+    </script>
 
     <footer
       class="flex flex-col mt-auto gap-1.5 sm:gap-3 bg-default text-white px-2 sm:px-3 lg:px-4 py-1.5 sm:py-3 2xl:justify-between 2xl:items-center"
@@ -1501,18 +1712,6 @@
     </footer>
 
     <script>
-      // back button functionality
-      document
-        .getElementById("backButtonLink")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent the default link behavior
-          if (window.history.length > 1) {
-            window.history.back();
-          } else {
-            window.location.href = "/";
-          }
-        });
-
       // header
 
       document.addEventListener("DOMContentLoaded", function () {
