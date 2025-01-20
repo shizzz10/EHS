@@ -3,14 +3,12 @@
 @tailwind utilities;
 /* npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch */
 
-/* For default checkbox */
-input[type="checkbox"]:checked {
-  accent-color: #2C3C87; /* Modern browsers support this property */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* Adjust based on your navbar height */
 }
-/* For default checkbox */
-input[type="radio"]:checked {
-  accent-color: #2C3C87; /* Modern browsers support this property */
-}
+
 
 body {
     overflow-x: hidden;
@@ -205,4 +203,21 @@ body {
 
 .border-accent-active{
   border: 1px solid #F15F5C;
+}
+
+
+/* For default checkbox */
+input[type="checkbox"]:checked {
+  accent-color: #2C3C87; /* Modern browsers support this property */
+}
+/* For default checkbox */
+input[type="radio"]:checked {
+  accent-color: #2C3C87; /* Modern browsers support this property */
+}
+
+
+@media (min-width: 1024px) {
+  html{
+      scroll-padding-top: 20px; /* Adjust based on your navbar height */
+  }
 }
