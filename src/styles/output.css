@@ -736,6 +736,10 @@ video {
   margin-left: auto;
 }
 
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
 .mt-1\.5 {
   margin-top: 0.375rem;
 }
@@ -778,10 +782,6 @@ video {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mr-1 {
-  margin-right: 0.25rem;
 }
 
 .block {
@@ -952,6 +952,10 @@ video {
   width: 240px;
 }
 
+.w-\[40\%\] {
+  width: 40%;
+}
+
 .w-\[96\%\] {
   width: 96%;
 }
@@ -971,6 +975,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[50\%\] {
+  width: 50%;
 }
 
 .flex-shrink-0 {
@@ -1040,6 +1048,10 @@ video {
   flex-direction: column;
 }
 
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -1090,6 +1102,10 @@ video {
 
 .gap-1\.5 {
   gap: 0.375rem;
+}
+
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-2 {
@@ -2357,10 +2373,6 @@ p, span, li, input, textarea{
     width: 10rem;
   }
 
-  .lg\:w-52 {
-    width: 13rem;
-  }
-
   .lg\:w-60 {
     width: 15rem;
   }
@@ -2389,6 +2401,10 @@ p, span, li, input, textarea{
     width: 500px;
   }
 
+  .lg\:w-\[80\%\] {
+    width: 80%;
+  }
+
   .lg\:w-auto {
     width: auto;
   }
@@ -2407,6 +2423,10 @@ p, span, li, input, textarea{
 
   .lg\:items-start {
     align-items: flex-start;
+  }
+
+  .lg\:items-end {
+    align-items: flex-end;
   }
 
   .lg\:items-center {
@@ -2429,12 +2449,12 @@ p, span, li, input, textarea{
     justify-content: space-between;
   }
 
-  .lg\:justify-around {
-    justify-content: space-around;
-  }
-
   .lg\:gap-2 {
     gap: 0.5rem;
+  }
+
+  .lg\:gap-20 {
+    gap: 5rem;
   }
 
   .lg\:gap-28 {
