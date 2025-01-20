@@ -981,6 +981,18 @@ video {
   width: 100vw;
 }
 
+.w-\[80\%\] {
+  width: 80%;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.max-w-\[1600px\] {
+  max-width: 1600px;
+}
+
 .flex-shrink-0 {
   flex-shrink: 0;
 }
@@ -1231,6 +1243,11 @@ video {
   border-color: rgb(156 163 175 / var(--tw-border-opacity, 1));
 }
 
+.border-gray-50 {
+  --tw-border-opacity: 1;
+  border-color: rgb(249 250 251 / var(--tw-border-opacity, 1));
+}
+
 .border-transparent {
   border-color: transparent;
 }
@@ -1238,11 +1255,6 @@ video {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
-.border-gray-50 {
-  --tw-border-opacity: 1;
-  border-color: rgb(249 250 251 / var(--tw-border-opacity, 1));
 }
 
 .border-r-accent {
@@ -1320,6 +1332,10 @@ video {
 
 .bg-opacity-60 {
   --tw-bg-opacity: 0.6;
+}
+
+.bg-opacity-70 {
+  --tw-bg-opacity: 0.7;
 }
 
 .bg-opacity-80 {
@@ -1510,6 +1526,11 @@ video {
   line-height: 2rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1535,6 +1556,11 @@ video {
   line-height: 1rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1555,8 +1581,32 @@ video {
   text-transform: uppercase;
 }
 
+.leading-10 {
+  line-height: 2.5rem;
+}
+
 .leading-8 {
   line-height: 2rem;
+}
+
+.\!leading-10 {
+  line-height: 2.5rem !important;
+}
+
+.\!leading-\[80px\] {
+  line-height: 80px !important;
+}
+
+.\!leading-\[60px\] {
+  line-height: 60px !important;
+}
+
+.\!leading-\[40px\] {
+  line-height: 40px !important;
+}
+
+.\!leading-\[50px\] {
+  line-height: 50px !important;
 }
 
 .tracking-wide {
@@ -1761,19 +1811,38 @@ p, span, li, input, textarea{
   /* Clean and modern sans-serif font */
 }
 
-/* Tailwind classes used in the HTML */
+.bg-utilities-strategy {
+  background-color: #2c3c87;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+  /* Smooth hover effect */
+}
 
-/* For mobile menu sliding animation */
+.bg-utilities-strategy:hover {
+  opacity: 0.8;
+}
 
-/* Mobile Navigation */
+.bg-utilities-safety {
+  background-color: red;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+  /* Smooth hover effect */
+}
 
-/* #mobile-menu {
-    transition: top 1s ease-in-out;
-  }
+.bg-utilities-safety:hover {
+  opacity: 0.8;
+}
 
-  #mobile-menu.active {
-    top: 0;
-  } */
+.bg-utilities-sustainability {
+  background-color: green;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+  /* Smooth hover effect */
+}
+
+.bg-utilities-sustainability:hover {
+  opacity: 0.8;
+}
 
 /* Active State for Cross Animation */
 
@@ -2067,6 +2136,10 @@ input[type="radio"]:checked {
 
 .hover\:bg-opacity-100:hover {
   --tw-bg-opacity: 1;
+}
+
+.hover\:bg-opacity-80:hover {
+  --tw-bg-opacity: 0.8;
 }
 
 .hover\:bg-opacity-90:hover {
@@ -2445,6 +2518,10 @@ input[type="radio"]:checked {
     width: 100%;
   }
 
+  .lg\:w-\[28\%\] {
+    width: 28%;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -2539,6 +2616,10 @@ input[type="radio"]:checked {
     text-align: center;
   }
 
+  .lg\:text-start {
+    text-align: start;
+  }
+
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2547,6 +2628,11 @@ input[type="radio"]:checked {
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .lg\:text-base {
@@ -2569,8 +2655,17 @@ input[type="radio"]:checked {
     line-height: 1.75rem;
   }
 
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
   .lg\:font-medium {
     font-weight: 500;
+  }
+
+  .lg\:\!leading-\[50px\] {
+    line-height: 50px !important;
   }
 
   .lg\:hover\:border-accent:hover {

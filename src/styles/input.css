@@ -20,17 +20,36 @@ body {
     font-family: 'Verdana', sans-serif; /* Clean and modern sans-serif font */
   }
   
-  /* Tailwind classes used in the HTML */
-
-  /* For mobile menu sliding animation */
-  /* Mobile Navigation */
-  /* #mobile-menu {
-    transition: top 1s ease-in-out;
+  .bg-utilities-strategy {
+    background-color: #2c3c87;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out; /* Smooth hover effect */
   }
-
-  #mobile-menu.active {
-    top: 0;
-  } */
+  
+  .bg-utilities-strategy:hover {
+    opacity: 0.8;
+  }
+  
+  .bg-utilities-safety {
+    background-color: red;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .bg-utilities-safety:hover {
+    opacity: 0.8;
+  }
+  
+  .bg-utilities-sustainability {
+    background-color: green;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .bg-utilities-sustainability:hover {
+    opacity: 0.8;
+  }
+  
 
   /* Active State for Cross Animation */
   #hamburger-menu.active .menu-line:nth-child(1) {
