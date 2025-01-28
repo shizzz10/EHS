@@ -16,6 +16,10 @@
       .active-subsection {
         background-color: #f15f5c; /* Tailwind's blue-100 */
       }
+
+
+   
+
     </style>
   </head>
   <body>
@@ -532,7 +536,8 @@
           </div>
 
           <form
-            action="POST"
+            action=""
+            method="post"
             id="dynamicForm"
             class="flex flex-col gap-5 justify-center items-center lg:items-start lg:justify-start"
           >
@@ -547,35 +552,40 @@
               <div
                 class="category flex gap-2 items-stretch flex-wrap justify-center lg:justify-start"
               >
-                <input
-                  type="button"
-                  id="btnDigitalSolutions"
-                  class="toggle-btn text-white lg:hover:text-gray-900 w-full sm:w-48 font-medium text-sm text-center sm:text-base md:text-base px-3 py-2 sm:px-4 sm:py-4 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl flex items-center justify-center shadow-sm shadow-black/50 !whitespace-normal"
-                  onclick="toggleSection('digitalSolutions', this)"
-                  data-section="services"
-                  data-value="digitalSolution"
-                  value="Digital Solution"
-                />
-
-                <input
-                  type="button"
-                  id="btnConsultancy"
-                  class="toggle-btn text-white lg:hover:text-gray-900 w-full sm:w-48 font-medium text-sm text-center sm:text-base md:text-base px-3 py-2 sm:px-4 sm:py-4 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl flex items-center justify-center shadow-sm shadow-black/50 !whitespace-normal"
-                  onclick="toggleSection('consultancy', this)"
-                  data-section="services"
-                  data-value="consultancy"
-                  value="CONSULTANCY"
-                />
-
-                <input
-                  type="button"
-                  id="btnother"
-                  class="toggle-btn text-white lg:hover:text-gray-900 w-full sm:w-48 font-medium text-sm text-center sm:text-base md:text-base px-3 py-2 sm:px-4 sm:py-4 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl flex items-center justify-center shadow-sm shadow-black/50 !whitespace-normal"
-                  onclick="toggleSection('training', this)"
-                  data-section="services"
-                  data-value="training"
-                  value="TRAINING"
-                />
+              <label class="toggle-btn text-white lg:hover:text-gray-900 w-full sm:w-48 font-medium text-sm text-center sm:text-base md:text-base px-3 py-2 sm:px-4 sm:py-4 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl flex items-center justify-center shadow-sm shadow-black/50 !whitespace-normal">
+                <input type="radio" 
+                       name="serviceType" 
+                       id="btnDigitalSolutions" 
+                       class="hidden"
+                       onclick="toggleSection('digitalSolutions', this)" 
+                       data-section="services" 
+                       data-value="digitalSolution">
+                Digital Solution
+            </label>
+            
+            <label class="toggle-btn text-white lg:hover:text-gray-900 w-full sm:w-48 font-medium text-sm text-center sm:text-base md:text-base px-3 py-2 sm:px-4 sm:py-4 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl flex items-center justify-center shadow-sm shadow-black/50 !whitespace-normal">
+                <input type="radio" 
+                       name="serviceType" 
+                       id="btnConsultancy" 
+                       class="hidden"
+                       onclick="toggleSection('consultancy', this)" 
+                       data-section="services" 
+                       data-value="consultancy"
+                       value="CONSULTANCY">
+                Consultancy
+            </label>
+            
+            <label class="toggle-btn text-white lg:hover:text-gray-900 w-full sm:w-48 font-medium text-sm text-center sm:text-base md:text-base px-3 py-2 sm:px-4 sm:py-4 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl flex items-center justify-center shadow-sm shadow-black/50 !whitespace-normal">
+                <input type="radio" 
+                       name="serviceType" 
+                       id="btnOther" 
+                       class="hidden"
+                       onclick="toggleSection('training', this)" 
+                       data-section="services" 
+                       data-value="training"
+                       value="TRAINING">
+                Training
+            </label>
               </div>
             </div>
 
@@ -591,25 +601,30 @@
               <div
                 class="category flex gap-2 items-stretch justify-center lg:justify-start flex-wrap"
               >
-                <input
-                  type="button"
-                  id="btnIRCHSE"
-                  class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-60 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center !whitespace-normal"
-                  onclick="toggleSubSection('ircHSE', this)"
-                  data-section="subservices"
-                  data-value="IRC"
-                  value="INCIDENT REPORTING & COMMUNICATION"
-                />
-
-                <input
-                  type="button"
-                  id="btnOtherHSE"
-                  class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-56 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center"
-                  onclick="toggleSubSection('other', this)"
-                  data-section="subservices"
-                  data-value="other"
-                  value="OTHER"
-                />
+              <label class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-60 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center !whitespace-normal">
+                <input 
+                  type="radio" 
+                  name="subServiceType" 
+                  id="btnIRCHSE" 
+                  class="hidden" 
+                  onclick="toggleSubSection('ircHSE', this)" 
+                  data-section="subservices" 
+                  data-value="IRC">
+                INCIDENT REPORTING & COMMUNICATION
+              </label>
+              
+              <label class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-56 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center">
+                <input 
+                  type="radio" 
+                  name="subServiceType" 
+                  id="btnOtherHSE" 
+                  class="hidden" 
+                  onclick="toggleSubSection('other', this)" 
+                  data-section="subservices" 
+                  data-value="other">
+                OTHER
+              </label>
+              
               </div>
             </div>
 
@@ -625,35 +640,42 @@
               <div
                 class="category flex gap-2 items-stretch justify-center lg:justify-start flex-wrap"
               >
-                <input
-                  type="button"
-                  id="btnConsultancyHSE"
-                  class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-56 h-14 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center !whitespace-normal"
-                  onclick="toggleSubSection('consultancyHSE', this)"
-                  data-section="subservices"
-                  data-value="HSE-STRATEGIES"
-                  value="HSE STRATEGIES"
-                />
-
-                <input
-                  type="button"
-                  id="btnSafetyHSE"
-                  class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-56 h-14 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center !whitespace-normal"
-                  onclick="toggleSubSection('safetyHSE', this)"
-                  data-section="subservices"
-                  data-value="WORKPLACE-SAFETY"
-                  value="WORKPLACE SAFETY"
-                />
-
-                <input
-                  type="button"
-                  id="btnConsultancySustainability"
-                  class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-56 h-14 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center !whitespace-normal"
-                  onclick="toggleSubSection('consultancySustainability', this)"
-                  data-section="subservices"
-                  data-value="SUSTAINABILITY"
-                  value="SUSTAINABILITY"
-                />
+              <label class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-56 h-14 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center !whitespace-normal">
+                <input 
+                  type="radio" 
+                  name="subservices" 
+                  id="btnConsultancyHSE" 
+                  class="hidden" 
+                  onclick="toggleSubSection('consultancyHSE', this)" 
+                  data-section="subservices" 
+                  data-value="HSE-STRATEGIES">
+                HSE STRATEGIES
+              </label>
+              
+              <label class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-56 h-14 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center !whitespace-normal">
+                <input 
+                  type="radio" 
+                  name="subservices" 
+                  id="btnSafetyHSE" 
+                  class="hidden" 
+                  onclick="toggleSubSection('safetyHSE', this)" 
+                  data-section="subservices" 
+                  data-value="WORKPLACE-SAFETY">
+                WORKPLACE SAFETY
+              </label>
+              
+              <label class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-56 h-14 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center !whitespace-normal">
+                <input 
+                  type="radio" 
+                  name="subservices" 
+                  id="btnConsultancySustainability" 
+                  class="hidden" 
+                  onclick="toggleSubSection('consultancySustainability', this)" 
+                  data-section="subservices" 
+                  data-value="SUSTAINABILITY">
+                SUSTAINABILITY
+              </label>
+              
               </div>
             </div>
 
@@ -669,35 +691,42 @@
               <div
                 class="category flex gap-2 items-stretch justify-center lg:justify-start flex-wrap"
               >
-                <input
-                  type="button"
-                  id="btnTrainingHSE"
-                  class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-56 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center !whitespace-normal"
-                  onclick="toggleSubSection('trainingHSE', this)"
-                  data-section="subservices"
-                  data-value="HSE-MANAGEMENT"
-                  value="HSE MANAGEMENT"
-                />
-
-                <input
-                  type="button"
-                  id="btnSafetyTrainingHSE"
-                  class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-56 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center !whitespace-normal"
-                  onclick="toggleSubSection('safetyTrainingHSE', this)"
-                  data-section="subservices"
-                  data-value="SAFETY-TRAINING"
-                  value="SAFETY TRAINING"
-                />
-
-                <input
-                  type="button"
-                  id="btnTrainingSustainability"
-                  class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-56 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center !whitespace-normal"
-                  onclick="toggleSubSection('trainingSustainability', this)"
-                  data-section="subservices"
-                  data-value="SUSTAINABILITY-TRAINING"
-                  value="SUSTAINABILITY TRAINING"
-                />
+              <label class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-56 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center !whitespace-normal">
+                <input 
+                  type="radio" 
+                  name="subservices" 
+                  id="btnTrainingHSE" 
+                  class="hidden" 
+                  onclick="toggleSubSection('trainingHSE', this)" 
+                  data-section="subservices" 
+                  data-value="HSE-MANAGEMENT">
+                HSE MANAGEMENT
+              </label>
+              
+              <label class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-56 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center !whitespace-normal">
+                <input 
+                  type="radio" 
+                  name="subservices" 
+                  id="btnSafetyTrainingHSE" 
+                  class="hidden" 
+                  onclick="toggleSubSection('safetyTrainingHSE', this)" 
+                  data-section="subservices" 
+                  data-value="SAFETY-TRAINING">
+                SAFETY TRAINING
+              </label>
+              
+              <label class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-56 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex items-center justify-center !whitespace-normal">
+                <input 
+                  type="radio" 
+                  name="subservices" 
+                  id="btnTrainingSustainability" 
+                  class="hidden" 
+                  onclick="toggleSubSection('trainingSustainability', this)" 
+                  data-section="subservices" 
+                  data-value="SUSTAINABILITY-TRAINING">
+                SUSTAINABILITY TRAINING
+              </label>
+              
               </div>
             </div>
 
@@ -715,27 +744,30 @@
               <div
                 class="category flex gap-2 items-stretch justify-center lg:justify-start flex-wrap"
               >
-                <input
-                  type="button"
-                  id="btnCloudHostedHSE"
-                  class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-64 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex flex-col items-center justify-center !whitespace-normal"
-                  onclick="toggleHeadSubSection('cloudHostedHSE', this)"
-                  data-section="subSubOption"
-                  data-value="CLOUD-HOSTED"
-                  value="CLOUD HOSTED&#10;Data stored in the cloud"
-                />
-
-                <input
-                  type="button"
-                  id="btnClientHostedHSE"
-                  class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-64 h-16 text-sm sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex flex-col font-normal items-center justify-center text-center !whitespace-normal"
-                  class="font-medium"
-                  onclick="toggleHeadSubSection('clientHostedHSE', this)"
-                  data-section="subSubOption"
-                  data-value="CLIENT-SERVER-HOSTED"
-                  value="CLIENT SERVER HOSTED&#10;Data stored on client
-                  server"
-                />
+              <label class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-64 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex flex-col items-center justify-center !whitespace-normal">
+                <input 
+                  type="radio" 
+                  name="subSubOption" 
+                  id="btnCloudHostedHSE" 
+                  class="hidden" 
+                  onclick="toggleHeadSubSection('cloudHostedHSE', this)" 
+                  data-section="subSubOption" 
+                  data-value="CLOUD-HOSTED">
+                CLOUD HOSTED<br>Data stored in the cloud
+              </label>
+              
+              <label class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-64 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex flex-col font-normal items-center justify-center text-center !whitespace-normal">
+                <input 
+                  type="radio" 
+                  name="subSubOption" 
+                  id="btnClientHostedHSE" 
+                  class="hidden" 
+                  onclick="toggleHeadSubSection('clientHostedHSE', this)" 
+                  data-section="subSubOption" 
+                  data-value="CLIENT-SERVER-HOSTED">
+                CLIENT SERVER HOSTED<br>Data stored on client server
+              </label>
+              
               </div>
             </div>
 
@@ -751,37 +783,42 @@
               <div
                 class="category flex gap-2 items-stretch justify-center lg:justify-start flex-wrap"
               >
-                <input
-                  type="button"
-                  id="btnActionTrackingHSE"
-                  class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-60 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex flex-col items-center justify-center !whitespace-normal"
-                  onclick="toggleHeadSubSection('actionTrackingHSE', this)"
-                  data-section="subSubOption"
-                  data-value="ACTION-TRACKING"
-                  value="ACTION TRACKING"
-                />
-
-                <input
-                  type="button"
-                  id="btnWasteManagementHSE"
-                  class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-60 h-16 text-sm sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex flex-col items-center justify-center !whitespace-normal"
-                  class="font-medium"
-                  onclick="toggleHeadSubSection('wasteManagementHSE', this)"
-                  data-section="subSubOption"
-                  data-value="WASTE-MANAGEMENT"
-                  value="WASTE MANAGEMENT"
-                />
-
-                <input
-                  type="button"
-                  id="btnTrainingManagementHSE"
-                  class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-60 h-16 text-sm sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex flex-col items-center justify-center !whitespace-normal"
-                  class="font-medium"
-                  onclick="toggleHeadSubSection('trainingManagementHSE', this)"
-                  data-section="subSubOption"
-                  data-value="TRAINING-MANAGEMENT"
-                  value="TRAINING MANAGEMENT"
-                />
+              <label class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-60 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex flex-col items-center justify-center !whitespace-normal">
+                <input 
+                  type="radio" 
+                  name="subSubOption" 
+                  id="btnActionTrackingHSE" 
+                  class="hidden" 
+                  onclick="toggleHeadSubSection('actionTrackingHSE', this)" 
+                  data-section="subSubOption" 
+                  data-value="ACTION-TRACKING">
+                ACTION TRACKING
+              </label>
+              
+              <label class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-60 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex flex-col items-center justify-center !whitespace-normal">
+                <input 
+                  type="radio" 
+                  name="subSubOption" 
+                  id="btnWasteManagementHSE" 
+                  class="hidden" 
+                  onclick="toggleHeadSubSection('wasteManagementHSE', this)" 
+                  data-section="subSubOption" 
+                  data-value="WASTE-MANAGEMENT">
+                WASTE MANAGEMENT
+              </label>
+              
+              <label class="toggle-btn text-white lg:hover:text-gray-400 w-full sm:w-60 h-16 font-medium text-sm text-center sm:text-base md:text-base px-3 py-1 sm:px-4 sm:py-2 bg-gray-400 border border-gray-400 lg:hover:border-accent lg:hover:bg-transparent rounded-xl shadow-sm shadow-black/20 flex flex-col items-center justify-center !whitespace-normal">
+                <input 
+                  type="radio" 
+                  name="subSubOption" 
+                  id="btnTrainingManagementHSE" 
+                  class="hidden" 
+                  onclick="toggleHeadSubSection('trainingManagementHSE', this)" 
+                  data-section="subSubOption" 
+                  data-value="TRAINING-MANAGEMENT">
+                TRAINING MANAGEMENT
+              </label>
+              
               </div>
             </div>
 
@@ -1737,6 +1774,7 @@
                 <div class="flex flex-col gap-1 w-full sm:w-[47%]">
                   <input
                     type="text"
+                    name="name"
                     required
                     class="w-full border border-black p-3 rounded-xl"
                     placeholder="Provide your name"
@@ -1749,6 +1787,7 @@
                 <div class="flex flex-col gap-1 w-full sm:w-[47%]">
                   <input
                     type="text"
+                    name="organization-name"
                     class="w-full border border-black p-3 rounded-xl"
                     placeholder="Organization Name"
                   />
@@ -1764,6 +1803,7 @@
                 <div class="flex flex-col gap-1 w-full sm:w-[47%]">
                   <input
                     type="text"
+                    name="designation"
                     required
                     class="w-full border border-black p-3 rounded-xl"
                     placeholder="Designation / Title"
@@ -1776,6 +1816,7 @@
                 <div class="flex flex-col gap-1 w-full sm:w-[47%]">
                   <input
                     type="text"
+                    name="Country"
                     required
                     class="w-full border border-black p-3 rounded-xl"
                     placeholder="Country / Region"
@@ -1792,6 +1833,7 @@
                 <div class="flex flex-col gap-1 w-full sm:w-[47%]">
                   <input
                     type="text"
+                    name="email"
                     required
                     class="w-full border border-black p-3 rounded-xl"
                     placeholder="Email Address"
@@ -1804,6 +1846,7 @@
                 <div class="flex flex-col gap-1 w-full sm:w-[47%]">
                   <input
                     type="text"
+                    name="contact-number"
                     required
                     class="w-full border border-black p-3 rounded-xl"
                     placeholder="Contact Number"
@@ -1823,7 +1866,7 @@
 
               <div class="flex flex-col gap-1">
                 <textarea
-                  name=""
+                  name="message"
                   id=""
                   rows="3"
                   class="border border-black p-3 rounded-xl"
