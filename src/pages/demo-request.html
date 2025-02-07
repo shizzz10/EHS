@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="../styles/output.css" rel="stylesheet" />
+    <link rel="icon" href="../assets/logo.webp" type="image/webp" />
+    <title>Demo Request</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+   
+    <header>
+        <!-- <div class="relative bg-white shadow-sm"> -->
+        <div
+          class="header fixed lg:static top-0 w-full z-50 flex justify-between items-center px-4 sm:px-5 py-1.5 bg-default bg-opacity-60 lg:bg-opacity-100 shadow-sm border-b-2 border-accent group"
+        >
+          <!-- logo -->
+          <div class="flex">
+            <a href="../../index.html" class="flex">
+              <img src="../assets/logo.webp" alt="" class="w-24"
+            /></a>
+          </div>
+  
+          <!-- menus -->
+          <div class="hidden lg:flex">
+            <ul class="flex items-center gap-8">
+              <li class="group/dropdown">
+                <button
+                  class="dropdown-parent hover:text-white py-2 flex items-center justify-center text-gray-100 text-base font-semibold"
+                >
+                  CONSULTANCY
+  
+                  <img
+                    src="../assets/white-half-arrow.svg"
+                    alt=""
+                    class="w-4 h-4 ml-1 transform transition-transform duration-300 group-hover/dropdown:rotate-180"
+                  />
+                </button>
+                <!-- Fixed-width dropdown menu -->
+                <div
+                  class="hidden dropdown absolute left-1/2 transform -translate-x-1/2 mt-5 bg-white border border-accent shadow-sm z-50"
+                >
+                  <div class="px-4">
+                    <div class="flex px-14 py-6">
+                      <!-- By CONSULTANCY -->
+                      <div class="flex flex-col gap-2">
+                        <a href="./consultancy.html"
+                          class="text-base font-semibold text-gray-700 hover:text-gray-800 tracking-wide uppercase mb-4"
+                        >
+                          CONSULTANCY
+                        </a>
+                        <ul class="text-sm font-medium flex flex-col gap-2">
+                          <li
+                            class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                          >
+                            <a href="./consultancy.html?filter=strategy" class="flex items-center"
+                              >HSE Strategy</a
+                            >
+                          </li>
+                          <li
+                            class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                          >
+                            <a href="./consultancy.html?filter=safety" class="flex items-center"
+                              >Safety Management</a
+                            >
+                          </li>
+                          <li
+                            class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                          >
+                            <a href="./consultancy.html?filter=sustainability" class="flex items-center"
+                              >Environment Management/ Sustainability</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="group/dropdown">
+                <button
+                  class="dropdown-parent hover:text-white py-2 flex items-center justify-center text-gray-100 text-base font-semibold"
+                >
+                  SOLUTIONS
+  
+                  <img
+                    src="../assets/white-half-arrow.svg"
+                    alt=""
+                    class="w-4 h-4 ml-1 transform transition-transform duration-300 group-hover/dropdown:rotate-180"
+                  />
+                </button>
+                <!-- Fixed-width dropdown menu -->
+                <div
+                  class="hidden dropdown absolute left-1/2 transform -translate-x-1/2 mt-5 bg-white border border-accent shadow-sm z-50"
+                >
+                  <div class="px-4">
+                    <div class="flex px-14 py-6">
+                      <!-- By DIGITAL SOLUTIONS -->
+                      <div  class="flex flex-col gap-2">
+                        <a href="./solutions.html"
+                          class="text-base font-semibold text-gray-700 hover:text-gray-800 tracking-wide uppercase mb-4"
+                        >
+                          DIGITAL SOLUTIONS
+                        </a>
+                        <ul class="text-sm font-medium flex flex-col gap-2">
+                          <li
+                            class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                          >
+                            <a href="./solutions.html" class="flex items-center"
+                              ><strong class="pr-1">EMPOWER: </strong>HSE
+                              Reporting and Communication</a
+                            >
+                          </li>
+                          <li
+                            class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                          >
+                            <a href="" class="flex items-center"
+                              ><strong class="pr-1">EMPOWER: </strong>Action
+                              Tracking Web Application</a
+                            >
+                          </li>
+                          <li
+                            class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                          >
+                            <a href="" class="flex items-center"
+                              ><strong class="pr-1">EMPOWER: </strong>Waste
+                              Management</a
+                            >
+                          </li>
+                          <li
+                            class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                          >
+                            <a href="" class="flex items-center"
+                              ><strong class="pr-1">EMPOWER: </strong>Training
+                              Management</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="group/dropdown">
+                <button
+                  class="dropdown-parent hover:text-white py-2 flex items-center justify-center text-gray-100 text-base font-semibold"
+                >
+                  TRAINING
+  
+                  <img
+                    src="../assets/white-half-arrow.svg"
+                    alt=""
+                    class="w-4 h-4 ml-1 transform transition-transform duration-300 group-hover/dropdown:rotate-180"
+                  />
+                </button>
+                <!-- Fixed-width dropdown menu -->
+                <div
+                  class="hidden dropdown absolute left-1/2 transform -translate-x-1/2 mt-5 bg-white border border-accent shadow-sm z-50"
+                >
+                  <div class="px-4">
+                    <div class="flex px-14 py-6">
+                     
+                      <!-- By TRAINING -->
+                      <div  class="flex flex-col gap-2">
+                        <a href="./training.html"
+                          class="text-base font-semibold text-gray-700 hover:text-gray-800 tracking-wide uppercase mb-4"
+                        >
+                          TRAINING
+                        </a>
+                        <ul class="text-sm font-medium flex flex-col gap-2">
+                          <li
+                            class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                          >
+                            <a href="./training.html?filter=strategy" class="flex items-center"
+                              >HSE Management Training</a
+                            >
+                          </li>
+                          <li
+                            class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                          >
+                            <a href="./training.html?filter=safety" class="flex items-center"
+                              >Safety Training </a
+                            >
+                          </li>
+                          <li
+                            class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                          >
+                            <a href="./training.html?filter=sustainability" class="flex items-center"
+                              >Environment / Sustainability Training</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+  
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+  
+          <!-- CTA Buttons -->
+          <div class="hidden lg:flex items-center">
+            <a
+              href="./contact-us.html"
+              class="px-4 py-1.5 rounded-full bg-white text-accent hover:bg-accent hover:text-white border border-accent transition-colors shadow-sm text-base font-semibold"
+            >
+              CONTACT US
+            </a>
+          </div>
+  
+          <!-- mobile header  -->
+  
+          <!-- Mobile Header -->
+          <div class="lg:hidden">
+            <div class="flex">
+              <button
+                id="hamburger-menu"
+                class="flex flex-col justify-between items-center bg-transparent border-none p-0 cursor-pointer w-6 h-6 outline-none"
+              >
+                <span
+                  class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"
+                ></span>
+                <span
+                  class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"
+                ></span>
+                <span
+                  class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"
+                ></span>
+              </button>
+            </div>
+  
+            <div
+              id="mobile-menu"
+              class="mobile-menu hidden absolute mt-20 inset-0 w-screen h-screen bg-default bg-opacity-80 z-50"
+            >
+              <div class="flex flex-col">
+                <div
+                  class="accordion-item border-b border-default px-2 bg-gray-50 font-medium"
+                >
+                  <h4
+                    class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
+                  >
+                    <span class="text-lg text-default">DIGITAL SOLUTIONS</span>
+                    <img
+                      src="../assets/gray-half-arrow.svg"
+                      alt="arrow"
+                      class="w-4 arrow transition-transform duration-300"
+                    />
+                  </h4>
+                  <div
+                    class="accordion-content hidden flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+                  >
+                    <ul class="text-sm font-medium flex flex-col gap-2">
+                      <li
+                        class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                      >
+                        <a href="./solutions.html" class="flex items-center"
+                          ><strong class="pr-1">EMPOWER: </strong>HSE Reporting
+                          and Communication</a
+                        >
+                      </li>
+                      <li
+                        class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                      >
+                        <a href="" class="flex items-center"
+                          ><strong class="pr-1">EMPOWER: </strong>Action Tracking
+                          Web Application</a
+                        >
+                      </li>
+                      <li
+                        class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                      >
+                        <a href="" class="flex items-center"
+                          ><strong class="pr-1">EMPOWER: </strong>Waste
+                          Management</a
+                        >
+                      </li>
+                      <li
+                        class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                      >
+                        <a href="" class="flex items-center"
+                          ><strong class="pr-1">EMPOWER: </strong>Training
+                          Management</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+  
+                <div
+                  class="accordion-item border-b border-default px-2 bg-gray-50 font-medium"
+                >
+                  <h4
+                    class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
+                  >
+                    <span class="text-lg text-default">CONSULTANCY</span>
+                    <img
+                      src="../assets/gray-half-arrow.svg"
+                      alt="arrow"
+                      class="w-4 arrow transition-transform duration-300"
+                    />
+                  </h4>
+                  <div
+                    class="accordion-content hidden flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+                  >
+                    <ul class="text-sm font-medium flex flex-col gap-2">
+                      <li
+                        class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                      >
+                        <a href="./consultancy.html?filter=strategy" class="flex items-center"
+                          >HSE Strategy </a
+                        >
+                      </li>
+                      <li
+                        class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                      >
+                        <a href="./consultancy.html?filter=safety" class="flex items-center"
+                          >Safety Management</a
+                        >
+                      </li>
+                      <li
+                        class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                      >
+                        <a href="./consultancy.html?filter=sustainability" class="flex items-center"
+                          >Environment Management/ Sustainability</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+  
+                <div
+                  class="accordion-item border-b border-default px-2 bg-gray-50 font-medium"
+                >
+                  <h4
+                    class="accordion-header flex justify-between items-center px-2 py-2 cursor-pointer"
+                  >
+                    <span class="text-lg text-default">TRAINING</span>
+                    <img
+                      src="../assets/gray-half-arrow.svg"
+                      alt="arrow"
+                      class="w-4 arrow transition-transform duration-300"
+                    />
+                  </h4>
+                  <div
+                    class="accordion-content hidden flex flex-col gap-2 px-2 py-2 transition-all duration-300 ease-in-out opacity-0 scale-y-0 transform origin-top"
+                  >
+                    <ul class="text-sm font-medium flex flex-col gap-2">
+                      <li
+                        class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                      >
+                        <a href="./training.html?filter=strategy" class="flex items-center"
+                          >HSE Management Training</a
+                        >
+                      </li>
+                      <li
+                        class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                      >
+                        <a href="./training.html?filter=safety" class="flex items-center"
+                          >Safety Training </a
+                        >
+                      </li>
+                      <li
+                        class="flex items-start before:content-['■'] before:mr-2 before:text-default text-default text-opacity-80 hover:text-opacity-95"
+                      >
+                        <a href="./training.html?filter=sustainability" class="flex items-center"
+                          >Environment / Sustainability Training</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+  
+                <a
+                  href="./contact-us.html"
+                  class="accordion-item border-b border-accent text-white hover:text-accent hover:bg-white px-6 py-2 bg-accent font-medium text-lg"
+                >
+                  CONNECT
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+  
+    <main class="flex flex-col mb-20  px-4 mt-24 lg:mt-8">
+      <div class="flex justify-between">
+        <div>
+          <h2 class="text-lg lg:text-2xl font-bold">Demo Request</h2>
+        </div>
+
+      
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <!-- Main Tabs Container -->
+        <div class="flex justify-center">
+          <div
+            class="border h-9 lg:h-10 rounded-full bg-gray-400 flex relative overflow-hidden"
+          >
+            <div
+              class="main-slider absolute top-0 left-0 w-1/2 h-full bg-default rounded-full transition-transform duration-300"
+            ></div>
+            <button
+              onclick="showMainTab(0, 'demo-content')"
+              class="tab-btn z-10 font-semibold text-sm w-36 lg:w-40 rounded-full transition-transform duration-300 scale-100 hover:scale-105 text-white lg:text-lg"
+            >
+              Demo Request
+            </button>
+            <button
+              onclick="showMainTab(1, 'contact-content')"
+              class="tab-btn z-10 font-semibold text-sm w-36 lg:w-40 rounded-full transition-transform duration-300 scale-100 hover:scale-105 text-white lg:text-lg"
+            >
+              Contact Form
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Content Sections -->
+        <div class="mt-4">
+          <!-- Demo Request Content -->
+          <div id="demo-content" class="space-y-4">
+            <!-- Sub Tabs Container -->
+            <div class="flex justify-center">
+              <div
+                class="border h-8 sm:h-9 rounded-full bg-gray-400 flex relative overflow-hidden"
+              >
+                <div
+                  class="sub-slider absolute top-0 left-0 w-1/3 h-full bg-default rounded-full transition-transform duration-300"
+                ></div>
+                <button
+                  onclick="showSubTab(0, 'new-content')"
+                  class="tab-btn z-10 font-medium text-sm w-28 lg:w-32 lg:text-base rounded-full transition-transform duration-300 scale-100 hover:scale-105 text-white"
+                >
+                  New (01)
+                </button>
+                <button
+                  onclick="showSubTab(1, 'reviewed-content')"
+                  class="tab-btn z-10 font-medium text-sm w-28 lg:w-32 lg:text-base rounded-full transition-transform duration-300 scale-100 hover:scale-105 text-white"
+                >
+                  Reviewed (01)
+                </button>
+                <button
+                  onclick="showSubTab(2, 'complete-content')"
+                  class="tab-btn z-10 font-medium text-sm lg:text-base w-28 lg:w-32 rounded-full transition-transform duration-300 scale-100 hover:scale-105 text-white"
+                >
+                  Complete (01)
+                </button>
+              </div>
+            </div>
+
+            <!-- Sub Tab Contents -->
+
+            <!-- new tab content  -->
+            <div id="new-content" class="hidden flex flex-col">
+              <div class="flex flex-col lg:grid lg:grid-cols-2 gap-4">
+                <!-- Users Card -->
+                <div
+                  class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                >
+                  <!-- columns  -->
+                  <div class="flex gap-1 w-full items-center">
+                    <!-- first col  -->
+                    <div class="flex flex-col gap-1">
+                      <!-- 1st group  -->
+                      <div class="flex flex-col">
+                        <div class="text-sm sm:text-base">
+                          <span class="font-semibold"> Mr. Asif Khan </span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium">Manager HSE</span>
+                        </div>
+                      </div>
+                      <!-- 2nd group  -->
+                      <div class="flex flex-col">
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Getz Pharma Pvt. Ltd</span
+                          >
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Pakistan
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 2nd col  -->
+                    <div
+                      class="ml-auto flex flex-col items-end justify-between gap-1"
+                    >
+                      <!-- info  -->
+                      <div class="flex flex-col gap-1 items-end">
+                        <a href="">
+                          <div
+                            class="text-center bg-default hover:bg-opacity-90 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                          >
+                            Mark as Read
+                          </div>
+                        </a>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../assets/Phone Blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+
+                          <span class="font-medium">+92 12345678 </span>
+                        </div>
+
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../assets/Email blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+
+                          <span class="font-medium ">abc@gmail.com </span>
+                        </div>
+                      </div>
+
+                      <!-- date  -->
+                      <div
+                        class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                      >
+                        <span class="font-medium">07/02/2024 </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- footer description  -->
+                  <div class="text-[11px] sm:text-[13px] text-gray-800">
+                    <span class="font-medium"
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Accusamus, totam.</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Users Card -->
+                <div
+                  class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                >
+                  <!-- columns  -->
+                  <div class="flex gap-1 w-full items-center">
+                    <!-- first col  -->
+                    <div class="flex flex-col gap-1">
+                      <!-- 1st group  -->
+                      <div class="flex flex-col">
+                        <div class="text-sm sm:text-base">
+                          <span class="font-semibold"> Mr. Asif Khan </span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium">Manager HSE</span>
+                        </div>
+                      </div>
+                      <!-- 2nd group  -->
+                      <div class="flex flex-col">
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Getz Pharma Pvt. Ltd</span
+                          >
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Pakistan
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 2nd col  -->
+                    <div
+                      class="ml-auto flex flex-col items-end justify-between gap-1"
+                    >
+                      <!-- info  -->
+                      <div class="flex flex-col gap-1 items-end">
+                        <a href="">
+                          <div
+                            class="text-center bg-default hover:bg-opacity-90 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                          >
+                            Mark as Read
+                          </div>
+                        </a>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../assets/Phone Blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+
+                          <span class="font-medium">+92 12345678 </span>
+                        </div>
+
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../assets/Email blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+
+                          <span class="font-medium">abc@gmail.com </span>
+                        </div>
+                      </div>
+
+                      <!-- date  -->
+                      <div
+                        class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                      >
+                        <span class="font-medium">07/02/2024 </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- footer description  -->
+                  <div class="text-[11px] sm:text-[13px] text-gray-800">
+                    <span class="font-medium"
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Accusamus, totam.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- reviewed tab content  -->
+            <div id="reviewed-content" class="hidden flex flex-col">
+              <div class="flex flex-col lg:grid lg:grid-cols-2 gap-4">
+                <!-- Users Card -->
+                <div
+                  class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                >
+                  <!-- columns  -->
+                  <div class="flex gap-1 w-full items-center">
+                    <!-- first col  -->
+                    <div class="flex flex-col gap-1">
+                      <!-- 1st group  -->
+                      <div class="flex flex-col">
+                        <div class="text-sm sm:text-base">
+                          <span class="font-semibold"> Mr. Asif Khan </span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium">Manager HSE</span>
+                        </div>
+                      </div>
+                      <!-- 2nd group  -->
+                      <div class="flex flex-col">
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Getz Pharma Pvt. Ltd</span
+                          >
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Pakistan
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 2nd col  -->
+                    <div
+                      class="ml-auto flex flex-col items-end justify-between gap-1"
+                    >
+                      <!-- info  -->
+                      <div class="flex flex-col gap-1 items-end">
+                        <a href="">
+                          <div
+                            class="text-center bg-default hover:bg-opacity-90 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                          >
+                            Move to Complete
+                          </div>
+                        </a>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../assets/Phone Blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+
+                          <span class="font-medium">+92 12345678 </span>
+                        </div>
+
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../assets/Email blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+
+                          <span class="font-medium">abc@gmail.com </span>
+                        </div>
+                      </div>
+
+                      <!-- date  -->
+                      <div
+                        class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                      >
+                        <span class="font-medium">07/02/2024 </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- footer description  -->
+                  <div class="text-[11px] sm:text-[13px] text-gray-800">
+                    <span class="font-medium"
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Accusamus, totam.</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Users Card -->
+                <div
+                  class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                >
+                  <!-- columns  -->
+                  <div class="flex gap-1 w-full items-center">
+                    <!-- first col  -->
+                    <div class="flex flex-col gap-1">
+                      <!-- 1st group  -->
+                      <div class="flex flex-col">
+                        <div class="text-sm sm:text-base">
+                          <span class="font-semibold"> Mr. Asif Khan </span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium">Manager HSE</span>
+                        </div>
+                      </div>
+                      <!-- 2nd group  -->
+                      <div class="flex flex-col">
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Getz Pharma Pvt. Ltd</span
+                          >
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Pakistan
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 2nd col  -->
+                    <div
+                      class="ml-auto flex flex-col items-end justify-between gap-1"
+                    >
+                      <!-- info  -->
+                      <div class="flex flex-col gap-1 items-end">
+                        <a href="">
+                          <div
+                            class="text-center bg-default hover:bg-opacity-90 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                          >
+                            Move to Complete
+                          </div>
+                        </a>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../assets/Phone Blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+
+                          <span class="font-medium">+92 12345678 </span>
+                        </div>
+
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../assets/Email blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+
+                          <span class="font-medium">abc@gmail.com </span>
+                        </div>
+                      </div>
+
+                      <!-- date  -->
+                      <div
+                        class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                      >
+                        <span class="font-medium">07/02/2024 </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- footer description  -->
+                  <div class="text-[11px] sm:text-[13px] text-gray-800">
+                    <span class="font-medium"
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Accusamus, totam.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- complete tab content  -->
+            <div id="complete-content" class="hidden flex flex-col">
+              <div class="flex flex-col lg:grid lg:grid-cols-2 gap-4">
+                <!-- Users Card -->
+                <div
+                  class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                >
+                  <!-- columns  -->
+                  <div class="flex gap-1 w-full items-center">
+                    <!-- first col  -->
+                    <div class="flex flex-col gap-1">
+                      <!-- 1st group  -->
+                      <div class="flex flex-col">
+                        <div class="text-sm sm:text-base">
+                          <span class="font-semibold"> Mr. Asif Khan </span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium">Manager HSE</span>
+                        </div>
+                      </div>
+                      <!-- 2nd group  -->
+                      <div class="flex flex-col">
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Getz Pharma Pvt. Ltd</span
+                          >
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Pakistan
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 2nd col  -->
+                    <div
+                      class="ml-auto flex flex-col items-end justify-between gap-1"
+                    >
+                      <!-- info  -->
+                      <div class="flex flex-col gap-1 items-end">
+                        <a href="">
+                          <div
+                            class="text-center bg-red-600 hover:bg-red-500 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                          >
+                            Delete
+                          </div>
+                        </a>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../assets/Phone Blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+
+                          <span class="font-medium">+92 12345678 </span>
+                        </div>
+
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../assets/Email blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+
+                          <span class="font-medium">abc@gmail.com </span>
+                        </div>
+                      </div>
+
+                      <!-- date  -->
+                      <div
+                        class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                      >
+                        <span class="font-medium">07/02/2024 </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- footer description  -->
+                  <div class="text-[11px] sm:text-[13px] text-gray-800">
+                    <span class="font-medium"
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Accusamus, totam.</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Users Card -->
+                <div
+                  class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                >
+                  <!-- columns  -->
+                  <div class="flex gap-1 w-full items-center">
+                    <!-- first col  -->
+                    <div class="flex flex-col gap-1">
+                      <!-- 1st group  -->
+                      <div class="flex flex-col">
+                        <div class="text-sm sm:text-base">
+                          <span class="font-semibold"> Mr. Asif Khan </span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium">Manager HSE</span>
+                        </div>
+                      </div>
+                      <!-- 2nd group  -->
+                      <div class="flex flex-col">
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Getz Pharma Pvt. Ltd</span
+                          >
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Pakistan
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 2nd col  -->
+                    <div
+                      class="ml-auto flex flex-col items-end justify-between gap-1"
+                    >
+                      <!-- info  -->
+                      <div class="flex flex-col gap-1 items-end">
+                        <a href="">
+                          <div
+                            class="text-center bg-red-600 hover:bg-red-500 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                          >
+                            Delete
+                          </div>
+                        </a>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../assets/Phone Blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+
+                          <span class="font-medium">+92 12345678 </span>
+                        </div>
+
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../assets/Email blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+
+                          <span class="font-medium">abc@gmail.com </span>
+                        </div>
+                      </div>
+
+                      <!-- date  -->
+                      <div
+                        class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                      >
+                        <span class="font-medium">07/02/2024 </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- footer description  -->
+                  <div class="text-[11px] sm:text-[13px] text-gray-800">
+                    <span class="font-medium"
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Accusamus, totam.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Content -->
+          <div id="contact-content" class="hidden space-y-4">
+            <!-- Sub Tabs Container -->
+            <div class="flex justify-center">
+                <div
+                  class="border h-8 rounded-full bg-gray-400 flex relative overflow-hidden"
+                >
+                  <div
+                    class="contact-sub-slider absolute top-0 left-0 w-1/3 h-full bg-default rounded-full transition-transform duration-300"
+                  ></div>
+                  <button
+                    onclick="showContactSubTab(0, 'contact-new-content')"
+                    class="tab-btn z-10 font-medium text-sm w-28 lg:w-32 lg:text-base rounded-full transition-transform duration-300 scale-100 hover:scale-105 text-white"
+                  >
+                    New (01)
+                  </button>
+                  <button
+                    onclick="showContactSubTab(1, 'contact-reviewed-content')"
+                    class="tab-btn z-10 font-medium text-sm w-28 lg:w-32 lg:text-base rounded-full transition-transform duration-300 scale-100 hover:scale-105 text-white"
+                  >
+                    Reviewed (01)
+                  </button>
+                  <button
+                    onclick="showContactSubTab(2, 'contact-complete-content')"
+                    class="tab-btn z-10 font-medium text-sm lg:text-base w-28 lg:w-32 rounded-full transition-transform duration-300 scale-100 hover:scale-105 text-white"
+                  >
+                    Complete (01)
+                  </button>
+                </div>
+              </div>
+  
+              <!-- Sub Tab Contents -->
+  
+              <!-- new tab content  -->
+              <div id="contact-new-content" class="hidden flex flex-col">
+                <div class="flex flex-col lg:grid lg:grid-cols-2 gap-4">
+                  <!-- Users Card -->
+                  <div
+                    class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                  >
+                    <!-- columns  -->
+                    <div class="flex gap-1 w-full items-center">
+                      <!-- first col  -->
+                      <div class="flex flex-col gap-1">
+                        <!-- 1st group  -->
+                        <div class="flex flex-col">
+                          <div class="text-sm sm:text-base">
+                            <span class="font-semibold"> Mr. Asif Khan </span>
+                          </div>
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium">Manager HSE</span>
+                          </div>
+                        </div>
+                        <!-- 2nd group  -->
+                        <div class="flex flex-col">
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium whitespace-nowrap"
+                              >Getz Pharma Pvt. Ltd</span
+                            >
+                          </div>
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium whitespace-nowrap"
+                              >Pakistan
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <!-- 2nd col  -->
+                      <div
+                        class="ml-auto flex flex-col items-end justify-between gap-1"
+                      >
+                        <!-- info  -->
+                        <div class="flex flex-col gap-1 items-end">
+                          <a href="">
+                            <div
+                              class="text-center bg-default hover:bg-opacity-90 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                            >
+                              Mark as Read
+                            </div>
+                          </a>
+                          <div class="text-xs sm:text-sm flex gap-1">
+                            <img
+                              src="../assets/Phone Blue.svg"
+                              alt=""
+                              class="w-4 sm:w-5 flex-shrink-0"
+                            />
+  
+                            <span class="font-medium">+92 12345678 </span>
+                          </div>
+  
+                          <div class="text-xs sm:text-sm flex gap-1">
+                            <img
+                              src="../assets/Email blue.svg"
+                              alt=""
+                              class="w-4 sm:w-5 flex-shrink-0"
+                            />
+  
+                            <span class="font-medium">abc@gmail.com </span>
+                          </div>
+                        </div>
+  
+                        <!-- date  -->
+                        <div
+                          class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                        >
+                          <span class="font-medium">07/02/2024 </span>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- footer description  -->
+                    <div class="text-[11px] sm:text-[13px] text-gray-800">
+                      <span class="font-medium"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Accusamus, totam.</span
+                      >
+                    </div>
+                  </div>
+  
+                  <!-- Users Card -->
+                  <div
+                    class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                  >
+                    <!-- columns  -->
+                    <div class="flex gap-1 w-full items-center">
+                      <!-- first col  -->
+                      <div class="flex flex-col gap-1">
+                        <!-- 1st group  -->
+                        <div class="flex flex-col">
+                          <div class="text-sm sm:text-base">
+                            <span class="font-semibold"> Mr. Asif Khan </span>
+                          </div>
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium">Manager HSE</span>
+                          </div>
+                        </div>
+                        <!-- 2nd group  -->
+                        <div class="flex flex-col">
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium whitespace-nowrap"
+                              >Getz Pharma Pvt. Ltd</span
+                            >
+                          </div>
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium whitespace-nowrap"
+                              >Pakistan
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <!-- 2nd col  -->
+                      <div
+                        class="ml-auto flex flex-col items-end justify-between gap-1"
+                      >
+                        <!-- info  -->
+                        <div class="flex flex-col gap-1 items-end">
+                          <a href="">
+                            <div
+                              class="text-center bg-default hover:bg-opacity-90 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                            >
+                              Mark as Read
+                            </div>
+                          </a>
+                          <div class="text-xs sm:text-sm flex gap-1">
+                            <img
+                              src="../assets/Phone Blue.svg"
+                              alt=""
+                              class="w-4 sm:w-5 flex-shrink-0"
+                            />
+  
+                            <span class="font-medium">+92 12345678 </span>
+                          </div>
+  
+                          <div class="text-xs sm:text-sm flex gap-1">
+                            <img
+                              src="../assets/Email blue.svg"
+                              alt=""
+                              class="w-4 sm:w-5 flex-shrink-0"
+                            />
+  
+                            <span class="font-medium">abc@gmail.com </span>
+                          </div>
+                        </div>
+  
+                        <!-- date  -->
+                        <div
+                          class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                        >
+                          <span class="font-medium">07/02/2024 </span>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- footer description  -->
+                    <div class="text-[11px] sm:text-[13px] text-gray-800">
+                      <span class="font-medium"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Accusamus, totam.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- reviewed tab content  -->
+              <div id="contact-reviewed-content" class="hidden flex flex-col">
+                <div class="flex flex-col lg:grid lg:grid-cols-2 gap-4">
+                  <!-- Users Card -->
+                  <div
+                    class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                  >
+                    <!-- columns  -->
+                    <div class="flex gap-1 w-full items-center">
+                      <!-- first col  -->
+                      <div class="flex flex-col gap-1">
+                        <!-- 1st group  -->
+                        <div class="flex flex-col">
+                          <div class="text-sm sm:text-base">
+                            <span class="font-semibold"> Mr. Asif Khan </span>
+                          </div>
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium">Manager HSE</span>
+                          </div>
+                        </div>
+                        <!-- 2nd group  -->
+                        <div class="flex flex-col">
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium whitespace-nowrap"
+                              >Getz Pharma Pvt. Ltd</span
+                            >
+                          </div>
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium whitespace-nowrap"
+                              >Pakistan
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <!-- 2nd col  -->
+                      <div
+                        class="ml-auto flex flex-col items-end justify-between gap-1"
+                      >
+                        <!-- info  -->
+                        <div class="flex flex-col gap-1 items-end">
+                          <a href="">
+                            <div
+                              class="text-center bg-default hover:bg-opacity-90 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                            >
+                              Move to Complete
+                            </div>
+                          </a>
+                          <div class="text-xs sm:text-sm flex gap-1">
+                            <img
+                              src="../assets/Phone Blue.svg"
+                              alt=""
+                              class="w-4 sm:w-5 flex-shrink-0"
+                            />
+  
+                            <span class="font-medium">+92 12345678 </span>
+                          </div>
+  
+                          <div class="text-xs sm:text-sm flex gap-1">
+                            <img
+                              src="../assets/Email blue.svg"
+                              alt=""
+                              class="w-4 sm:w-5 flex-shrink-0"
+                            />
+  
+                            <span class="font-medium">abc@gmail.com </span>
+                          </div>
+                        </div>
+  
+                        <!-- date  -->
+                        <div
+                          class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                        >
+                          <span class="font-medium">07/02/2024 </span>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- footer description  -->
+                    <div class="text-[11px] sm:text-[13px] text-gray-800">
+                      <span class="font-medium"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Accusamus, totam.</span
+                      >
+                    </div>
+                  </div>
+  
+                  <!-- Users Card -->
+                  <div
+                    class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                  >
+                    <!-- columns  -->
+                    <div class="flex gap-1 w-full items-center">
+                      <!-- first col  -->
+                      <div class="flex flex-col gap-1">
+                        <!-- 1st group  -->
+                        <div class="flex flex-col">
+                          <div class="text-sm sm:text-base">
+                            <span class="font-semibold"> Mr. Asif Khan </span>
+                          </div>
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium">Manager HSE</span>
+                          </div>
+                        </div>
+                        <!-- 2nd group  -->
+                        <div class="flex flex-col">
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium whitespace-nowrap"
+                              >Getz Pharma Pvt. Ltd</span
+                            >
+                          </div>
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium whitespace-nowrap"
+                              >Pakistan
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <!-- 2nd col  -->
+                      <div
+                        class="ml-auto flex flex-col items-end justify-between gap-1"
+                      >
+                        <!-- info  -->
+                        <div class="flex flex-col gap-1 items-end">
+                          <a href="">
+                            <div
+                              class="text-center bg-default hover:bg-opacity-90 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                            >
+                              Move to Complete
+                            </div>
+                          </a>
+                          <div class="text-xs sm:text-sm flex gap-1">
+                            <img
+                              src="../assets/Phone Blue.svg"
+                              alt=""
+                              class="w-4 sm:w-5 flex-shrink-0"
+                            />
+  
+                            <span class="font-medium">+92 12345678 </span>
+                          </div>
+  
+                          <div class="text-xs sm:text-sm flex gap-1">
+                            <img
+                              src="../assets/Email blue.svg"
+                              alt=""
+                              class="w-4 sm:w-5 flex-shrink-0"
+                            />
+  
+                            <span class="font-medium">abc@gmail.com </span>
+                          </div>
+                        </div>
+  
+                        <!-- date  -->
+                        <div
+                          class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                        >
+                          <span class="font-medium">07/02/2024 </span>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- footer description  -->
+                    <div class="text-[11px] sm:text-[13px] text-gray-800">
+                      <span class="font-medium"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Accusamus, totam.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- complete tab content  -->
+              <div id="contact-complete-content" class="hidden flex flex-col">
+                <div class="flex flex-col lg:grid lg:grid-cols-2 gap-4">
+                  <!-- Users Card -->
+                  <div
+                    class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                  >
+                    <!-- columns  -->
+                    <div class="flex gap-1 w-full items-center">
+                      <!-- first col  -->
+                      <div class="flex flex-col gap-1">
+                        <!-- 1st group  -->
+                        <div class="flex flex-col">
+                          <div class="text-sm sm:text-base">
+                            <span class="font-semibold"> Mr. Asif Khan </span>
+                          </div>
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium">Manager HSE</span>
+                          </div>
+                        </div>
+                        <!-- 2nd group  -->
+                        <div class="flex flex-col">
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium whitespace-nowrap"
+                              >Getz Pharma Pvt. Ltd</span
+                            >
+                          </div>
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium whitespace-nowrap"
+                              >Pakistan
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <!-- 2nd col  -->
+                      <div
+                        class="ml-auto flex flex-col items-end justify-between gap-1"
+                      >
+                        <!-- info  -->
+                        <div class="flex flex-col gap-1 items-end">
+                          <a href="">
+                            <div
+                              class="text-center bg-red-600 hover:bg-red-500 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                            >
+                              Delete
+                            </div>
+                          </a>
+                          <div class="text-xs sm:text-sm flex gap-1">
+                            <img
+                              src="../assets/Phone Blue.svg"
+                              alt=""
+                              class="w-4 sm:w-5 flex-shrink-0"
+                            />
+  
+                            <span class="font-medium">+92 12345678 </span>
+                          </div>
+  
+                          <div class="text-xs sm:text-sm flex gap-1">
+                            <img
+                              src="../assets/Email blue.svg"
+                              alt=""
+                              class="w-4 sm:w-5 flex-shrink-0"
+                            />
+  
+                            <span class="font-medium">abc@gmail.com </span>
+                          </div>
+                        </div>
+  
+                        <!-- date  -->
+                        <div
+                          class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                        >
+                          <span class="font-medium">07/02/2024 </span>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- footer description  -->
+                    <div class="text-[11px] sm:text-[13px] text-gray-800">
+                      <span class="font-medium"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Accusamus, totam.</span
+                      >
+                    </div>
+                  </div>
+  
+                  <!-- Users Card -->
+                  <div
+                    class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                  >
+                    <!-- columns  -->
+                    <div class="flex gap-1 w-full items-center">
+                      <!-- first col  -->
+                      <div class="flex flex-col gap-1">
+                        <!-- 1st group  -->
+                        <div class="flex flex-col">
+                          <div class="text-sm sm:text-base">
+                            <span class="font-semibold"> Mr. Asif Khan </span>
+                          </div>
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium">Manager HSE</span>
+                          </div>
+                        </div>
+                        <!-- 2nd group  -->
+                        <div class="flex flex-col">
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium whitespace-nowrap"
+                              >Getz Pharma Pvt. Ltd</span
+                            >
+                          </div>
+                          <div class="text-xs sm:text-sm">
+                            <span class="font-medium whitespace-nowrap"
+                              >Pakistan
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <!-- 2nd col  -->
+                      <div
+                        class="ml-auto flex flex-col items-end justify-between gap-1"
+                      >
+                        <!-- info  -->
+                        <div class="flex flex-col gap-1 items-end">
+                          <a href="">
+                            <div
+                              class="text-center bg-red-600 hover:bg-red-500 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                            >
+                              Delete
+                            </div>
+                          </a>
+                          <div class="text-xs sm:text-sm flex gap-1">
+                            <img
+                              src="../assets/Phone Blue.svg"
+                              alt=""
+                              class="w-4 sm:w-5 flex-shrink-0"
+                            />
+  
+                            <span class="font-medium">+92 12345678 </span>
+                          </div>
+  
+                          <div class="text-xs sm:text-sm flex gap-1">
+                            <img
+                              src="../assets/Email blue.svg"
+                              alt=""
+                              class="w-4 sm:w-5 flex-shrink-0"
+                            />
+  
+                            <span class="font-medium">abc@gmail.com </span>
+                          </div>
+                        </div>
+  
+                        <!-- date  -->
+                        <div
+                          class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                        >
+                          <span class="font-medium">07/02/2024 </span>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <!-- footer description  -->
+                    <div class="text-[11px] sm:text-[13px] text-gray-800">
+                      <span class="font-medium"
+                        >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Accusamus, totam.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+   
+    <footer
+      class="flex flex-col mt-auto gap-1.5 sm:gap-3 bg-default text-white px-2 sm:px-3 lg:px-4 py-1.5 sm:py-3 2xl:justify-between 2xl:items-center"
+    >
+      <!-- Logo social  -->
+      <div
+        class="flex border-b border-gray-300 w-full justify-between items-center py-1.5 px-1 md:py-2 md:px-4 2xl:max-w-[1600px] 2xl:justify-between 2xl:items-center"
+      >
+        <!-- logo  -->
+        <div class="flex">
+          <a href="../../index.html" class="flex">
+            <img src="../assets/logo.webp" alt="" class="w-20 sm:w-24"
+          /></a>
+        </div>
+
+        <!-- socials  -->
+        <div class="flex gap-4 items-center">
+          <a target="_blank" href="http://Wa.me/+923157814385">
+            <img
+              src="../assets/whatsapp.svg"
+              alt=""
+              class="w-5 sm:w-7 ease-in-out transform scale-100 hover:scale-[1.03] duration-300"
+            />
+          </a>
+
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/company/ehsandesgconsultants/"
+          >
+            <img
+              src="../assets/linkedin.svg"
+              alt=""
+              class="w-5 sm:w-7 ease-in-out transform scale-100 hover:scale-[1.03] duration-300"
+            />
+          </a>
+          <a target="_blank" href="mailto:info@ehsandesgconsultants.com">
+            <img
+              src="../assets/email.svg"
+              alt=""
+              class="w-5 sm:w-7 ease-in-out transform scale-100 hover:scale-[1.03] duration-300"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- about  -->
+      <div
+        class="flex gap-5 flex-col sm:flex-row justify-between border-b border-gray-300 w-full py-1.5 px-1 md:py-2 md:px-4 2xl:max-w-[1600px] 2xl:justify-between 2xl:items-center"
+      >
+        <!-- Digital soultions  -->
+        <div class="flex flex-col text-white gap-3">
+          <a href="./solutions.html"
+            class="text-base lg:text-xl font-medium text-white text-opacity-40 hover:text-opacity-60"
+          >
+            DIGITAL SOLUTIONS
+          </a>
+          <div class="flex gap-2 flex-col">
+            <ul class="ml-3 text-sm">
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="../pages/solutions.html" class="flex items-start"
+                  ><strong class="pr-1">EMPOWER: </strong>HSE Reporting and
+                  Communication</a
+                >
+              </li>
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="" class="flex items-start"
+                  ><strong class="pr-1">EMPOWER: </strong>Action Tracking Web
+                  Application</a
+                >
+              </li>
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="" class="flex items-start"
+                  ><strong class="pr-1">EMPOWER: </strong>Waste Management</a
+                >
+              </li>
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="" class="flex items-start"
+                  ><strong class="pr-1">EMPOWER: </strong>Training Management</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Consultancy  -->
+        <div class="flex flex-col text-white gap-3">
+          <a  href="./consultancy.html"
+            class="text-base lg:text-xl font-medium text-white text-opacity-40 hover:text-opacity-60"
+          >
+            CONSULTANCY
+          </a>
+          <div class="flex gap-2 flex-col">
+            <ul class="ml-3 text-sm">
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="./consultancy.html?filter=strategy" class="flex items-start"
+                  >HSE Strategy </a
+                >
+              </li>
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="./consultancy.html?filter=safety" class="flex items-start"
+                  >Safety Management</a
+                >
+              </li>
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="./consultancy.html?filter=sustainability" class="flex items-start"
+                  >Environment Management/ Sustainability</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Trainings  -->
+        <div class="flex flex-col text-white gap-3">
+          <a  href="./training.html"
+            class="text-base lg:text-xl font-medium text-white text-opacity-40 hover:text-opacity-60"
+          >
+            TRAINING
+          </a>
+          <div class="flex gap-2 flex-col">
+            <ul class="ml-3 text-sm">
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="./training.html?filter=strategy" class="flex items-start"
+                  >HSE Management Training</a
+                >
+              </li>
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="./training.html?filter=safety" class="flex items-start"
+                  >Safety Training </a
+                >
+              </li>
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="./training.html?filter=sustainability" class="flex items-start"
+                  >Environment / Sustainability Training</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- copyright  -->
+      <div
+        class="flex flex-col lg:flex-row gap-4 lg:justify-between py-1.5 px-1 md:py-2 md:px-4 2xl:max-w-[1600px] w-full"
+      >
+        <!-- 1st columns -->
+        <div class="flex flex-col gap-1 w-full lg:w-[48%]">
+          <h6 class="text-base text-white text-opacity-80 font-semibold">
+            EHS & ESG Consultants
+          </h6>
+          <p class="text-xs text-gray-200 text-opacity-25">
+            Republication or redistribution of EHS & ESG Consultants content or
+            logo, including by framing or similar means, is prohibited without
+            the prior written consent of EHS & ESG Consultants.
+          </p>
+        </div>
+
+        <!-- 2nd column -->
+        <div class="block w-full lg:w-[48%]">
+          <div class="flex justify-center lg:justify-end gap-1">
+            <a
+              href=""
+              class="relative pr-2 lg:mr-3 text-xs sm:text-sm lg:text-base text-white text-opacity-70 hover:text-opacity-90"
+            >
+              Privacy
+              <span
+                class="absolute right-0 top-1/2 h-4 w-px bg-white -translate-y-1/2"
+              ></span>
+            </a>
+            <a
+              href=""
+              class="relative pr-2 lg:mr-3 text-xs sm:text-sm lg:text-base text-white text-opacity-70 hover:text-opacity-90"
+            >
+              Cookie Policy
+              <span
+                class="absolute right-0 top-1/2 h-4 w-px bg-white -translate-y-1/2"
+              ></span>
+            </a>
+
+            <a
+              href="./contact-us.html"
+              class="relative text-xs sm:text-sm lg:text-base text-white text-opacity-70 hover:text-opacity-90"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script>
+     
+        // Main tabs controller
+        function showMainTab(index, tabId) {
+            // Hide all main contents
+            document.querySelectorAll('[id$="-content"]').forEach(el => {
+                if(!el.id.startsWith('demo') && !el.id.startsWith('contact')) return;
+                el.classList.add('hidden');
+            });
+            
+            // Show selected content
+            document.getElementById(tabId).classList.remove('hidden');
+            
+            // Move main slider
+            document.querySelector('.main-slider').style.transform = `translateX(${index * 100}%)`;
+            
+            // Reset sub tabs when switching main tabs
+            if(index === 0) {
+                showSubTab(0, 'new-content');
+            } else {
+                showContactSubTab(0, 'contact-new-content');
+            }
+        }
+
+        // Demo sub tabs controller
+        function showSubTab(index, tabId) {
+            // Hide all demo sub contents
+            const demoContents = ['new-content', 'reviewed-content', 'complete-content'];
+            demoContents.forEach(id => document.getElementById(id).classList.add('hidden'));
+
+            // Show selected content
+            document.getElementById(tabId).classList.remove('hidden');
+
+            // Move sub slider
+            document.querySelector('.sub-slider').style.transform = `translateX(${index * 100}%)`;
+        }
+
+        // Contact sub tabs controller
+        function showContactSubTab(index, tabId) {
+            // Hide all contact sub contents
+            const contactContents = ['contact-new-content', 'contact-reviewed-content', 'contact-complete-content'];
+            contactContents.forEach(id => document.getElementById(id).classList.add('hidden'));
+
+            // Show selected content
+            document.getElementById(tabId).classList.remove('hidden');
+
+            // Move contact sub slider
+            document.querySelector('.contact-sub-slider').style.transform = `translateX(${index * 100}%)`;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            showMainTab(0, 'demo-content');
+            showSubTab(0, 'new-content');
+        });
+
+
+
+
+
+
+
+         // header
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector(".header"); // Target the header
+        const threshold = 80; // Change the background when scrolled down 80px or more
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > threshold) {
+            header.classList.remove("bg-opacity-60");
+          } else {
+            header.classList.add("bg-opacity-60");
+          }
+        });
+      });
+
+      const parents = document.querySelectorAll(".dropdown-parent");
+      const dropdowns = document.querySelectorAll(".dropdown");
+
+      parents.forEach((parent, index) => {
+        const dropdown = dropdowns[index]; // Match the parent with its corresponding dropdown
+        let timeoutID;
+
+        parent.addEventListener("mouseenter", () => {
+          clearTimeout(timeoutID);
+          setTimeout(() => dropdown.classList.remove("hidden"), 100);
+        });
+
+        parent.addEventListener("mouseleave", () => {
+          timeoutID = setTimeout(() => dropdown.classList.add("hidden"), 100);
+        });
+
+        dropdown.addEventListener("mouseenter", () => clearTimeout(timeoutID));
+        dropdown.addEventListener("mouseleave", () => {
+          timeoutID = setTimeout(() => dropdown.classList.add("hidden"), 100);
+        });
+      });
+
+      const hamburgerMenu = document.getElementById("hamburger-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      // Toggle the mobile menu and hamburger animation when clicked
+      hamburgerMenu.addEventListener("click", () => {
+        // Toggle the 'active' class for the hamburger button
+        hamburgerMenu.classList.toggle("active");
+
+        // Toggle the mobile menu visibility
+        if (mobileMenu.classList.contains("active")) {
+          mobileMenu.classList.remove("active");
+          // Wait for the animation to complete, then hide the menu
+          setTimeout(() => {
+            mobileMenu.classList.add("hidden");
+          }, 300); // Matches the animation duration
+        } else {
+          mobileMenu.classList.remove("hidden");
+          setTimeout(() => {
+            mobileMenu.classList.add("active");
+          }, 300);
+        }
+      });
+
+      // accordian & its animation
+      const accordionHeaders = document.querySelectorAll(".accordion-header");
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          const arrow = header.querySelector(".arrow");
+
+          if (content.classList.contains("hidden")) {
+            content.classList.remove("hidden");
+            requestAnimationFrame(() => {
+              content.classList.add("opacity-100", "scale-y-100");
+              content.classList.remove("opacity-0", "scale-y-0");
+            });
+          } else {
+            // Start collapsing animation
+            content.classList.add("opacity-0", "scale-y-0");
+            content.classList.remove("opacity-100", "scale-y-100");
+
+            // Wait for the animation to complete before adding 'hidden'
+            content.addEventListener(
+              "transitionend",
+              () => {
+                content.classList.add("hidden");
+              },
+              { once: true }
+            );
+          }
+
+          // Rotate the arrow
+          arrow.classList.toggle("rotate-180");
+        });
+      });
+
+      // Select all elements with animation classes
+      const sections = document.querySelectorAll(
+        ".animate-it-y, .animate-it--x, .animate-it-x, .animate-it-product, .animate-text"
+      );
+
+      const handleScroll = () => {
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          // Check if the element is in the viewport
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            section.classList.add("visible"); // Add "visible" class
+          }
+        });
+      };
+
+      // Add scroll event listener
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // Run on page load to check initial visibility
+    </script>
+  </body>
+</html>
