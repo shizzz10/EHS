@@ -42,12 +42,12 @@
             >Trainings</a
           >
           <a
-            href=""
+            href="./blogs.html"
             class="text-white text-lg font-semibold underline decoration-4 underline-offset-[6px]"
             >Blogs</a
           >
           <a
-            href=""
+            href="./carrers.html"
             class="hover:text-white text-gray-300 text-lg font-semibold"
             >Career</a
           >
@@ -602,7 +602,7 @@
           </div>
 
           
-        <!-- Environment and Sustainability  -->
+        <!--  Other blogs  -->
         <div class="flex flex-col gap-4">
             <!-- Heading text  -->
             <div
@@ -748,91 +748,6 @@
       </div>
     </main>
 
-    <script>
-      // Function to get URL parameters
-      function getURLParam(param) {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(param);
-      }
-
-      // Function to update the URL
-      function updateURLParam(param, value) {
-        const url = new URL(window.location);
-        if (value === "all") {
-          url.searchParams.delete(param); // Remove the filter if "all" is selected
-        } else {
-          url.searchParams.set(param, value); // Set the filter for other options
-        }
-        window.history.replaceState({}, "", url); // Update URL without reloading the page
-      }
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const buttons = document.querySelectorAll(".filter-btn");
-        const cards = document.querySelectorAll(".card");
-
-        // Function to calculate and update card counts
-        function updateCounts() {
-          const counts = { all: cards.length }; // Initialize "all" with total card count
-
-          // Calculate counts based on the "data-category" attribute
-          cards.forEach((card) => {
-            const category = card.getAttribute("data-category");
-            if (category) {
-              counts[category] = (counts[category] || 0) + 1;
-            }
-          });
-
-          // Update button text with counts inside the <span> tag
-          buttons.forEach((button) => {
-            const filter = button.getAttribute("data-filter");
-            const countElement = button.querySelector(".count"); // Select the <span class="count">
-            countElement.textContent = `(${counts[filter] || 0})`; // Update the count in the span
-          });
-        }
-
-        // Load filter from URL if present
-        const currentFilter = getURLParam("filter") || "all";
-
-        // Function to apply filter
-        function applyFilter(filter) {
-          // Remove 'active' class from all buttons
-          buttons.forEach((btn) =>
-            btn.classList.remove("text-default", "font-semibold")
-          );
-
-          // Add 'active' class to the clicked button
-          const activeButton = Array.from(buttons).find(
-            (btn) => btn.getAttribute("data-filter") === filter
-          );
-          if (activeButton) {
-            activeButton.classList.add("text-default", "font-semibold");
-          }
-
-          // Show/hide cards based on filter
-          cards.forEach((card) => {
-            const category = card.getAttribute("data-category");
-            if (filter === "all" || category === filter) {
-              card.style.display = "block";
-            } else {
-              card.style.display = "none";
-            }
-          });
-        }
-
-        // Initial setup
-        updateCounts(); // Update counts on page load
-        applyFilter(currentFilter); // Apply the filter based on URL
-
-        // Add click event listeners to buttons
-        buttons.forEach((button) => {
-          button.addEventListener("click", () => {
-            const filter = button.getAttribute("data-filter");
-            updateURLParam("filter", filter); // Update URL parameter or remove if "all"
-            applyFilter(filter); // Apply the filter
-          });
-        });
-      });
-    </script>
 
     <footer
       class="flex flex-col mt-auto gap-1.5 sm:gap-3 bg-default text-white px-2 sm:px-3 lg:px-4 py-1.5 sm:py-3 2xl:justify-between 2xl:items-center"
@@ -1072,28 +987,7 @@
         });
       });
 
-      const parents = document.querySelectorAll(".dropdown-parent");
-      const dropdowns = document.querySelectorAll(".dropdown");
-
-      parents.forEach((parent, index) => {
-        const dropdown = dropdowns[index]; // Match the parent with its corresponding dropdown
-        let timeoutID;
-
-        parent.addEventListener("mouseenter", () => {
-          clearTimeout(timeoutID);
-          setTimeout(() => dropdown.classList.remove("hidden"), 100);
-        });
-
-        parent.addEventListener("mouseleave", () => {
-          timeoutID = setTimeout(() => dropdown.classList.add("hidden"), 100);
-        });
-
-        dropdown.addEventListener("mouseenter", () => clearTimeout(timeoutID));
-        dropdown.addEventListener("mouseleave", () => {
-          timeoutID = setTimeout(() => dropdown.classList.add("hidden"), 100);
-        });
-      });
-
+     
       const hamburgerMenu = document.getElementById("hamburger-menu");
       const mobileMenu = document.getElementById("mobile-menu");
 
@@ -1117,38 +1011,7 @@
         }
       });
 
-      // accordian & its animation
-      const accordionHeaders = document.querySelectorAll(".accordion-header");
-      accordionHeaders.forEach((header) => {
-        header.addEventListener("click", () => {
-          const content = header.nextElementSibling;
-          const arrow = header.querySelector(".arrow");
-
-          if (content.classList.contains("hidden")) {
-            content.classList.remove("hidden");
-            requestAnimationFrame(() => {
-              content.classList.add("opacity-100", "scale-y-100");
-              content.classList.remove("opacity-0", "scale-y-0");
-            });
-          } else {
-            // Start collapsing animation
-            content.classList.add("opacity-0", "scale-y-0");
-            content.classList.remove("opacity-100", "scale-y-100");
-
-            // Wait for the animation to complete before adding 'hidden'
-            content.addEventListener(
-              "transitionend",
-              () => {
-                content.classList.add("hidden");
-              },
-              { once: true }
-            );
-          }
-
-          // Rotate the arrow
-          arrow.classList.toggle("rotate-180");
-        });
-      });
+      
 
       // Select all elements with animation classes
       const sections = document.querySelectorAll(
