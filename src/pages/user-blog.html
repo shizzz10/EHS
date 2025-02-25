@@ -1,0 +1,615 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles/output.css" rel="stylesheet" />
+    <link rel="icon" href="../assets/logo.webp" type="image/webp" />
+    <title>My Blog</title>
+  </head>
+  <body>
+    <header>
+      <!-- <div class="relative bg-white shadow-sm"> -->
+      <div
+        class="header fixed lg:static top-0 w-full z-50 flex justify-between items-center px-4 sm:px-5 py-1.5 bg-default bg-opacity-60 lg:bg-opacity-100 shadow-sm border-b-2 border-accent group"
+      >
+        <!-- logo -->
+        <div class="flex">
+          <a href="../../index.html" class="flex">
+            <img src="../assets/logo.webp" alt="" class="w-24"
+          /></a>
+        </div>
+
+        <!-- menus -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a
+            href=""
+            class="hover:text-white text-gray-300 text-lg font-semibold"
+            >About Us</a
+          >
+          <a
+            href=""
+            class="hover:text-white text-gray-300 text-lg font-semibold"
+            >Solutions</a
+          >
+          <a
+            href=""
+            class="hover:text-white text-gray-300 text-lg font-semibold"
+            >Consultancy</a
+          >
+          <a
+            href=""
+            class="hover:text-white text-gray-300 text-lg font-semibold"
+            >Trainings</a
+          >
+          <a
+            href=""
+            class="hover:text-white text-gray-300 text-lg font-semibold"
+            >Blogs</a
+          >
+          <a
+            href=""
+            class="hover:text-white text-gray-300 text-lg font-semibold"
+            >Career</a
+          >
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hidden lg:flex items-center">
+          <a
+            href="./contact-us.html"
+            class="px-4 py-1.5 rounded-full bg-white text-accent hover:bg-accent hover:text-white border border-accent transition-colors shadow-sm text-base font-semibold"
+          >
+            CONTACT US
+          </a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="lg:hidden">
+          <!-- hamburger  -->
+          <div class="flex">
+            <button
+              id="hamburger-menu"
+              class="flex flex-col justify-between items-center bg-transparent border-none p-0 cursor-pointer w-6 h-6 outline-none"
+            >
+              <span
+                class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"
+              ></span>
+              <span
+                class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"
+              ></span>
+              <span
+                class="menu-line block bg-white w-6 h-1 rounded-sm transition-all duration-300 origin-center"
+              ></span>
+            </button>
+          </div>
+
+          <div
+            id="mobile-menu"
+            class="mobile-menu hidden absolute mt-20 inset-0 w-screen h-screen bg-default bg-opacity-80 z-50"
+          >
+            <div class="flex flex-col">
+              <a
+                href="./about-us"
+                class="border-b border-default px-6 bg-gray-50 text-default py-2 font-medium text-lg"
+              >
+                About Us
+              </a>
+
+              <a
+                href="./solutions.html"
+                class="border-b border-default px-6 bg-gray-50 text-default py-2 font-medium text-lg"
+              >
+                Solutions
+              </a>
+
+              <a
+                href="./consultancy.html"
+                class="border-b border-default px-6 bg-gray-50 text-default py-2 font-medium text-lg"
+              >
+                Consultancy
+              </a>
+
+              <a
+                href="./training.html"
+                class="border-b border-default px-6 bg-gray-50 text-default py-2 font-medium text-lg"
+              >
+                Trainings
+              </a>
+
+              <a
+                href="./blogs.html"
+                class="border-b border-default px-6 bg-gray-50 text-default py-2 font-medium text-lg"
+              >
+                Blogs
+              </a>
+
+              <a
+                href="./careers.html"
+                class="border-b border-default px-6 bg-gray-50 text-default py-2 font-medium text-lg"
+              >
+                Career
+              </a>
+
+              <a
+                href="./contact-us.html"
+                class="accordion-item border-b border-accent text-white hover:text-accent hover:bg-white px-6 py-2 bg-accent font-medium text-lg"
+              >
+                CONTACT US
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+   
+  
+    <main class="flex flex-col gap-6 mb-20  px-4 mt-24 lg:mt-8   2xl:justify-center 2xl:items-center">
+        <div class="flex justify-start items-start   max-w-[1600px] w-full">
+          <div class="flex mr-auto">
+            <h2 class="text-lg lg:text-2xl font-bold">My Blog</h2>
+          </div>
+  
+        
+        </div>
+  
+        <!-- filters  -->
+        <div class="flex flex-col gap-3">
+    <!-- months filter  -->
+        <div id="blogMonths" class="flex justify-start items-center text-xs lg:text-sm overflow-x-auto whitespace-nowrap button-slider gap-2 lg:gap-3 link-btns p-1">
+            <button data-month="all" class="link-btn items-center justify-center px-3 py-1 shadow-sm shadow-black/50 rounded-full bg-white font-semibold activeLink-btn">
+              All <span>(100)</span>
+            </button>
+            <button data-month="01" class="link-btn items-center justify-center px-3 py-1 shadow-sm shadow-black/50 rounded-full bg-white">
+              Jan <span>(0)</span>
+            </button>
+            <button data-month="02" class="link-btn items-center justify-center px-3 py-1 shadow-sm shadow-black/50 rounded-full bg-white">
+              Feb <span>(0)</span>
+            </button>
+            <button data-month="03" class="link-btn items-center justify-center px-3 py-1 shadow-sm shadow-black/50 rounded-full bg-white">
+              Mar <span>(0)</span>
+            </button>
+            <button data-month="04" class="link-btn items-center justify-center px-3 py-1 shadow-sm shadow-black/50 rounded-full bg-white">
+              Apr <span>(0)</span>
+            </button>
+            <button data-month="05" class="link-btn items-center justify-center px-3 py-1 shadow-sm shadow-black/50 rounded-full bg-white">
+              May <span>(0)</span>
+            </button>
+            <button data-month="06" class="link-btn items-center justify-center px-3 py-1 shadow-sm shadow-black/50 rounded-full bg-white">
+              Jun <span>(0)</span>
+            </button>
+            <button data-month="07" class="link-btn items-center justify-center px-3 py-1 shadow-sm shadow-black/50 rounded-full bg-white">
+              Jul <span>(0)</span>
+            </button>
+            <button data-month="08" class="link-btn items-center justify-center px-3 py-1 shadow-sm shadow-black/50 rounded-full bg-white">
+              Aug <span>(0)</span>
+            </button>
+            <button data-month="09" class="link-btn items-center justify-center px-3 py-1 shadow-sm shadow-black/50 rounded-full bg-white">
+              Sep <span>(0)</span>
+            </button>
+            <button data-month="10" class="link-btn items-center justify-center px-3 py-1 shadow-sm shadow-black/50 rounded-full bg-white">
+              Oct <span>(0)</span>
+            </button>
+            <button data-month="11" class="link-btn items-center justify-center px-3 py-1 shadow-sm shadow-black/50 rounded-full bg-white">
+              Nov <span>(0)</span>
+            </button>
+            <button data-month="12" class="link-btn items-center justify-center px-3 py-1 shadow-sm shadow-black/50 rounded-full bg-white">
+              Dec <span>(0)</span>
+            </button>
+          </div>
+        
+          <!-- dropDowns  -->
+          <div class="flex gap-2 sm:gap-4 justify-start items-end button-slider p-1">
+
+            <div class="flex head-btn shadow-sm shadow-black/70 hover:shadow-black/80 rounded-2xl flex-shrink-0 overflow-hidden">
+            <button type="submit" class="py-1 lg:py-1.5 px-3 bg-default hover:bg-default/90 text-white font-semibold w-full text-sm lg:text-base">
+              Apply Filters
+            </button>
+          </div>
+       
+
+        <!-- Type of Blog dropDown -->
+        <div class="flex-shrink-0">
+          <div class="relative shadow-sm shadow-black/10 w-full border border-gray-300 rounded flex">
+            <select id="blog_type" name="department" class="blog_type_dropdown c-text-sm px-1 sm:px-2 py-1 font-semibold rounded transition-colors duration-300 hover:bg-gray-100  bg-white link-btns text-sm lg:text-base p-2">
+              <option selected disabled class="hover:bg-gray-200 link-btn w-fit">
+                Type of Blog
+              </option>
+              <option value="" class="hover:bg-gray-200 link-btn">
+                Workplace safety (1)
+              </option>
+              <option value="" class="hover:bg-gray-200 link-btn">
+                Environment & Sustainability (1)
+              </option>
+              <option value="" class="hover:bg-gray-200 link-btn">
+                EHS Solutions  (1)
+              </option>
+              <option value="" class="hover:bg-gray-200 link-btn">
+                Other (1)
+              </option>
+            </select>
+          </div>
+        </div>
+
+        
+        <!-- Sort By dropDown -->
+        <div class="flex-shrink-0">
+            <div class="relative shadow-sm shadow-black/10 w-full border border-gray-300 rounded flex">
+              <select id="blog_type" name="department" class="blog_type_dropdown c-text-sm px-1 sm:px-2 py-1 font-semibold rounded transition-colors duration-300 hover:bg-gray-100  bg-white link-btns text-sm lg:text-base p-2">
+                <option selected disabled class="hover:bg-gray-200 link-btn w-fit">
+                    Sort By 
+                </option>
+                <option value="" class="hover:bg-gray-200 link-btn">
+                    Newest
+                </option>
+                <option value="" class="hover:bg-gray-200 link-btn">
+                    Oldest
+                </option>
+                <option value="" class="hover:bg-gray-200 link-btn">
+                    Max Reads
+                </option>
+                <option value="" class="hover:bg-gray-200 link-btn">
+                    Min Reads
+                </option>
+                <option value="" class="hover:bg-gray-200 link-btn">
+                    Reshare Count
+                </option>
+              </select>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+
+    <!-- cards  -->
+    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4">
+        <!-- card  -->
+        <div class="flex gap-2 shadow-sm shadow-black/20 lg:w-[48%] rounded-2xl hover:bg-gray-50 border border-gray-100 p-2">
+            <div class="flex ">
+                <img src="../assets/Blog Ad.png" class="w-36  h-fit rounded-lg object-contain" alt="">
+            </div>
+
+            <div class="flex flex-col gap-1 sm:gap-2 w-full">
+                <!-- 1st row -->
+                <div class="flex flex-col sm:flex-row font-medium text-xs sm:font-semibold text-sm justify-between sm:items-center w-full">
+                    <span class="flex text-accent">Workplace Safety | 25/02/24</span>
+                     <div class="flex flex-row sm:flex-col gap-0.5">
+                        <span class="text-xs font-medium">105 Reads</span>
+                        <span class="text-xs font-medium">304 Reshares</span>
+                    </div>
+                   </div>
+                   <!-- 2nd row -->
+                   <div class="flex">
+                    <h4 class="lg:text-lg font-semibold leading-4 sm:leading-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                   </div>
+
+                   
+                   <!-- 3rd row -->
+                   <div class="flex justify-around items-center gap-1 px-1">
+                    <a href="" class="bg-default hover:bg-default/90 text-white w-[40%] sm:w-[30%] text-center py-0.5 rounded-3xl">View</a> 
+                    <a href="" class="bg-default hover:bg-default/90 text-white w-[40%] sm:w-[30%] text-center py-0.5 rounded-3xl">Edit</a>
+                   </div>
+
+            </div>
+
+        </div>
+       
+         <!-- card  -->
+         <div class="flex gap-2 shadow-sm shadow-black/20 lg:w-[48%] rounded-2xl hover:bg-gray-50 border border-gray-100 p-2">
+          <div class="flex ">
+              <img src="../assets/Blog Ad.png" class="w-36  h-fit rounded-lg object-contain" alt="">
+          </div>
+
+          <div class="flex flex-col gap-1 sm:gap-2 w-full">
+              <!-- 1st row -->
+              <div class="flex flex-col sm:flex-row font-medium text-xs sm:font-semibold text-sm justify-between sm:items-center w-full">
+                  <span class="flex text-accent">Workplace Safety | 25/02/24</span>
+                   <div class="flex flex-row sm:flex-col gap-0.5">
+                      <span class="text-xs font-medium">105 Reads</span>
+                      <span class="text-xs font-medium">304 Reshares</span>
+                  </div>
+                 </div>
+                 <!-- 2nd row -->
+                 <div class="flex">
+                  <h4 class="lg:text-lg font-semibold leading-4 sm:leading-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                 </div>
+
+                 
+                 <!-- 3rd row -->
+                 <div class="flex justify-around items-center gap-1 px-1">
+                  <a href="" class="bg-default hover:bg-default/90 text-white w-[40%] sm:w-[30%] text-center py-0.5 rounded-3xl">View</a> 
+                  <a href="" class="bg-default hover:bg-default/90 text-white w-[40%] sm:w-[30%] text-center py-0.5 rounded-3xl">Edit</a>
+                 </div>
+
+          </div>
+
+      </div>
+
+    </div>
+
+      </main>
+  
+
+    <footer
+      class="flex flex-col mt-auto gap-1.5 sm:gap-3 bg-default text-white px-2 sm:px-3 lg:px-4 py-1.5 sm:py-3 2xl:justify-between 2xl:items-center"
+    >
+      <!-- Logo social  -->
+      <div
+        class="flex border-b border-gray-300 w-full justify-between items-center py-1.5 px-1 md:py-2 md:px-4 2xl:max-w-[1600px] 2xl:justify-between 2xl:items-center"
+      >
+        <!-- logo  -->
+        <div class="flex">
+          <a href="../../index.html" class="flex">
+            <img src="../assets/logo.webp" alt="" class="w-20 sm:w-24"
+          /></a>
+        </div>
+
+        <!-- socials  -->
+        <div class="flex gap-4 items-center">
+          <a target="_blank" href="http://Wa.me/+923157814385">
+            <img
+              src="../assets/whatsapp.svg"
+              alt=""
+              class="w-5 sm:w-7 ease-in-out transform scale-100 hover:scale-[1.03] duration-300"
+            />
+          </a>
+
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/company/ehsandesgconsultants/"
+          >
+            <img
+              src="../assets/linkedin.svg"
+              alt=""
+              class="w-5 sm:w-7 ease-in-out transform scale-100 hover:scale-[1.03] duration-300"
+            />
+          </a>
+          <a target="_blank" href="mailto:info@ehsandesgconsultants.com">
+            <img
+              src="../assets/email.svg"
+              alt=""
+              class="w-5 sm:w-7 ease-in-out transform scale-100 hover:scale-[1.03] duration-300"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- about  -->
+      <div
+        class="flex gap-5 flex-col sm:flex-row justify-between border-b border-gray-300 w-full py-1.5 px-1 md:py-2 md:px-4 2xl:max-w-[1600px] 2xl:justify-between 2xl:items-center"
+      >
+        <!-- Digital soultions  -->
+        <div class="flex flex-col text-white gap-3">
+          <a
+            href="./solutions.html"
+            class="text-base lg:text-xl font-medium text-white text-opacity-40 hover:text-opacity-60"
+          >
+            DIGITAL SOLUTIONS
+          </a>
+          <div class="flex gap-2 flex-col">
+            <ul class="ml-3 text-sm">
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="../pages/solutions.html" class="flex items-start"
+                  ><strong class="pr-1">EMPOWER: </strong>HSE Reporting and
+                  Communication</a
+                >
+              </li>
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="" class="flex items-start"
+                  ><strong class="pr-1">EMPOWER: </strong>Action Tracking Web
+                  Application</a
+                >
+              </li>
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="" class="flex items-start"
+                  ><strong class="pr-1">EMPOWER: </strong>Waste Management</a
+                >
+              </li>
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="" class="flex items-start"
+                  ><strong class="pr-1">EMPOWER: </strong>Training Management</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Consultancy  -->
+        <div class="flex flex-col text-white gap-3">
+          <a
+            href="./consultancy.html"
+            class="text-base lg:text-xl font-medium text-white text-opacity-40 hover:text-opacity-60"
+          >
+            CONSULTANCY
+          </a>
+          <div class="flex gap-2 flex-col">
+            <ul class="ml-3 text-sm">
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a
+                  href="./consultancy.html?filter=strategy"
+                  class="flex items-start"
+                  >HSE Strategy
+                </a>
+              </li>
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a
+                  href="./consultancy.html?filter=safety"
+                  class="flex items-start"
+                  >Safety Management</a
+                >
+              </li>
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a
+                  href="./consultancy.html?filter=sustainability"
+                  class="flex items-start"
+                  >Environment Management/ Sustainability</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Trainings  -->
+        <div class="flex flex-col text-white gap-3">
+          <a
+            href="./training.html"
+            class="text-base lg:text-xl font-medium text-white text-opacity-40 hover:text-opacity-60"
+          >
+            TRAINING
+          </a>
+          <div class="flex gap-2 flex-col">
+            <ul class="ml-3 text-sm">
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a
+                  href="./training.html?filter=strategy"
+                  class="flex items-start"
+                  >HSE Management Training</a
+                >
+              </li>
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a href="./training.html?filter=safety" class="flex items-start"
+                  >Safety Training
+                </a>
+              </li>
+              <li
+                class="flex items-start before:content-['■'] before:mr-2 before:text-gray-200 text-gray-200 text-opacity-80 hover:text-opacity-95"
+              >
+                <a
+                  href="./training.html?filter=sustainability"
+                  class="flex items-start"
+                  >Environment / Sustainability Training</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- copyright  -->
+      <div
+        class="flex flex-col lg:flex-row gap-4 lg:justify-between py-1.5 px-1 md:py-2 md:px-4 2xl:max-w-[1600px] w-full"
+      >
+        <!-- 1st columns -->
+        <div class="flex flex-col gap-1 w-full lg:w-[48%]">
+          <h6 class="text-base text-white text-opacity-80 font-semibold">
+            EHS & ESG Consultants
+          </h6>
+          <p class="text-xs text-gray-200 text-opacity-25">
+            Republication or redistribution of EHS & ESG Consultants content or
+            logo, including by framing or similar means, is prohibited without
+            the prior written consent of EHS & ESG Consultants.
+          </p>
+        </div>
+
+        <!-- 2nd column -->
+        <div class="block w-full lg:w-[48%]">
+          <div class="flex justify-center lg:justify-end gap-1">
+            <a
+              href=""
+              class="relative pr-2 lg:mr-3 text-xs sm:text-sm lg:text-base text-white text-opacity-70 hover:text-opacity-90"
+            >
+              Privacy
+              <span
+                class="absolute right-0 top-1/2 h-4 w-px bg-white -translate-y-1/2"
+              ></span>
+            </a>
+            <a
+              href=""
+              class="relative pr-2 lg:mr-3 text-xs sm:text-sm lg:text-base text-white text-opacity-70 hover:text-opacity-90"
+            >
+              Cookie Policy
+              <span
+                class="absolute right-0 top-1/2 h-4 w-px bg-white -translate-y-1/2"
+              ></span>
+            </a>
+
+            <a
+              href="./contact-us.html"
+              class="relative text-xs sm:text-sm lg:text-base text-white text-opacity-70 hover:text-opacity-90"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // header
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector(".header"); // Target the header
+        const threshold = 80; // Change the background when scrolled down 80px or more
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > threshold) {
+            header.classList.remove("bg-opacity-60");
+          } else {
+            header.classList.add("bg-opacity-60");
+          }
+        });
+      });
+
+      const hamburgerMenu = document.getElementById("hamburger-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      // Toggle the mobile menu and hamburger animation when clicked
+      hamburgerMenu.addEventListener("click", () => {
+        // Toggle the 'active' class for the hamburger button
+        hamburgerMenu.classList.toggle("active");
+
+        // Toggle the mobile menu visibility
+        if (mobileMenu.classList.contains("active")) {
+          mobileMenu.classList.remove("active");
+          // Wait for the animation to complete, then hide the menu
+          setTimeout(() => {
+            mobileMenu.classList.add("hidden");
+          }, 300); // Matches the animation duration
+        } else {
+          mobileMenu.classList.remove("hidden");
+          setTimeout(() => {
+            mobileMenu.classList.add("active");
+          }, 300);
+        }
+      });
+
+      // Select all elements with animation classes
+      const sections = document.querySelectorAll(
+        ".animate-it-y, .animate-it--x, .animate-it-x, .animate-it-product, .animate-text"
+      );
+
+      const handleScroll = () => {
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          // Check if the element is in the viewport
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            section.classList.add("visible"); // Add "visible" class
+          }
+        });
+      };
+
+      // Add scroll event listener
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // Run on page load to check initial visibility
+    </script>
+  </body>
+</html>
