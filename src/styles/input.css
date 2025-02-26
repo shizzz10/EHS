@@ -72,6 +72,19 @@ body {
     background-color: #1e3271; /* Darker blue on hover */
   }
 
+    /* Active State (Cross Icon) */
+    #menu-btn.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    #menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    #menu-btn.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
   .marquee {
     display: flex;
     overflow-x: hidden;

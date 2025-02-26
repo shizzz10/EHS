@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../styles/output.css" rel="stylesheet" />
+    <link rel="icon" href="../../assets/logo.webp" type="image/webp" />
+    <title>Admin Contact Data</title>
+  </head>
+  <body class="min-h-screen flex flex-col bg-[#f0eeee]">
+    <header>
+      <!-- <div class="relative bg-white shadow-sm"> -->
+      <div
+        class="header fixed lg:static top-0 w-full z-50 flex justify-between items-center px-4 sm:px-5 py-1.5 bg-default bg-opacity-60 lg:bg-opacity-100 shadow-sm border-b-2 border-accent group"
+      >
+        <!-- logo & hamburger  -->
+        <div class="flex gap-1 items-center">
+          <!-- hamburger  -->
+          <div
+            class="flex bg-gradient-to-b from-default/20 to-default p-2 lg:p-3 rounded-full lg:hidden"
+          >
+            <button id="menu-btn" class="flex flex-col justify-between w-4 h-4">
+              <span
+                class="block w-4 h-0.5 bg-white transition-transform origin-center duration-500 ease-in-out"
+              ></span>
+              <span
+                class="block w-4 h-0.5 bg-white transition-opacity duration-500"
+              ></span>
+              <span
+                class="block w-4 h-0.5 bg-white transition-transform origin-center duration-500 ease-in-out"
+              ></span>
+            </button>
+          </div>
+
+          <!-- logo -->
+          <div class="flex">
+            <a href="../../../index.html" class="flex">
+              <img src="../../assets/logo.webp" alt="" class="w-24"
+            /></a>
+          </div>
+        </div>
+
+        <!-- menu  -->
+        <div
+          id="menu"
+          class="fixed top-20 -left-0 h-[100vh] bg-opacity-90 transform -translate-x-full transition-transform duration-500 ease-in-out z-50 flex justify-center overflow-hidden scroll-smooth"
+        >
+          <!-- sidebar -->
+          <div
+            class="flex flex-col w-80 border-r border-[#D2DAFF] bg-[#DBE2EF] sticky top-0 h-[100vh] shrink-0"
+          >
+            <a
+              href="./admin-dashboard.html"
+              class="hover:bg-default/10 p-5 font-semibold text-lg text-default border-b border-[#D2DAFF] flex gap-2 border-l-4 border-l-[#DBE2EF] hover:border-l-default/20 transition-all duration-100 ease-in-out"
+            >
+              <img src="../../assets/grip-solid (1).svg" class="h-6" alt="" />
+              <span>Dashboard</span>
+            </a>
+
+            <a
+              href="./admin-demo-request.html"
+              class="hover:bg-default/10 p-5 font-semibold text-lg text-default border-b border-[#D2DAFF] flex gap-2 border-l-4 border-l-[#DBE2EF] hover:border-l-default/20 transition-all duration-100 ease-in-out"
+            >
+              <img
+                src="../../assets/circle-play-solid.svg"
+                class="h-6"
+                alt=""
+              />
+              <span>Demo Request</span>
+            </a>
+
+            <a
+              href="./admin-contact-data.html"
+              class="bg-default/20 p-5 font-semibold text-lg text-default border-b border-[#D2DAFF] flex gap-2 border-l-4 border-l-default transition-all duration-100 ease-in-out"
+            >
+              <img
+                src="../../assets/envelope-solid (2).svg"
+                class="h-6"
+                alt=""
+              />
+              <span>Contact Form</span>
+            </a>
+
+            <a
+              href="./admin-blogs.html"
+              class="hover:bg-default/10 p-5 font-semibold text-lg text-default border-b border-[#D2DAFF] flex gap-2 border-l-4 border-l-[#DBE2EF] hover:border-l-default/20 transition-all duration-100 ease-in-out"
+            >
+              <img src="../../assets/newspaper-solid.svg" class="h-6" alt="" />
+              <span>Blogs</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- admin head -->
+        <div class="hidden sm:flex">
+          <h4
+            class="hover:text-white py-2 flex items-center justify-center text-gray-100 text-base sm:text-base lg:text-xl font-bold mt-2 sm:mt-0"
+          >
+            Admin Panel
+          </h4>
+        </div>
+
+        <!-- Logout  -->
+
+        <div class="flex">
+          <button
+            class="px-3 sm:px-4 py-1 sm:py-1.5 rounded-lg bg-white text-accent hover:bg-accent hover:text-white border border-accent transition-colors shadow-sm text-sm sm:text-base lg:text-xl font-semibold mt-2 sm:mt-0"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="px-2 lg:px-0 lg:pr-3 flex flex-col gap-8 w-full mt-16 lg:mt-0">
+      <!-- sidebar and content -->
+      <div class="flex gap-4">
+        <!-- sidebar -->
+        <div
+          class="hidden lg:flex flex-col w-80 border-r border-[#D2DAFF] bg-[#DBE2EF] sticky top-0 h-[100vh] shrink-0"
+        >
+          <a
+            href="./admin-dashboard.html"
+            class="hover:bg-default/10 p-5 font-semibold text-lg text-default border-b border-[#D2DAFF] flex gap-2 border-l-4 border-l-[#DBE2EF] hover:border-l-default/20 transition-all duration-100 ease-in-out"
+          >
+            <img src="../../assets/grip-solid (1).svg" class="h-6" alt="" />
+            <span>Dashboard</span>
+          </a>
+
+          <a
+            href="./admin-demo-request.html"
+            class="hover:bg-default/10 p-5 font-semibold text-lg text-default border-b border-[#D2DAFF] flex gap-2 border-l-4 border-l-[#DBE2EF] hover:border-l-default/20 transition-all duration-100 ease-in-out"
+          >
+            <img src="../../assets/circle-play-solid.svg" class="h-6" alt="" />
+            <span>Demo Request</span>
+          </a>
+
+          <a
+            href="./admin-contact-data.html"
+            class="bg-default/20 p-5 font-semibold text-lg text-default border-b border-[#D2DAFF] flex gap-2 border-l-4 border-l-default transition-all duration-100 ease-in-out"
+          >
+            <img src="../../assets/envelope-solid (2).svg" class="h-6" alt="" />
+            <span>Contact Form</span>
+          </a>
+
+          <a
+            href="./admin-blogs.html"
+            class="hover:bg-default/10 p-5 font-semibold text-lg text-default border-b border-[#D2DAFF] flex gap-2 border-l-4 border-l-[#DBE2EF] hover:border-l-default/20 transition-all duration-100 ease-in-out"
+          >
+            <img src="../../assets/newspaper-solid.svg" class="h-6" alt="" />
+            <span>Blogs</span>
+          </a>
+        </div>
+
+        <!-- Content  -->
+        <div
+          class="flex flex-col gap-8 mt-6 mb-6 sm:mb-2 w-full xl:max-w-[1200px] overflow-hidden"
+        >
+        <!-- heading  -->
+          <div class="flex justify-start items-start max-w-[1600px] w-full">
+            <div class="flex mr-auto">
+              <h2 class="text-2xl sm:text-3xl lg:text-3xl text-default font-bold">Contact Form Data</h2>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4 max-w-[1600px] mt-2">
+            <!-- Sub Tabs Container -->
+            <div class="flex justify-center">
+              <div
+                class="border h-8 sm:h-9 rounded-full bg-gray-400 flex relative overflow-hidden"
+              >
+                <!-- Slider -->
+                <div
+                  class="contact-sub-slider absolute top-0 left-0 w-1/3 h-full bg-default rounded-full transition-transform duration-300"
+                ></div>
+
+                <!-- Tab Buttons -->
+                <button
+                  onclick="showTab(0, 'contact-new-content')"
+                  class="tab-btn z-10 font-medium lg:font-semibold text-sm w-28 lg:w-36 lg:text-lg rounded-full transition-transform duration-300 scale-100 hover:scale-105 text-white"
+                >
+                  New (01)
+                </button>
+                <button
+                  onclick="showTab(1, 'contact-reviewed-content')"
+                  class="tab-btn z-10 font-medium lg:font-semibold text-sm w-28 lg:w-36 lg:text-lg rounded-full transition-transform duration-300 scale-100 hover:scale-105 text-white"
+                >
+                  Reviewed (01)
+                </button>
+                <button
+                  onclick="showTab(2, 'contact-complete-content')"
+                  class="tab-btn z-10 font-medium lg:font-semibold text-sm w-28 lg:w-36 lg:text-lg rounded-full transition-transform duration-300 scale-100 hover:scale-105 text-white"
+                >
+                  Complete (01)
+                </button>
+              </div>
+            </div>
+
+            <!-- Sub Tab Contents -->
+            <div class="mt-4">
+              <!-- New Tab Content -->
+              <div id="contact-new-content" class="flex flex-col p-2">
+                <div class="flex flex-col gap-4">
+                  <!-- Users Card -->
+                  <div
+                    class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                  >
+                    <!-- Card Content -->
+                    <div class="flex gap-1 w-full items-center">
+                      <!-- First Column -->
+                      <div class="flex flex-col gap-1">
+                        <div class="text-sm sm:text-base">
+                          <span class="font-semibold">Mr. Asif Khan</span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium">Manager HSE</span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Getz Pharma Pvt. Ltd</span
+                          >
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Pakistan</span
+                          >
+                        </div>
+                      </div>
+                      <!-- Second Column -->
+                      <div
+                        class="ml-auto flex flex-col items-end justify-between gap-1"
+                      >
+                        <a href="">
+                          <div
+                            class="text-center bg-default hover:bg-opacity-90 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                          >
+                            Mark as Read
+                          </div>
+                        </a>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../../assets/Phone Blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+                          <span class="font-medium">+92 12345678</span>
+                        </div>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../../assets/Email blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+                          <span class="font-medium">abc@gmail.com</span>
+                        </div>
+                        <div
+                          class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                        >
+                          <span class="font-medium">07/02/2024</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Footer Description -->
+                    <div class="text-[11px] sm:text-[13px] text-gray-800">
+                      <span class="font-medium">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Accusamus, totam.
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Users Card -->
+                  <div
+                    class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                  >
+                    <!-- Card Content -->
+                    <div class="flex gap-1 w-full items-center">
+                      <!-- First Column -->
+                      <div class="flex flex-col gap-1">
+                        <div class="text-sm sm:text-base">
+                          <span class="font-semibold">Mr. Asif Khan</span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium">Manager HSE</span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Getz Pharma Pvt. Ltd</span
+                          >
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Pakistan</span
+                          >
+                        </div>
+                      </div>
+                      <!-- Second Column -->
+                      <div
+                        class="ml-auto flex flex-col items-end justify-between gap-1"
+                      >
+                        <a href="">
+                          <div
+                            class="text-center bg-default hover:bg-opacity-90 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                          >
+                            Mark as Read
+                          </div>
+                        </a>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../../assets/Phone Blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+                          <span class="font-medium">+92 12345678</span>
+                        </div>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../../assets/Email blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+                          <span class="font-medium">abc@gmail.com</span>
+                        </div>
+                        <div
+                          class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                        >
+                          <span class="font-medium">07/02/2024</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Footer Description -->
+                    <div class="text-[11px] sm:text-[13px] text-gray-800">
+                      <span class="font-medium">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Accusamus, totam.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Reviewed Tab Content -->
+              <div
+                id="contact-reviewed-content"
+                class="hidden flex flex-col p-2"
+              >
+                <div class="flex flex-col gap-4">
+                  <!-- Users Card -->
+                  <div
+                    class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                  >
+                    <!-- Card Content -->
+                    <div class="flex gap-1 w-full items-center">
+                      <!-- First Column -->
+                      <div class="flex flex-col gap-1">
+                        <div class="text-sm sm:text-base">
+                          <span class="font-semibold">Mr. Asif Khan</span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium">Manager HSE</span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Getz Pharma Pvt. Ltd</span
+                          >
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Pakistan</span
+                          >
+                        </div>
+                      </div>
+                      <!-- Second Column -->
+                      <div
+                        class="ml-auto flex flex-col items-end justify-between gap-1"
+                      >
+                        <a href="">
+                          <div
+                            class="text-center bg-default hover:bg-opacity-90 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                          >
+                            Move to Complete
+                          </div>
+                        </a>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../../assets/Phone Blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+                          <span class="font-medium">+92 12345678</span>
+                        </div>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../../assets/Email blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+                          <span class="font-medium">abc@gmail.com</span>
+                        </div>
+                        <div
+                          class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                        >
+                          <span class="font-medium">07/02/2024</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Footer Description -->
+                    <div class="text-[11px] sm:text-[13px] text-gray-800">
+                      <span class="font-medium">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Accusamus, totam.
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Users Card -->
+                  <div
+                    class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                  >
+                    <!-- Card Content -->
+                    <div class="flex gap-1 w-full items-center">
+                      <!-- First Column -->
+                      <div class="flex flex-col gap-1">
+                        <div class="text-sm sm:text-base">
+                          <span class="font-semibold">Mr. Asif Khan</span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium">Manager HSE</span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Getz Pharma Pvt. Ltd</span
+                          >
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Pakistan</span
+                          >
+                        </div>
+                      </div>
+                      <!-- Second Column -->
+                      <div
+                        class="ml-auto flex flex-col items-end justify-between gap-1"
+                      >
+                        <a href="">
+                          <div
+                            class="text-center bg-default hover:bg-opacity-90 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                          >
+                            Move to Complete
+                          </div>
+                        </a>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../../assets/Phone Blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+                          <span class="font-medium">+92 12345678</span>
+                        </div>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../../assets/Email blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+                          <span class="font-medium">abc@gmail.com</span>
+                        </div>
+                        <div
+                          class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                        >
+                          <span class="font-medium">07/02/2024</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Footer Description -->
+                    <div class="text-[11px] sm:text-[13px] text-gray-800">
+                      <span class="font-medium">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Accusamus, totam.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Complete Tab Content -->
+              <div
+                id="contact-complete-content"
+                class="hidden flex flex-col p-2"
+              >
+                <div class="flex flex-col gap-4">
+                  <!-- Users Card -->
+                  <div
+                    class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                  >
+                    <!-- Card Content -->
+                    <div class="flex gap-1 w-full items-center">
+                      <!-- First Column -->
+                      <div class="flex flex-col gap-1">
+                        <div class="text-sm sm:text-base">
+                          <span class="font-semibold">Mr. Asif Khan</span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium">Manager HSE</span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Getz Pharma Pvt. Ltd</span
+                          >
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Pakistan</span
+                          >
+                        </div>
+                      </div>
+                      <!-- Second Column -->
+                      <div
+                        class="ml-auto flex flex-col items-end justify-between gap-1"
+                      >
+                        <a href="">
+                          <div
+                            class="text-center bg-red-600 hover:bg-red-500 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                          >
+                            Delete
+                          </div>
+                        </a>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../../assets/Phone Blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+                          <span class="font-medium">+92 12345678</span>
+                        </div>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../../assets/Email blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+                          <span class="font-medium">abc@gmail.com</span>
+                        </div>
+                        <div
+                          class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                        >
+                          <span class="font-medium">07/02/2024</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Footer Description -->
+                    <div class="text-[11px] sm:text-[13px] text-gray-800">
+                      <span class="font-medium">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Accusamus, totam.
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Users Card -->
+                  <div
+                    class="card flex flex-col border border-gray-300 rounded-xl py-3 px-2 sm:px-3 gap-1 shadow-sm shadow-black/20 w-full shadow-sm shadow-black/50 ease-in-out transform scale-100 hover:scale-[1.01] duration-300 hover:shadow-black/70 bg-white"
+                  >
+                    <!-- Card Content -->
+                    <div class="flex gap-1 w-full items-center">
+                      <!-- First Column -->
+                      <div class="flex flex-col gap-1">
+                        <div class="text-sm sm:text-base">
+                          <span class="font-semibold">Mr. Asif Khan</span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium">Manager HSE</span>
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Getz Pharma Pvt. Ltd</span
+                          >
+                        </div>
+                        <div class="text-xs sm:text-sm">
+                          <span class="font-medium whitespace-nowrap"
+                            >Pakistan</span
+                          >
+                        </div>
+                      </div>
+                      <!-- Second Column -->
+                      <div
+                        class="ml-auto flex flex-col items-end justify-between gap-1"
+                      >
+                        <a href="">
+                          <div
+                            class="text-center bg-red-600 hover:bg-red-500 px-1 sm:px-2 lg:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium whitespace-nowrap border rounded-2xl text-white w-28 sm:w-32 lg:w-36"
+                          >
+                            Delete
+                          </div>
+                        </a>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../../assets/Phone Blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+                          <span class="font-medium">+92 12345678</span>
+                        </div>
+                        <div class="text-xs sm:text-sm flex gap-1">
+                          <img
+                            src="../../assets/Email blue.svg"
+                            alt=""
+                            class="w-4 sm:w-5 flex-shrink-0"
+                          />
+                          <span class="font-medium">abc@gmail.com</span>
+                        </div>
+                        <div
+                          class="text-xs sm:text-sm flex gap-0.5 text-gray-700"
+                        >
+                          <span class="font-medium">07/02/2024</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Footer Description -->
+                    <div class="text-[11px] sm:text-[13px] text-gray-800">
+                      <span class="font-medium">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Corrupti, odio! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Accusamus, totam.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Tab controller
+      function showTab(index, tabId) {
+        // Hide all tab contents
+        const tabContents = [
+          "contact-new-content",
+          "contact-reviewed-content",
+          "contact-complete-content",
+        ];
+        tabContents.forEach((id) =>
+          document.getElementById(id).classList.add("hidden")
+        );
+
+        // Show selected content
+        document.getElementById(tabId).classList.remove("hidden");
+
+        // Move slider
+        document.querySelector(
+          ".contact-sub-slider"
+        ).style.transform = `translateX(${index * 100}%)`;
+      }
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", () => {
+        showTab(0, "contact-new-content"); // Show the first tab on load
+      });
+
+      // Select elements
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+
+      // Toggle menu visibility
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("-translate-x-full"); // Slide menu in/out
+        menuBtn.classList.toggle("active"); // Toggle active state for hamburger button
+        menu.classList.toggle("left-0");
+      });
+
+      // Close the menu when clicking outside of it
+      document.addEventListener("click", (e) => {
+        if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+          // If the click is outside the menu and hamburger button
+          menu.classList.add("-translate-x-full"); // Hide the menu
+          menuBtn.classList.remove("active"); // Reset the hamburger button state
+          menu.classList.remove("left-0");
+        }
+      });
+
+      // Prevent clicks inside the menu from closing it
+      menu.addEventListener("click", (e) => {
+        e.stopPropagation(); // Stop the click event from propagating to the document
+      });
+
+      // Select all accordion header containers
+      const accordionHeaders = document.querySelectorAll(
+        ".accordion-item > div"
+      );
+
+      // header
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector(".header"); // Target the header
+        const threshold = 80; // Change the background when scrolled down 80px or more
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > threshold) {
+            header.classList.remove("bg-opacity-60");
+          } else {
+            header.classList.add("bg-opacity-60");
+          }
+        });
+      });
+
+      // Select all elements with animation classes
+      const sections = document.querySelectorAll(
+        ".animate-it-y, .animate-it--x, .animate-it-x, .animate-it-product, .animate-text"
+      );
+
+      const handleScroll = () => {
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          // Check if the element is in the viewport
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            section.classList.add("visible"); // Add "visible" class
+          }
+        });
+      };
+
+      // Add scroll event listener
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // Run on page load to check initial visibility
+    </script>
+  </body>
+</html>
